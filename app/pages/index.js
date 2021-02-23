@@ -52,9 +52,9 @@ const Home = ({ randomContributors }) => {
                     Het Fullstack React Framework
                   </h2>
                   <p className="text-lg xl:text-xl xl:font-medium text-off-white lg:text-transparent lg:bg-clip-text lg:bg-gradient-to-r lg:from-blue-gradient-white lg:to-blue-gradient-light-blue xl:w-4/5">
-                    Blitz is een framework (batterijen inbegrepen) dat geïnspireerd werd door Ruby on Rails,
-                    gebouwd is op Next.js en beschikt over een "Zero API" datalaag-abstractie waardoor je
-                    REST/GraphQL niet meer nodig hebt.
+                    Blitz is een framework <i>(batterijen inbegrepen)</i> dat geïnspireerd werd door Ruby
+                    on Rails, gebouwd is op Next.js en beschikt over een "Zero API"
+                    data layer abstractie die REST/GraphQL overbodig maakt.
                   </p>
                   <div className="flex space-x-4">
                     <ButtonLink className="w-2/3 lg:w-auto rounded-tl-xl" href="/docs/get-started">
@@ -95,14 +95,15 @@ const Home = ({ randomContributors }) => {
             </div>
             <div className="z-10 px-6 mx-auto space-y-12 text-lg text-center text-white lg:space-y-0 lg:space-x-12 lg:flex lg:text-left max-w-7xl xl:font-mediumxl:text-xl">
               <FeatureIcon icon="layers">
-                Met de "Zero-API" datalaag kan je{" "}
-                <strong>servercode rechtstreeks in je componenten importeren</strong> in plaats van
-                handmatig API endpoints toe te voegen en de data aan de client-side op te vragen en te cachen.
+                Met de "Zero-API" data layer kan je{" "}
+                <strong>server code rechtstreeks in je components importeren</strong> in plaats van
+                handmatig API endpoints toe te voegen en de data aan de client-side op te vragen en
+                te cachen.
               </FeatureIcon>
               <FeatureIcon icon="lighteningBolt">
                 In nieuwe Blitz apps zijn alle{" "}
-                <strong>saaie dingen reeds ingesteld voor jou!</strong> Zoals ESLint, Prettier, Jest,
-                gebruikersregistratie, login en wachtwoord reset.
+                <strong>saaie dingen reeds ingesteld voor jou!</strong> Zoals ESLint, Prettier,
+                Jest, gebruikersregistratie, login en wachtwoord reset.
               </FeatureIcon>
               <FeatureIcon icon="graphUp">
                 Biedt <strong>handige standaardinstellingen en conventies</strong> voor zaken als
@@ -112,7 +113,7 @@ const Home = ({ randomContributors }) => {
             <div className="grid w-full gap-5 px-6 mx-auto text-white xl:gap-10 max-w-7xl lg:grid-cols-2">
               <Link href="#" passHref>
                 <StyledLink className="flex items-center justify-between pb-1 text-lg border-b border-opacity-50 border-blue-mid lg:col-span-2 font-secondary xl:text-xl">
-                  <span>Top Videos</span>
+                  <span>Top video's</span>
 
                   {/*
                   <span className="flex items-center">
@@ -139,39 +140,42 @@ const Home = ({ randomContributors }) => {
                   <div className="grid pb-4 ml-6 features-grid lg:gap-y-14">
                     <Feature title="Fullstack & monolithisch">
                       <p>
-                        Bevat alles van de database tot je frontend in één app.
-                        Er is maar één ding om te ontwikkelen. Maar één ding om te implementeren.
+                        Bevat alles van de database tot je frontend in één app. Er is maar één ding
+                        om te ontwikkelen. Maar één ding om uit te rollen.
                       </p>
-                      <p>En je kunt het op een server of serverless implementeren.</p>
+                      <p>En je kunt het op een server of serverless uitrollen.</p>
                     </Feature>
-                    <Feature title="API niet nodig">
+                    <Feature title="Geen API nodig">
                       <p>
                         In plaats van data uit de backend op te halen, importeer je je servercode
-                        rechtstreeks in je componenten. Tijdens het compileren wordt die functie-import
-                        vervangen door een automatisch gegenereerde HTTP API.
+                        rechtstreeks in je componenten. Tijdens het compileren wordt die
+                        functie-import vervangen door een automatisch gegenereerde HTTP API.
                       </p>
                       <p>De gegenereerde API kan ook worden gebruikt door apps en derden.</p>
                     </Feature>
                     <Feature title="Losse opinies">
                       <p>
-                        De out-of-the-box-ervaring begeleidt je op een pad dat perfect is voor
-                        de meeste toepassingen. Maar als je buiten de gebaande paden wilt treden,
-                        ben je volledig vrij om dat te doen.
+                        De out-of-the-box ervaring begeleidt je op een pad dat perfect is voor de
+                        meeste applicaties. Maar als je buiten de gebaande paden wilt treden, ben
+                        je volledig vrij om dat te doen.
                       </p>
                       <p>
-                        En bijna alles is pluggable. We bepalen bijvoorbeeld niet welke
-                        styling of formulier libraries je gebruikt.
+                        En bijna alles is pluggable. We bepalen bijvoorbeeld niet welke styling of
+                        form libraries je gebruikt.
                       </p>
                     </Feature>
                     <Feature title="Conventie over configuratie">
                       <p>
-                        Blitz doet al de saaie set up en configuratie voor je. De gemeenschappelijke
-                        projectstructuur en architectuurpatronen maken het gemakkelijk om van
-                        de ene Blitz app naar de andere te gaan en je meteen thuis te voelen.
+                        Blitz doet al de saaie setup en configuratie voor je. De gemeenschappelijke
+                        projectstructuur en architectuurpatronen maken het gemakkelijk om van de ene
+                        Blitz app naar de andere te gaan en je meteen thuis te voelen.
                       </p>
                     </Feature>
-                    <Feature title="Eenvoudig te starten en op te schalen">
-                      <p>Gemakkelijk voor beginners en gemakkelijk om bestaande Next.js apps naar Blitz te migreren.</p>
+                    <Feature title="Eenvoudig starten en opschalen">
+                      <p>
+                        Gemakkelijk voor beginners en gemakkelijk om bestaande Next.js apps naar
+                        Blitz te migreren.
+                      </p>
                       <p>
                         Eenvoudig schaalbaar in alle vormen: lijnen code, aantal mensen dat in de
                         codebase werkt en uitvoering van de code.
@@ -237,8 +241,8 @@ const Home = ({ randomContributors }) => {
                 <div className="z-10 flex flex-col justify-between space-y-6 lg:justify-end">
                   <div className="flex flex-col space-y-6 lg:h-auto lg:text-transparent text-off-white">
                     <p className="lg:bg-gradient-to-r lg:from-blue-gradient-white lg:to-blue-gradient-light-blue lg:bg-clip-text">
-                      Onze community is warm, veilig, divers, inclusief en leuk!
-                      Vooral LGBTQ+, vrouwen en minderheden zijn welkom.
+                      Onze community is warm, veilig, divers, inclusief en leuk! Vooral LGBTQ+,
+                      vrouwen en minderheden zijn welkom.
                     </p>
                     <p className="lg:bg-gradient-to-r lg:from-blue-gradient-white lg:to-blue-gradient-light-blue lg:bg-clip-text">
                       Lees onze{" "}
@@ -262,11 +266,13 @@ const Home = ({ randomContributors }) => {
                 <div className="z-10 flex flex-col justify-between space-y-6 lg:justify-start">
                   <div className="flex flex-col space-y-6 lg:h-auto lg:text-transparent text-off-white lg:bg-clip-text lg:bg-gradient-to-r lg:from-blue-gradient-white lg:to-blue-gradient-light-blue">
                     <p className="lg:bg-gradient-to-r lg:from-blue-gradient-white lg:to-blue-gradient-light-blue lg:bg-clip-text">
-                      We maken hier allemaal samen deel van uit, van de jongste tot de oudste.
-                      We lijken allemaal meer op elkaar dan dat we verschillend zijn. We houden ervan om samen te werken.
+                      We maken hier allemaal samen deel van uit, van de jongste tot de oudste. We
+                      lijken allemaal meer op elkaar dan dat we verschillend zijn. We houden ervan
+                      om samen te werken.
                     </p>
                     <p className="lg:bg-gradient-to-r lg:from-blue-gradient-white lg:to-blue-gradient-light-blue lg:bg-clip-text">
-                      We nodigen je uit om van Blitz het beste framework te maken dat we ooit hebben gehad!
+                      We nodigen je uit om van Blitz het beste framework te maken dat we ooit hebben
+                      gehad!
                     </p>
                   </div>
                   <Link href="/docs/contributing" passHref>
@@ -279,7 +285,7 @@ const Home = ({ randomContributors }) => {
             </div>
             <div className="z-10 w-full mx-auto text-white space-y-7 max-w-7xl">
               <h2 className="px-6 text-2xl font-medium text-white font-secondary lg:text-3xl">
-                Architectuur schema
+                Architectuurschema
               </h2>
               <div className="w-full">
                 <Scrollbar className="lg:hidden" thumbHeight="4px" thumbColor="white">
@@ -305,33 +311,35 @@ const Home = ({ randomContributors }) => {
                 />
                 <FeatureIconTitle icon="thumbsUp" title="Authenticatie & autorisatie">
                   De ingebouwde authenticatie is supergemakkelijk en zeer veilig. Werkt met elke
-                  identiteitsprovider, inclusief zelf gehoste gebruikersnaam en wachtwoord en
-                  derden zoals Auth0.
+                  identiteitsprovider, inclusief zelf gehoste gebruikersnaam en wachtwoord en derden
+                  zoals Auth0.
                 </FeatureIconTitle>
                 <FeatureIconTitle icon="database" title="Database agnostisch">
-                  Je kan elke database gebruiken die je wilt. Prisma 2 is de standaard databaseclient,
-                  maar je kan deze verwijderen en iets anders gebruiken, zoals Fauna of DynamoDB.
+                  Je kan elke database gebruiken die je wilt. Prisma 2 is de standaard
+                  database client, maar je kan deze verwijderen en iets anders gebruiken, zoals Fauna
+                  of DynamoDB.
                 </FeatureIconTitle>
-                <FeatureIconTitle icon="fileCode" title="Recepten">
-                  Eén commando om code en/of packages in je Blitz app te installeren.
-                  Voorbeelden: `blitz install tailwind` of` blitz install chakra-ui`.
-                  Recepten kunnen door iedereen worden gemaakt.
+                <FeatureIconTitle icon="fileCode" title="Recipes">
+                  Eén commando om code en/of packages in je Blitz app te installeren. Voorbeelden:
+                  `blitz install tailwind` of` blitz install chakra-ui`. Recipes kunnen door
+                  iedereen worden gemaakt.
                 </FeatureIconTitle>
                 <FeatureIconTitle icon="plugin" title="Backend architectuur">
-                  Blitz is opgezet voor serverintensieve taken zoals het verzenden van e-mails,
-                  cron jobs, achtergrondverwerking, het genereren van PDF's, enz. Momenteel
-                  hebben we minimale backend-gidsen, maar we werken aan het ontwikkelen van meer
-                  patterns en het toevoegen van meer documentatie.
+                  Blitz is opgezet voor serverintensieve taken zoals het verzenden van e-mails, cron
+                  jobs, achtergrondverwerking, het genereren van PDF's, etc. Momenteel hebben we
+                  minimale backend gidsen, maar we werken aan het ontwikkelen van meer patronen en
+                  het toevoegen van meer documentatie.
                 </FeatureIconTitle>
-                <FeatureIconTitle icon="typescript" title="Eersteklas Typescript ondersteuning">
-                  Blitz is gebouwd met Typescript en de Blitz datalaag is volledig end-to-end typesafe.
-                  Alle types zijn volledig statisch zonder dat er een apart proces voor het
-                  genereren van types nodig is!
+                <FeatureIconTitle icon="typescript" title="First class Typescript ondersteuning">
+                  Blitz is gebouwd met Typescript en de Blitz data layer is volledig end-to-end
+                  typesafe. Alle types zijn volledig statisch zonder dat er een apart proces voor
+                  het genereren van types nodig is!
                 </FeatureIconTitle>
                 <FeatureIconTitle icon="scaffolding" title="Codegeneratie">
-                  Het is nog maar net begonnen, maar Blitz codegeneratie wordt buitengewoon krachtig.
-                  Geweldig voor zowel prototyping als voor het bouwen van echte apps. Je zal in
-                  staat zijn om elke template te overschrijven en aan te passen voor jouw project.
+                  Het staat nog in de kinderschoenen, maar Blitz codegeneratie wordt buitengewoon
+                  krachtig. Geweldig voor zowel prototyping als voor het bouwen van echte apps. Je
+                  zal in staat zijn om elke template te overschrijven en aan te passen voor jouw
+                  project.
                 </FeatureIconTitle>
               </div>
             </div>
@@ -354,8 +362,8 @@ const Home = ({ randomContributors }) => {
                   Onze sponsors
                 </h2>
                 <p className="text-lg xl:text-xl">
-                  Jullie financiële bijdragen helpen ervoor te zorgen dat Blitz verder wordt ontwikkeld{" "}
-                  <br className="hidden lg:block" />
+                  Jullie financiële bijdragen helpen ervoor te zorgen dat Blitz verder wordt
+                  ontwikkeld <br className="hidden lg:block" />
                   en onderhouden! We hebben maandelijkse sponsoropties vanaf $5/maand.
                 </p>
                 <div>
