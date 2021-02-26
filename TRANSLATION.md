@@ -126,16 +126,26 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 
 | Origineel | Vertaling |
 |:---|:---|
+| app | app(licatie) |
 | array | _array_ |
 | backend |  _backend_ |
 | client | _client_ |
+| command | commando |
 | database |  _database_ |
 | framework | _framework_ |
 | frontend |  _frontend_ |
 | hooks |  _hooks_ |
+| issue | _issue_ |
 | middleware | _middleware_ |
 | promise | _promise_ |
 | server |  _server_ |
 | templates |  _templates_ |
 | token |  _token_ |
+| tutorial | _tutorial_ |
 
+Om overal de juiste verwijzingen naar pagina's te hebben, vind je hieronder de Nederlandse vertalingen voor de docs pagina's.
+
+| Origineel | Vertaling |
+|:---|:---|
+| Get Started | Aan de slag |
+| How the Community Operates | Hoe de community werkt |
