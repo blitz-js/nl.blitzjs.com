@@ -143,6 +143,7 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 | data layer | _data layer_ |
 | database |  _database_ |
 | defaults | standaardinstellingen / -waarden |
+| dependency | _dependency_ |
 | deploy | uitrollen |
 | end-to-end | _end-to-end_ |
 | (code) execution | uitvoering (van de code) |
@@ -169,6 +170,7 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 | release cycle | _release cycle_ |
 | reset | opnieuw instellen (_verb_) / reset (_noun_) |
 | routing / router | _routing_ / _router_ |
+| scaffold | _scaffold_ |
 | scalable | schaalbaar |
 | scale | schalen / opschalen |
 | server |  _server_ |
