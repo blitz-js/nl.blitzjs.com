@@ -137,6 +137,7 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 | Code of Conduct | gedragscode |
 | codebase | _codebase_ |
 | community | _community_ |
+| components | componenten |
 | configuration | configuratie |
 | convension | conventie |
 | data layer | _data layer_ |
@@ -159,7 +160,7 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 | migrate | migreren |
 | monolithic | monolitisch |
 | password | wachtwoord |
-| pluggable | pluggable |
+| pluggable | _pluggable_ |
 | production | productie |
 | promise | _promise_ |
 | prototyping | _prototyping_ |

@@ -52,9 +52,9 @@ const Home = ({ randomContributors }) => {
                     Het Fullstack React Framework
                   </h2>
                   <p className="text-lg xl:text-xl xl:font-medium text-off-white lg:text-transparent lg:bg-clip-text lg:bg-gradient-to-r lg:from-blue-gradient-white lg:to-blue-gradient-light-blue xl:w-4/5">
-                    Blitz is een framework <i>(batterijen inbegrepen)</i> dat geïnspireerd werd door Ruby
-                    on Rails, gebouwd is op Next.js en beschikt over een "Zero API"
-                    data layer abstractie die REST/GraphQL overbodig maakt.
+                    Blitz is een framework dat geïnspireerd werd door Ruby on Rails,
+                    gebouwd is op Next.js en beschikt over een "Zero API" data
+                    layer abstractie die REST/GraphQL overbodig maakt.
                   </p>
                   <div className="flex space-x-4">
                     <ButtonLink className="w-2/3 lg:w-auto rounded-tl-xl" href="/docs/get-started">
@@ -96,7 +96,7 @@ const Home = ({ randomContributors }) => {
             <div className="z-10 px-6 mx-auto space-y-12 text-lg text-center text-white lg:space-y-0 lg:space-x-12 lg:flex lg:text-left max-w-7xl xl:font-mediumxl:text-xl">
               <FeatureIcon icon="layers">
                 Met de "Zero-API" data layer kan je{" "}
-                <strong>server code rechtstreeks in je components importeren</strong> in plaats van
+                <strong>server code rechtstreeks in je componenten importeren</strong> in plaats van
                 handmatig API endpoints toe te voegen en de data aan de client-side op te vragen en
                 te cachen.
               </FeatureIcon>
