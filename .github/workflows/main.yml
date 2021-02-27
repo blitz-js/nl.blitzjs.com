@@ -27,7 +27,3 @@ jobs:
         run: yarn install --frozen-lockfile --silent
         env:
           CI: true
-      - name: Lint Blitz Website
-        run: yarn lint
-        env:
-          CI: true
