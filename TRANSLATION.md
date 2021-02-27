@@ -147,6 +147,7 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 | deploy | uitrollen |
 | end-to-end | _end-to-end_ |
 | (code) execution | uitvoering (van de code) |
+| feature | _feature_ |
 | fetch (data) | (data) opvragen |
 | file structure | bestandsstructuur |
 | form | _form_ |
