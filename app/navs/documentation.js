@@ -168,7 +168,7 @@ export const documentationNav = [
   {
     title: (
       <Title
-        title="Uitrollen naar Productie"
+        title="Uitrollen naar productie"
         iconPath="/img/deploying-to-production.svg"
         iconDarkPath="/img/deploying-to-production-white.svg"
       />

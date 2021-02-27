@@ -128,7 +128,7 @@ const Header = ({
               rel="noopener noreferrer"
               href="https://github.com/sponsors/blitz-js"
             >
-              <FaHeart className="inline mr-1 align-text-top" /> Doneer/sponsor
+              <FaHeart className="inline mr-1 align-text-top" /> Doneer/Sponsor
               <FiArrowUpRight size="0.70rem" className="opacity-50 absolute top-2 right-0" />
             </NavLink>
           </div>
