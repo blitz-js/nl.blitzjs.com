@@ -122,26 +122,68 @@ Om consistentie te behouden en de teksten zo toegankelijk mogelijk te maken, geb
 
 # Woordenlijst
 
-Om de consistentie in de documentatie te behouden vind je hieronder de vertalingen voor de _vaktermen_ in het Nederlands.
+Om de consistentie in de documentatie te behouden vind je hieronder de vertalingen voor de _vaktermen_ in het Nederlands. Ook de woorden die expliciet in het Engels worden behouden vind je hier terug.
 
 | Origineel | Vertaling |
 |:---|:---|
+| agnostic | agnostisch |
 | app | app(licatie) |
+| application | applicatie |
+| architectural pattern | architectuurpatroon |
 | array | _array_ |
+| authentication | authenticatie |
+| authorization | autorisatie |
 | backend |  _backend_ |
 | client | _client_ |
+| Code of Conduct | gedragscode |
+| codebase | _codebase_ |
 | command | commando |
+| community | _community_ |
+| components | componenten |
+| configuration | configuratie |
+| convension | conventie |
+| data layer | _data layer_ |
 | database |  _database_ |
+| defaults | standaardinstellingen / -waarden |
+| deploy | uitrollen |
+| end-to-end | _end-to-end_ |
+| (code) execution | uitvoering (van de code) |
+| fetch (data) | (data) opvragen |
+| file structure | bestandsstructuur |
+| form | _form_ |
 | framework | _framework_ |
 | frontend |  _frontend_ |
+| fullstack | _fullstack_ |
 | hooks |  _hooks_ |
+| identity provider | identiteitsprovider |
 | issue | _issue_ |
+| library | _library_ |
+| log in / login | inloggen (_verb_) / login (_noun_) |
 | middleware | _middleware_ |
+| migrate | migreren |
+| monolithic | monolitisch |
+| password | wachtwoord |
+| pluggable | _pluggable_ |
+| production | productie |
 | promise | _promise_ |
+| prototyping | _prototyping_ |
+| recipe | _recipe_ |
+| release | _release_ |
+| release cycle | _release cycle_ |
+| reset | opnieuw instellen (_verb_) / reset (_noun_) |
+| routing / router | _routing_ / _router_ |
+| scalable | schaalbaar |
+| scale | schalen / opschalen |
 | server |  _server_ |
+| serverless | _serverless_ |
+| set up / setup | opzetten (_verb_) / setup (_noun_) |
+| sign up / signup | registreren (_verb_) / registratie (_noun_) |
+| styling | _styling_ |
 | templates |  _templates_ |
 | token |  _token_ |
 | tutorial | _tutorial_ |
+| user | gebruiker |
+| username | gebruikersnaam |
 
 Om overal de juiste verwijzingen naar pagina's te hebben, vind je hieronder de Nederlandse vertalingen voor de docs pagina's.
 
