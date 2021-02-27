@@ -158,7 +158,7 @@ export function ContentsLayout({ children, meta, tableOfContents: toc }) {
     <>
       <Link href="/docs">
         <a className="lg:hidden mx-6 text-xxs px-2.5 py-0.5 rounded-sm bg-off-white font-primary inline-flex mb-4 dark:bg-purple-off-black -mt-4 items-center">
-          <BiChevronLeft size={18} /> Back to Documentation Menu
+          <BiChevronLeft size={18} /> Terug naar het documentatie menu
         </a>
       </Link>
       <div id={meta.containerId} className="pt-4 pb-8 w-full flex">
@@ -169,13 +169,13 @@ export function ContentsLayout({ children, meta, tableOfContents: toc }) {
           >
             {!!toc.length && (
               <>
-                <h3 className="dark:text-white mb-2 text-sm">Topics</h3>
+                <h3 className="dark:text-white mb-2 text-sm">Onderwerpen</h3>
                 <Select
                   value={topic}
                   className="topic-select"
                   classNamePrefix="topic-select"
                   options={toc.map((option) => ({ value: option.slug, label: option.title }))}
-                  placeholder="Jump to a Topic"
+                  placeholder="Ga naar een onderwerp"
                   onChange={(e) => {
                     if (e && e.value) {
                       const hash = e.value
@@ -210,7 +210,7 @@ export function ContentsLayout({ children, meta, tableOfContents: toc }) {
                 rel="noopener noreferrer"
                 className="flex items-center py-2 text-sm"
               >
-                <FaGithub className="mr-3" /> Idea for improving this page? Edit it on Github.
+                <FaGithub className="mr-3" /> Idee om deze pagina te verbeteren? Bewerk het op Github.
               </a>
               {(prev || next) && (
                 <>
