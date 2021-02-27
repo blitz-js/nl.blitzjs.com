@@ -134,6 +134,7 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 | authorization | autorisatie |
 | backend |  _backend_ |
 | client | _client_ |
+| client-side | _client-side_ |
 | Code of Conduct | gedragscode |
 | codebase | _codebase_ |
 | community | _community_ |
@@ -146,12 +147,14 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 | deploy | uitrollen |
 | end-to-end | _end-to-end_ |
 | (code) execution | uitvoering (van de code) |
+| feature | _feature_ |
 | fetch (data) | (data) opvragen |
 | file structure | bestandsstructuur |
 | form | _form_ |
 | framework | _framework_ |
 | frontend |  _frontend_ |
 | fullstack | _fullstack_ |
+| Hot Module Replacement | _Hot Module Replacement_ |
 | hooks |  _hooks_ |
 | identity provider | identiteitsprovider |
 | library | _library_ |
@@ -160,6 +163,8 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 | migrate | migreren |
 | monolithic | monolitisch |
 | password | wachtwoord |
+| prefetch | _prefetch_ |
+| pre-rendering | _pre-rendering_ |
 | pluggable | _pluggable_ |
 | production | productie |
 | promise | _promise_ |
