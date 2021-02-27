@@ -144,6 +144,7 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 | database |  _database_ |
 | defaults | standaardinstellingen / -waarden |
 | deploy | uitrollen |
+| endpoint | _endpoint_ |
 | end-to-end | _end-to-end_ |
 | (code) execution | uitvoering (van de code) |
 | fetch (data) | (data) opvragen |
