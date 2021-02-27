@@ -7,7 +7,7 @@ const pageTokenized = tokenize.jsx(
   `// app/pages/projects/new.tsx
 import { Link, useRouter, useMutation, BlitzPage } from "blitz"
 import Layout from "app/core/layouts/Layout"
-// Notice how we import the server function directly
+// Merk op hoe we de server functie rechtstreeks importeren
 import createProject, {CreateProject} from "app/projects/mutations/createProject"
 import { ProjectForm, FORM_ERROR } from "app/projects/components/ProjectForm"
 
@@ -17,14 +17,14 @@ const NewProjectPage: BlitzPage = () => {
 
   return (
     <div>
-      <h1>Create New Project</h1>
+      <h1>Nieuw project aanmaken</h1>
 
       <ProjectForm
-        submitText="Create Project"
+        submitText="Project aanmaken"
         schema={CreateProject}
         onSubmit={async (values) => {
           try {
-            // This is equivalent to calling the server function directly
+            // Dit is hetzelfde als de server functie rechtstreeks te callen
             const project = await createProjectMutation(values)
             router.push("/projects/" + project.id)
           } catch (error) {
@@ -49,19 +49,19 @@ import { resolver } from "blitz"
 import db from "db"
 import * as z from "zod"
 
-// This provides runtime validation + type safety
+// Dit zorgt voor runtime validatie + type safety
 export const CreateProject = z
   .object({
     name: z.string(),
   })
 
-// resolver.pipe is a functional pipe
+// resolver.pipe is een functional pipe
 export default resolver.pipe(
-  // Validate the input data
+  // Valideer de input data
   resolver.zod(CreateProject),
-  // Ensure user is logged in
+  // Wees zeker dat de gebruiker is ingelogd
   resolver.authorize(),
-  // Perform business logic
+  // Voer business logica uit
   async (input) => {
     const project = await db.project.create({ data: input })
     return project
