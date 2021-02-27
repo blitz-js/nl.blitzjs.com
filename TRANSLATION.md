@@ -127,6 +127,7 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 | Origineel | Vertaling |
 |:---|:---|
 | agnostic | agnostisch |
+| app | app(licatie) |
 | application | applicatie |
 | architectural pattern | architectuurpatroon |
 | array | _array_ |
@@ -136,6 +137,7 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 | client | _client_ |
 | Code of Conduct | gedragscode |
 | codebase | _codebase_ |
+| command | commando |
 | community | _community_ |
 | components | componenten |
 | configuration | configuratie |
@@ -154,6 +156,7 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 | fullstack | _fullstack_ |
 | hooks |  _hooks_ |
 | identity provider | identiteitsprovider |
+| issue | _issue_ |
 | library | _library_ |
 | log in / login | inloggen (_verb_) / login (_noun_) |
 | middleware | _middleware_ |
@@ -178,5 +181,13 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 | styling | _styling_ |
 | templates |  _templates_ |
 | token |  _token_ |
+| tutorial | _tutorial_ |
 | user | gebruiker |
 | username | gebruikersnaam |
+
+Om overal de juiste verwijzingen naar pagina's te hebben, vind je hieronder de Nederlandse vertalingen voor de docs pagina's.
+
+| Origineel | Vertaling |
+|:---|:---|
+| Get Started | Aan de slag |
+| How the Community Operates | Hoe de community werkt |
