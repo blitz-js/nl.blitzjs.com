@@ -374,11 +374,7 @@ const Home = ({ randomContributors }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-<<<<<<< HEAD
-                    Sponsor of doneer
-=======
-                    Support Blitz
->>>>>>> 9f9ccc79b0228702f7d19db6c6b0d3ad5b88ee7e
+                    Steun Blitz
                   </ButtonLink>
                 </div>
               </div>
