@@ -127,6 +127,7 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 | Origineel | Vertaling |
 |:---|:---|
 | agnostic | agnostisch |
+| app | app(licatie) |
 | application | applicatie |
 | architectural pattern | architectuurpatroon |
 | array | _array_ |
@@ -134,8 +135,10 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 | authorization | autorisatie |
 | backend |  _backend_ |
 | client | _client_ |
+| client-side | _client-side_ |
 | Code of Conduct | gedragscode |
 | codebase | _codebase_ |
+| command | commando |
 | community | _community_ |
 | components | componenten |
 | configuration | configuratie |
@@ -146,20 +149,25 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 | deploy | uitrollen |
 | end-to-end | _end-to-end_ |
 | (code) execution | uitvoering (van de code) |
+| feature | _feature_ |
 | fetch (data) | (data) opvragen |
 | file structure | bestandsstructuur |
 | form | _form_ |
 | framework | _framework_ |
 | frontend |  _frontend_ |
 | fullstack | _fullstack_ |
+| Hot Module Replacement | _Hot Module Replacement_ |
 | hooks |  _hooks_ |
 | identity provider | identiteitsprovider |
+| issue | _issue_ |
 | library | _library_ |
 | log in / login | inloggen (_verb_) / login (_noun_) |
 | middleware | _middleware_ |
 | migrate | migreren |
 | monolithic | monolitisch |
 | password | wachtwoord |
+| prefetch | _prefetch_ |
+| pre-rendering | _pre-rendering_ |
 | pluggable | _pluggable_ |
 | production | productie |
 | promise | _promise_ |
@@ -178,5 +186,13 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 | styling | _styling_ |
 | templates |  _templates_ |
 | token |  _token_ |
+| tutorial | _tutorial_ |
 | user | gebruiker |
 | username | gebruikersnaam |
+
+Om overal de juiste verwijzingen naar pagina's te hebben, vind je hieronder de Nederlandse vertalingen voor de docs pagina's.
+
+| Origineel | Vertaling |
+|:---|:---|
+| Get Started | Aan de slag |
+| How the Community Operates | Hoe de community werkt |
