@@ -3,13 +3,13 @@ title: Waarom Blitz gebruiken in plaats van Next.js?
 sidebar_label: Waarom Blitz in plaats van Next.js?
 ---
 
-### 1. Fullstack in plaats van frontend
+### 1. Fullstack in plaats van frontend {#1-fullstack-instead-of-frontend}
 
 Next.js is vooral een frontend framework. Het is ontworpen voor het bouwen van een frontend die verbinding maakt met een andere API. Next.js is niet standaard ingesteld om een echte fullstack applicatie te bouwen.
 
 Blitz voegt alle ontbrekende features en functionaliteit toe die van Next een echt fullstack framework maken. Deze belangrijke features omvatten directe toegang tot de database, middleware, en authenticatie.
 
-### 2. Data layer
+### 2. Data layer {#2-data-layer}
 
 De Blitz data layer is een nieuwe technologie die de API overbodig maakt terwijl client-side rendering behouden blijft. In een Blitz app kan je je servercode rechtstreeks in de frontend importeren, zodat je geen API hoeft te bouwen en geen data hoeft op te halen van de frontend. Op build time voegt Blitz automatisch een API-call toe die de servercode op de server uitvoert. Eigenlijk abstraheert Blitz je API in een compileerstap.
 
@@ -17,20 +17,19 @@ Dit is een doorbraak in de ontwikkeling van React-apps, omdat het een heel deel 
 
 Uiteraard kan je gebruik blijven maken van REST of GraphQL voor het opvragen van data. Blitz beperkt dit op geen enkele manier.
 
-### 3. Ingebouwde authenticatie
+### 3. Ingebouwde authenticatie {#3-built-in-authentication}
 
 Blitz heeft een ingebouwd sessiebeheer dat werkt met elke identiteitsprovider, inclusief zelf gehoste e-mail/wachtwoord en diensten van derden. Authenticatie is iets dat ingewikkeld en moeilijk is om correct te implementeren. Doordat dit in Blitz is ingebouwd, bespaar je een hoop tijd en potentiële beveiligingslekken.
 
 Het bouwen van een geweldige gebruikerservaring met authenticatie in Next.js is erg lastig en vervelend, maar met Blitz krijgt je gratis de beste ontwikkerlaarservaring in zijn klasse.
 
-
-### 4. Conventies
+### 4. Conventies {#4-conventions}
 
 Next.js heeft geen conventies, afgezien van file-system based routing. Dit zorgt ervoor dat elke ontwikkelaar telkens het wiel moet heruitvinden bij elk project.
 
 Blitz geeft je een aantal conventies voor dingen zoals hoe je je bestanden organiseert en hoe je je routes structureert. Dit betekent dat je geen tijd verspilt met dit voor elk project uit te zoeken. Het heeft ook grote voordelen voor de community. Dankzij de gemeenschappelijke projectstructuur en architectuurpatronen kun je van Blitz-app naar Blitz-app gaan en je meteen thuis voelen.
 
-### 5. Code scaffolding
+### 5. Code scaffolding {#5-code-scaffolding}
 
 Er zijn twee belangrijke manieren om de hoeveelheid code die je met de hand moet schrijven te verminderen:
 
@@ -43,7 +42,7 @@ Er zijn twee belangrijke manieren om de hoeveelheid code die je met de hand moet
 
 Bij Blitz zijn we grote fan van code scaffolding. We hebben een hele reeks [`blitz generate`](./cli-generate) commando's om code in je project te plaatsen. Onze code scaffolding staat nog in de kinderschoenen - we hebben veel krachtige features die nog moeten worden toegevoegd, inclusief de mogelijkheid om je eigen aangepaste scaffold templates toe te voegen.
 
-### 6. Recipes
+### 6. Recipes {#6-recipes}
 
 Recipes zijn one-line commando's om code in je project te plaatsen vanuit een MDX recipe op npm of een Git repository.
 
@@ -55,13 +54,13 @@ Examples:
 
 Recipes zijn super krachtig. Ze kunnen bijna alles in je project veranderen, inclusief het toevoegen van dependencies, het veranderen van code, het toevoegen van code, etc. Ze worden geschreven via MDX en kunnen worden samengesteld zoals React-componenten.
 
-### 7. Het ontwikkelen van een nieuwe applicatie
+### 7. Het ontwikkelen van een nieuwe applicatie {#7-new-app-development}
 
 Een nieuwe Next.js app is volledig kaal. Dus elke keer dat je een Next.js project start, moet je uren spenderen aan het opzetten van de basis zoals eslint, prettier, husky git hooks, etc.
 
 Een nieuwe Blitz app bespaart je een hoop tijd omdat alles al voorgeconfigureerd is voor jou! Natuurlijk kan je het later altijd nog aanpassen, maar het is geweldig om een werkend startpunt te hebben.
 
-### 8. Versoepelde beperkingen
+### 8. Versoepelde beperkingen {#8-relaxed-restrictions}
 
 Next.js vereist dat al jouw React-pagina's in een enkele `pages/` map staan. Blitz versoepelt deze beperking door je toe te staan een oneindig aantal `pages/` mappen te hebben.
 
@@ -69,6 +68,6 @@ Voor grote projecten is dit een enorm voordeel omdat je je pagina's kan scheiden
 
 Voorbeelden:
 
-- `app/pages/` zou de homepage kunnen bevatten en pagina's zoals "about"
+- `app/pages/` zou de homepage kunnen bevatten en pagina's zoals "Over ons"
 - `app/products/pages/` zou alle pagina's kunnen bevatten die te maken hebben met producten
 - `app/admin/pages/` zou alle pagina's kunnen bevatten die te maken hebben met de backend administratie sectie
