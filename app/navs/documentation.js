@@ -33,7 +33,7 @@ export const documentationNav = [
   {
     title: (
       <Title
-        title="Introduction"
+        title="Introductie"
         iconPath="/img/introduction.svg"
         iconDarkPath="/img/introduction-white.svg"
       />
@@ -66,7 +66,7 @@ export const documentationNav = [
     ],
   },
   {
-    title: <Title title="Basics" iconPath="/img/basics.svg" iconDarkPath="/img/basics-white.svg" />,
+    title: <Title title="Basis" iconPath="/img/basics.svg" iconDarkPath="/img/basics-white.svg" />,
     pages: [
       pages["file-structure"],
       pages["app-component"],
@@ -79,7 +79,7 @@ export const documentationNav = [
     ],
   },
   {
-    title: <Title title="Pages" iconPath="/img/pages.svg" iconDarkPath="/img/pages-white.svg" />,
+    title: <Title title="Pagina's" iconPath="/img/pages.svg" iconDarkPath="/img/pages-white.svg" />,
     pages: [
       pages["pages"],
       pages["redirects"],
@@ -155,7 +155,7 @@ export const documentationNav = [
   {
     title: (
       <Title
-        title="Backend Architecture"
+        title="Backend Architectuur"
         iconPath="/img/mutations.svg"
         iconDarkPath="/img/mutations-white.svg"
       />
@@ -169,7 +169,7 @@ export const documentationNav = [
   {
     title: (
       <Title
-        title="Deploying to Production"
+        title="Uitrollen naar productie"
         iconPath="/img/deploying-to-production.svg"
         iconDarkPath="/img/deploying-to-production-white.svg"
       />
@@ -189,7 +189,7 @@ export const documentationNav = [
   {
     title: (
       <Title
-        title="Configuration"
+        title="Configuratie"
         iconPath="/img/config-purple.svg"
         iconDarkPath="/img/config-white.svg"
       />
