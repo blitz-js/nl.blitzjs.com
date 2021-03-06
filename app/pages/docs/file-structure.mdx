@@ -1,15 +1,15 @@
 ---
 id: file-structure
-title: File Structure
-sidebar_label: File Structure
+title: Bestandsstructuur
+sidebar_label: Bestandsstructuur
 ---
 
-#### Guiding Principles
+#### Leidende beginselen
 
-1. Files that change together should live together.
-2. Minimal requirements, maximum flexibility
+1. Bestanden die samen veranderen moeten samen blijven
+2. Minimale eisen, maximale flexibiliteit
 
-#### Example file structure
+#### Voorbeeld bestandsstructuur
 
 ```
 ├── app/
@@ -90,47 +90,48 @@ sidebar_label: File Structure
 
 #### `app`
 
-Contains all your core application code.
+Bevat alle core applicatiecode.
 
-- The file structure nested inside `app/` can be anything you want, but we recommend the following:
-  - First layer folders to be a "domain context", like `core/`, `projects/`, `users/`, `billing/`, etc.
-  - All other folders like `components/` and `hooks/` go inside one of the above domain context folders
-- Special Folder Names
-  - Can exist at any level of the hierarchy inside `app`.
-  - `pages/` expose a React component at a URL. Follows the same semantics as the Next.js `pages/` folder.
-  - `api/` expose a Node.js request handler at URL. Same semantics as Next.js `pages/api/` folder.
-  - `queries/` and `mutations/` are for your Blitz queries and mutations. Each query and mutation is exposed at a URL corresponding to its file path.
+- De bestandsstructuur binnen `app/` is vrijblijvend, maar we raden het volgende aan:
+  - De eerste laag mappen moeten een "domain context" zijn, zoals `core/`, `projects/`, `users/`, `billing/`, etc.
+  - Alle andere mappen zoals `components/` en `hooks/` gaan in één van de bovenstaande domain context mappen.
+- Speciale mapnamen
+  - Kunnen op elk niveau van de hiërarchie binnen `app` bestaan.
+  - `pages/` weergeeft een React component op een URL. Volgt dezelfde semantiek als de Next.js `pages/api/` map.
+  - `api/` geeft een Node.js request handler vrij op de URL. Volgt dezelfde semantiek als de Next.js `pages/api/` map.
+  - `queries/` en `mutations/` zijn voor je Blitz queries en mutations. Elke query en mutation wordt gekoppeld aan een URL die overeenkomt met het bestandspad.
 
 #### `db`
 
-Contains database configuration, schema, and migration files. `db/index.js` exports your initialized database client so you can use it anywhere in your app.
+Bevat de databaseconfiguratie, schema en migratiebestanden. `db/index.js` exporteert je geïnitialiseerde database client zodat je deze overal in jouw app kan gebruiken.
 
 #### `integrations`
 
-Contains third-party integration code. Ex: `auth0.js`, `twilio.js`, etc. These files are a good place to instantiate a client with shared configuration.
+Bevat integratiecode van derden. Bijvoorbeeld: `auth0.js`, `twilio.js`, etc. Deze bestanden zijn een goede plaats om een client met gedeelde configuratie te instantiëren
 
 #### `pages`
 
-The top level `pages` folder and all nested `pages` folders inside `app` are merged together at build time. The build will fail if the same route is defined in two places.
+De `pages` map op het hoogste niveau map en alle geneste `pages` mappen binnen `app` worden samengevoegd op build time. De build zal mislukken als dezelfde route op twee plaatsen is gedefinieerd.
 
-- This top level pages folder is optional.
-- Has the same semantics as the Next.js `pages` folder. All files in here are mapped to the url corresponding to their file paths.
-- While you can place any route files here, we recommend placing route files inside `app`. But if you want, you can instead place all your route files in this top level folders instead of being spread out in various folders inside `app`
+- De `pages` map op het hoogste niveau is optioneel.
+- Heeft dezelfde semantiek als de Next.js `pages` map. Alle bestanden hierin worden gekoppeld aan een URL die overeenkomt met hun bestandspaden.
+- Hoewel je alle routebestanden hier kan plaatsen, raden wij aan om deze in `app` te plaatsen. Maar je kan ook al jouw routebestanden in deze map op het hoogste niveau plaatsen in plaats van ze te verspreiden over de verschillende 
+mappen binnen `app`.
 
 #### `api`
 
-Same as Next.js `pages/api` folder, but not nested inside pages.
+Hetzelfde als de Next.js `pages/api` map, maar niet genest in `pages`.
 
-And like the `pages` folder, the top level `api` folder and all nested `api` folders inside `app` are merged together at build time.
+En net zoals de `pages` map, worden de `api` map op het hoogste niveau en alle geneste `api` mappen samengevoegd op build time.
 
 #### `public`
 
-All files in here are served statically from your app's root URL
+Alle bestanden in deze map worden statisch geserveerd vanuit de root URL van je app.
 
 #### `blitz.config.js`
 
-A configuration file with the same format as `next.config.js`
+Een configuratiebestand met dezelfde opmaak als `next.config.js`
 
-### Other Notes {#other-notes}
+### Andere opmerkingen {#other-notes}
 
-- All top level folders are automatically aliased. So for example you can import from `app/projects/queries/getProject` from anywhere in our app.
+- Alle mappen op het hoogste niveau worden automatisch gealiased. Je kan bijvoorbeeld `app/projects/queries/getProject` overal in de applicatie importeren.
