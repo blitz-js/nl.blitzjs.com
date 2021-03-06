@@ -1,73 +1,73 @@
 ---
-title: Why use Blitz instead of Next.js?
-sidebar_label: Why Blitz instead of Next.js?
+title: Waarom Blitz gebruiken in plaats van Next.js?
+sidebar_label: Waarom Blitz in plaats van Next.js?
 ---
 
-### 1. Fullstack instead of Frontend
+### 1. Fullstack in plaats van frontend {#1-fullstack-instead-of-frontend}
 
-Next.js is mostly a frontend framework. It's designed for building a frontend that connects to some other API. Next.js isn't set up by default for building a true fullstack application.
+Next.js is vooral een frontend framework. Het is ontworpen voor het bouwen van een frontend die verbinding maakt met een andere API. Next.js is niet standaard ingesteld om een echte fullstack applicatie te bouwen.
 
-Blitz adds all the missing features and functionality that turns Next into a true fullstack framework. These key features include direct database access, middleware, and authentication.
+Blitz voegt alle ontbrekende features en functionaliteit toe die van Next een echt fullstack framework maken. Deze belangrijke features omvatten directe toegang tot de database, middleware, en authenticatie.
 
-### 2. Data Layer
+### 2. Data layer {#2-data-layer}
 
-The new Blitz data layer is a novel technology for eliminating the API while retaining client-side rendering. In a Blitz app, you can import your server code directly into the frontend so you don't need to build an API and do data fetching from the frontend. At build time, Blitz automatically inserts an API call that runs the server code on the server. Essentially, Blitz abstracts your API into a compile step.
+De Blitz data layer is een nieuwe technologie die de API overbodig maakt terwijl client-side rendering behouden blijft. In een Blitz app kan je je servercode rechtstreeks in de frontend importeren, zodat je geen API hoeft te bouwen en geen data hoeft op te halen van de frontend. Op build time voegt Blitz automatisch een API-call toe die de servercode op de server uitvoert. Eigenlijk abstraheert Blitz je API in een compileerstap.
 
-This is a game changer for React app development because it eliminates an entire portion of traditional React app architecture. This means it's easier to learn, faster to develop, and more fun to build things!
+Dit is een doorbraak in de ontwikkeling van React-apps, omdat het een heel deel van de traditionele React applicatie-architectuur elimineert. Dit betekent dat het makkelijker is om te leren, sneller om te ontwikkelen en leuker om dingen mee te bouwen!
 
-That said, you can continue doing data fetching via REST or GraphQL like you've always done. Blitz doesn't restrict this in any way.
+Uiteraard kan je gebruik blijven maken van REST of GraphQL voor het opvragen van data. Blitz beperkt dit op geen enkele manier.
 
-### 3. Built-in Authentication
+### 3. Ingebouwde authenticatie {#3-built-in-authentication}
 
-Blitz has built-in session management that works with any identity provider, including self-hosted email/password and third party services. Authentication is something that's complicated and difficult to implement correctly. Having it built into Blitz saves you a ton of time and potential security vulnerabilities.
+Blitz heeft een ingebouwd sessiebeheer dat werkt met elke identiteitsprovider, inclusief zelf gehoste e-mail/wachtwoord en diensten van derden. Authenticatie is iets dat ingewikkeld en moeilijk is om correct te implementeren. Doordat dit in Blitz is ingebouwd, bespaar je een hoop tijd en potentiële beveiligingslekken.
 
-Building an awesome UX with auth in Next.js is very tricky and tedious, but Blitz gives you best-in-class DX for free.
+Het bouwen van een geweldige gebruikerservaring met authenticatie in Next.js is erg lastig en vervelend, maar met Blitz krijgt je gratis de beste ontwikkerlaarservaring in zijn klasse.
 
-### 4. Conventions
+### 4. Conventies {#4-conventions}
 
-Next.js does not have any conventions aside from file-system based routing. This leaves every developer to re-invent the wheel for every project.
+Next.js heeft geen conventies, afgezien van file-system based routing. Dit zorgt ervoor dat elke ontwikkelaar telkens het wiel moet heruitvinden bij elk project.
 
-Blitz brings a number of conventions for things like how to organize your files and how to structure your routes. This means you don't waste any time figuring this out for every project. It also greatly benefits the community. Common project structure and architectural patterns allow you to move from Blitz app to Blitz app and immediately feel at home.
+Blitz geeft je een aantal conventies voor dingen zoals hoe je je bestanden organiseert en hoe je je routes structureert. Dit betekent dat je geen tijd verspilt met dit voor elk project uit te zoeken. Het heeft ook grote voordelen voor de community. Dankzij de gemeenschappelijke projectstructuur en architectuurpatronen kun je van Blitz-app naar Blitz-app gaan en je meteen thuis voelen.
 
-### 5. Code Scaffolding
+### 5. Code scaffolding {#5-code-scaffolding}
 
-There are two main ways to reduce the amount of code you have to write by hand:
+Er zijn twee belangrijke manieren om de hoeveelheid code die je met de hand moet schrijven te verminderen:
 
-1. Code generation
+1. Codegeneratie
 2. Code scaffolding
 
-**Code generation** means a library generates code for you. Examples are graphql-code-generator which generates code from GraphQL queries and Hasura which generates an entire GraphQL API from your database schema. Usually codegen has no way to fully customize the generated code. You're at the mercy of the library for what it supports. Often you will run into edge cases that codegen has no solution for. And you can't fix it because you don't own the code.
+**Codegeneratie** betekent dat een library code voor je genereert. Voorbeelden zijn graphql-code-generator die code genereert uit GraphQL queries en Hasura die een volledige GraphQL API genereert uit jouw database schema. Meestal heeft codegeneratie geen manier om de gegenereerde code volledig aan te passen. Je bent afhankelijk van hetgeen de library ondersteunt. Vaak zal je tegen edge cases aanlopen waar codegeneratie geen oplossing voor heeft. En je kan het niet oplossen omdat je de code niet bezit.
 
-**Code scaffolding** means initial code is scaffolded into your project for you. From then on, you have full ownership over all the code and can customize it as much you need. A downside of code scaffolding is that you don't get automatic updates like you do with code generation from a third-party library. But the huge upside is that you are guaranteed to never be limited by someone else's design choices which you have no way to change.
+**Code scaffolding** betekent dat de initiële code voor je in jouw project wordt geplaatst. Vanaf dat moment bent je de volledige eigenaar van de code en kan je deze naar eigen wens aanpassen. Een nadeel van code scaffolding is dat je geen automatische updates krijgt zoals bij het genereren van code uit een library van derden. Maar het grote voordeel is dat je gegarandeerd nooit wordt beperkt door de ontwerpkeuzes van iemand anders die je op geen enkele manier kan veranderen.
 
-Blitz is a huge fan of code scaffolding. We have a whole slew of [`blitz generate`](./cli-generate) commands for scaffolding code into your project. It's still early days for our code scaffolding — we have a lot of powerful features that still need to be added, including the ability to add your own custom scaffold templates.
+Bij Blitz zijn we grote fan van code scaffolding. We hebben een hele reeks [`blitz generate`](./cli-generate) commando's om code in je project te plaatsen. Onze code scaffolding staat nog in de kinderschoenen - we hebben veel krachtige features die nog moeten worden toegevoegd, inclusief de mogelijkheid om je eigen aangepaste scaffold templates toe te voegen.
 
-### 6. Recipes
+### 6. Recipes {#6-recipes}
 
-Recipes are one-line commands for scaffolding code into your project from an MDX recipe on npm or a git repository.
-
-Examples:
-
-- `blitz install tailwind` - one command to install and configure tailwind
-- `blitz install chakra-ui` - one command to install and configure chakra
-- `blitz install material-ui` - one command to install and configure material-ui
-
-Recipes are super powerful. They can change almost anything in your project, including adding dependencies, changing code, adding code, etc. They are written via MDX and can be composed like React components.
-
-### 7. New App Development
-
-A new Next.js app is totally bare-bones. So every time you start a Next.js project, you have to spend hours setting up all the basics like eslint, prettier, husky git hooks, etc.
-
-A new Blitz app saves you a ton of time because all that is pre-configured for you! For sure you can always customize it later, but having a working starting point is awesome.
-
-### 8. Relaxed Restrictions
-
-Next.js requires all your React pages go in a single `pages/` folder. Blitz relaxes this restriction by allowing you to have an infinite number of `pages/` folders.
-
-For large projects this is a huge benefit because you can separate and organize your pages in any way you want.
+Recipes zijn one-line commando's om code in je project te plaatsen vanuit een MDX recipe op npm of een Git repository.
 
 Examples:
 
-- `app/pages/` could contain the homepage and pages like "about"
-- `app/products/pages/` could contain all the pages related to products
-- `app/admin/pages/` could contain all pages related to the backend admin section
+- `blitz install tailwind` - één commando om Tailwind te installeren en te configureren
+- `blitz install chakra-ui` - één commando om Chakra te installeren en te configureren
+- `blitz install material-ui` - één commando om Material-UI te installeren en te configureren
+
+Recipes zijn super krachtig. Ze kunnen bijna alles in je project veranderen, inclusief het toevoegen van dependencies, het veranderen van code, het toevoegen van code, etc. Ze worden geschreven via MDX en kunnen worden samengesteld zoals React-componenten.
+
+### 7. Het ontwikkelen van een nieuwe applicatie {#7-new-app-development}
+
+Een nieuwe Next.js app is volledig kaal. Dus elke keer dat je een Next.js project start, moet je uren spenderen aan het opzetten van de basis zoals eslint, prettier, husky git hooks, etc.
+
+Een nieuwe Blitz app bespaart je een hoop tijd omdat alles al voorgeconfigureerd is voor jou! Natuurlijk kan je het later altijd nog aanpassen, maar het is geweldig om een werkend startpunt te hebben.
+
+### 8. Versoepelde beperkingen {#8-relaxed-restrictions}
+
+Next.js vereist dat al jouw React-pagina's in een enkele `pages/` map staan. Blitz versoepelt deze beperking door je toe te staan een oneindig aantal `pages/` mappen te hebben.
+
+Voor grote projecten is dit een enorm voordeel omdat je je pagina's kan scheiden en organiseren op elke manier die je wilt.
+
+Voorbeelden:
+
+- `app/pages/` zou de homepage kunnen bevatten en pagina's zoals "Over ons"
+- `app/products/pages/` zou alle pagina's kunnen bevatten die te maken hebben met producten
+- `app/admin/pages/` zou alle pagina's kunnen bevatten die te maken hebben met de backend administratie sectie

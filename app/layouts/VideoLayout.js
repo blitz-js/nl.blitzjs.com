@@ -38,13 +38,13 @@ export function VideoLayout({ children, meta }) {
               </span>
             </a>{" "}
             <a href={meta.sourceCode} className="ml-6 text-gray-600 hover:text-gray-900">
-              <span>Source code</span>
+              <span>Broncode</span>
             </a>
           </div>
           <Link href={next && next.published !== false ? next.href : "/course/coming-soon"}>
             <a className="inline-flex items-center text-gray-600 hover:text-gray-900">
               <span>
-                Next<span className="hidden sm:inline"> lesson</span>
+                Volgende<span className="hidden sm:inline"> les</span>
               </span>
               <svg viewBox="0 0 24 24" className="ml-2 h-4 w-4 fill-current text-gray-500">
                 <path d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z" />
@@ -55,20 +55,19 @@ export function VideoLayout({ children, meta }) {
       </div>
       <div className="flex">
         <div className="markdown px-6 xl:px-12 w-full max-w-3xl mx-auto lg:ml-0 lg:mr-auto xl:mx-0 xl:w-3/4">
-          <h2>Tools used</h2>
+          <h2>Gebruikte tools</h2>
           <ul>
             <li>
-              <a href="https://code.visualstudio.com/">VS Code</a> as the editor
+              <a href="https://code.visualstudio.com/">VS Code</a> als de editor
             </li>
             <li>
-              <a href="https://adamwathan.me/sizzy">Sizzy</a> for the browser preview on the
-              right-hand side
+              <a href="https://adamwathan.me/sizzy">Sizzy</a> voor de browser preview aan de rechterkant
             </li>
             <li>
               <a href="https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss">
                 Tailwind CSS Intellisense
               </a>{" "}
-              for intelligent auto-completion in VS Code
+              voor intelligente auto-completion in VS Code
             </li>
           </ul>
         </div>

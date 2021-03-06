@@ -23,7 +23,7 @@ const Title = ({ title, iconPath, iconDarkPath }) => (
         <Image src={iconDarkPath} width="14" height="18" alt={title} />
       </div>
     )}
-    <div className="text-xxs uppercase tracking-wider text-purple-off-black dark:text-white font-normal font-primary">
+    <div className="text-sm uppercase tracking-wider text-purple-off-black dark:text-dark-mode-text font-normal font-primary">
       {title}
     </div>
   </div>
@@ -33,7 +33,7 @@ export const documentationNav = [
   {
     title: (
       <Title
-        title="Introduction"
+        title="Introductie"
         iconPath="/img/introduction.svg"
         iconDarkPath="/img/introduction-white.svg"
       />
@@ -62,10 +62,11 @@ export const documentationNav = [
       pages["contributing"],
       pages["maintainers"],
       pages["code-of-conduct"],
+      pages["translations"],
     ],
   },
   {
-    title: <Title title="Basics" iconPath="/img/basics.svg" iconDarkPath="/img/basics-white.svg" />,
+    title: <Title title="Basis" iconPath="/img/basics.svg" iconDarkPath="/img/basics-white.svg" />,
     pages: [
       pages["file-structure"],
       pages["app-component"],
@@ -78,7 +79,7 @@ export const documentationNav = [
     ],
   },
   {
-    title: <Title title="Pages" iconPath="/img/pages.svg" iconDarkPath="/img/pages-white.svg" />,
+    title: <Title title="Pagina's" iconPath="/img/pages.svg" iconDarkPath="/img/pages-white.svg" />,
     pages: [
       pages["pages"],
       pages["redirects"],
@@ -154,7 +155,7 @@ export const documentationNav = [
   {
     title: (
       <Title
-        title="Backend Architecture"
+        title="Backend Architectuur"
         iconPath="/img/mutations.svg"
         iconDarkPath="/img/mutations-white.svg"
       />
@@ -168,7 +169,7 @@ export const documentationNav = [
   {
     title: (
       <Title
-        title="Deploying to Production"
+        title="Uitrollen naar productie"
         iconPath="/img/deploying-to-production.svg"
         iconDarkPath="/img/deploying-to-production-white.svg"
       />
@@ -188,7 +189,7 @@ export const documentationNav = [
   {
     title: (
       <Title
-        title="Configuration"
+        title="Configuratie"
         iconPath="/img/config-purple.svg"
         iconDarkPath="/img/config-white.svg"
       />
