@@ -3,25 +3,26 @@ title: blitz new
 sidebar_label: blitz new
 ---
 
-Generates a new Blitz project in the current directory. The project will include basic scaffolding for a landing page, a database, and all of the other configuration that makes Blitz's magic work.
+Genereert een nieuw Blitz project in de huidige map. Het project bevat een basisstructuur voor een landingspagina, 
+een database en alle andere configuraties die de magie van Blitz laten werken.
 
 ```bash
 blitz new [name]
 ```
 
-| Argument | Required | Description                                                   |
+| Argument | Vereist | Beschrijving                                                   |
 | -------- | -------- | ------------------------------------------------------------- |
-| `name`   | Yes      | The project name. Will be used in initial project scaffolding |
+| `name`   | Ja     | De naam van het project. Zal gebruikt worden voor de initiële project scaffolding |
 
-#### Options
+#### Opties
 
-| Argument    | Shorthand | Description                                                                                                     | Default |
+| Argument    | Afkorting | Beschrijving                                                                                                    | Standaard |
 | ----------- | --------- | --------------------------------------------------------------------------------------------------------------- | ------- |
-| `--npm`     |           | Uses `npm` as the project's package manager. If omitted, the project will default to `yarn` if it is installed. | `false` |
-| `--dry-run` | `-d`      | Displays what files would be generated but does not write the files to disk.                                    | `false` |
-| `--no-git`  |           | Skips git repository creation.                                                                                  | `false` |
+| `--npm`     |           | Gebruikt `npm` als de package manager voor het project. Indien weggelaten, zal het project standaard `yarn` gebruiken als deze is geïnstalleerd. | `false` |
+| `--dry-run` | `-d`      | Toont welke bestanden zouden worden gegenereerd, maar schrijft de bestanden niet naar schijf.                                 | `false` |
+| `--no-git`  |           | Slaat het maken van een git repository over.                                                                                  | `false` |
 
-#### Examples
+#### Voorbeelden
 
 ```bash
 blitz new task-manager
