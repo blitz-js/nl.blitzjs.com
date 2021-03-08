@@ -70,7 +70,7 @@ export default function App({Component, pageProps, router}) {
         <meta key="twitter:site" name="twitter:site" content="@blitz_js" />
         <meta key="twitter:description" name="twitter:description" content={description} />
         <meta key="twitter:creator" name="twitter:creator" content="@blitz_js" />
-        <meta key="og:url" property="og:url" content={`https://blitzjs.com${router.pathname}`} />
+        <meta key="og:url" property="og:url" content={`https://nl.blitzjs.com${router.pathname}`} />
         <meta key="og:type" property="og:type" content="article" />
         <meta key="og:description" property="og:description" content={description} />
       </Head>
