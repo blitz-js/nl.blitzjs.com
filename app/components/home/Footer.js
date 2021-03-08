@@ -24,8 +24,8 @@ export function Footer({className, hasDarkMode}) {
         <div className="grid px-6 mx-auto max-w-7xl lg:grid-cols-3 gap-x-24 my-14 lg:mt-24 lg:mb-12 gap-y-7">
           <div className="flex flex-col justify-between space-y-7">
             <p className="text-lg font-semibold">
-							Wil je het laatste nieuws en updates van het Blitz-team ontvangen? Meld je dan aan voor onze
-              nieuwsbrief!
+              Wil je het laatste nieuws en updates van het Blitz-team ontvangen? Meld je dan aan
+              voor onze nieuwsbrief!
             </p>
             <div className="pb-5 lg:pb-0">
               <NewsletterForm hasDarkMode={hasDarkMode} />
@@ -94,11 +94,7 @@ export function Footer({className, hasDarkMode}) {
                 </a>
               </Link>
               <br />
-<<<<<<< HEAD
-              Copyright &copy; 2021 Brandon Bayer en Blitz.js bijdragers
-=======
-              Copyright &copy; {new Date().getFullYear()} Brandon Bayer and Blitz.js Contributors
->>>>>>> affbcb446e54830637027fa261c3c38bcf983269
+              Copyright &copy; {new Date().getFullYear()} Brandon Bayer en Blitz.js bijdragers
             </div>
           </div>
         </div>

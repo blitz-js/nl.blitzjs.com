@@ -54,9 +54,9 @@ const Home = ({randomContributors}) => {
                     Het Fullstack React Framework
                   </h2>
                   <p className="text-lg xl:text-xl xl:font-medium text-off-white lg:text-transparent lg:bg-clip-text lg:bg-gradient-to-r lg:from-blue-gradient-white lg:to-blue-gradient-light-blue xl:w-4/5">
-                    Blitz is een framework dat geïnspireerd werd door Ruby on Rails,
-                    gebouwd is op Next.js en beschikt over een "Zero API" data
-                    layer abstractie die REST/GraphQL overbodig maakt.
+                    Blitz is een framework dat geïnspireerd werd door Ruby on Rails, gebouwd is op
+                    Next.js en beschikt over een "Zero API" data layer abstractie die REST/GraphQL
+                    overbodig maakt.
                   </p>
                   <div className="flex space-x-4">
                     <ButtonLink className="w-2/3 lg:w-auto rounded-tl-xl" href="/docs/get-started">
@@ -158,8 +158,8 @@ const Home = ({randomContributors}) => {
                     <Feature title="Losse opinies">
                       <p>
                         De out-of-the-box ervaring begeleidt je op een pad dat perfect is voor de
-                        meeste applicaties. Maar als je buiten de gebaande paden wilt treden, ben
-                        je volledig vrij om dat te doen.
+                        meeste applicaties. Maar als je buiten de gebaande paden wilt treden, ben je
+                        volledig vrij om dat te doen.
                       </p>
                       <p>
                         En bijna alles is pluggable. We bepalen bijvoorbeeld niet welke styling of
@@ -303,8 +303,7 @@ const Home = ({randomContributors}) => {
             <div className="absolute w-full h-full row-start-8 row-end-19 xl:row-end-19 -z-20 bg-purple-mid dark:bg-purple-off-black"></div>
             <div className="relative px-6 mx-auto my-6 space-y-12 text-white xl:my-0 max-w-7xl xl:space-y-36">
               <h2 className="text-3xl font-semibold lg:text-transparent lg:bg-clip-text lg:bg-gradient-to-r lg:from-blue-gradient-white lg:to-blue-gradient-light-blue xl:text-5xl">
-                Alles end-to-end van <br className="hidden xl:block" />
-                de database tot de frontend
+                Alles end-to-end van <br className="hidden xl:block" /> de database tot de frontend
               </h2>
               <div className="grid gap-12 md:grid-cols-2 xl:grid-cols-3">
                 <Hand
@@ -317,9 +316,9 @@ const Home = ({randomContributors}) => {
                   zoals Auth0.
                 </FeatureIconTitle>
                 <FeatureIconTitle icon="database" title="Database agnostisch">
-                  Je kan elke database gebruiken die je wilt. Prisma 2 is de standaard
-                  database client, maar je kan deze verwijderen en iets anders gebruiken, zoals Fauna
-                  of DynamoDB.
+                  Je kan elke database gebruiken die je wilt. Prisma 2 is de standaard database
+                  client, maar je kan deze verwijderen en iets anders gebruiken, zoals Fauna of
+                  DynamoDB.
                 </FeatureIconTitle>
                 <FeatureIconTitle icon="fileCode" title="Recipes">
                   Eén commando om code en/of packages in je Blitz app te installeren. Voorbeelden:
@@ -365,8 +364,8 @@ const Home = ({randomContributors}) => {
                 </h2>
                 <p className="text-lg xl:text-xl">
                   Jullie financiële bijdragen helpen ervoor te zorgen dat Blitz verder wordt
-                  ontwikkeld <br className="hidden lg:block" />
-                  en onderhouden! We hebben maandelijkse sponsoropties vanaf $5/maand.
+                  ontwikkeld <br className="hidden lg:block" /> en onderhouden! We hebben
+                  maandelijkse sponsoropties vanaf $5/maand.
                 </p>
                 <div>
                   <ButtonLink
@@ -447,7 +446,7 @@ const getStaticProps = async () => {
 Home.layoutProps = {
   meta: {
     title: "Blitz.js - Het Fullstack React Framework",
-    description: `Blitz is een hyperproductief fullstack React-framework dat is gebouwd op Next.js en een "Zero-API" datalaag heeft.`,
+    description: `Blitz is een hyperproductief fullstack React-framework dat is gebouwd op Next.js en beschikt over een "Zero-API" data layer.`,
   },
 }
 

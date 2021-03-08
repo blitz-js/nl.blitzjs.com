@@ -173,13 +173,8 @@ export function ContentsLayout({children, meta, tableOfContents: toc}) {
                   value={topic}
                   className="topic-select"
                   classNamePrefix="topic-select"
-<<<<<<< HEAD
-                  options={toc.map((option) => ({ value: option.slug, label: option.title }))}
-                  placeholder="Ga naar een onderwerp"
-=======
                   options={toc.map((option) => ({value: option.slug, label: option.title}))}
-                  placeholder="Jump to a Topic"
->>>>>>> affbcb446e54830637027fa261c3c38bcf983269
+                  placeholder="Ga naar een onderwerp"
                   onChange={(e) => {
                     if (e && e.value) {
                       const hash = e.value
