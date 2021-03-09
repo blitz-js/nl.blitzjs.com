@@ -5,23 +5,30 @@ sidebar_label: Tutorial
 
 In deze tutorial maken we samen een eenvoudige stemming-applicatie.
 
-We gaan ervan uit dat je [Blitz al hebt geïnstalleerd](./get-started). Je kan nakijken of Blitz al is geïnstalleerd, en over welke versie je beschikt door het volgende commando uit te voeren in je terminal:
+We gaan ervan uit dat je [Blitz al hebt geïnstalleerd](./get-started). Je
+kan nakijken of Blitz al is geïnstalleerd, en over welke versie je
+beschikt door het volgende commando uit te voeren in je terminal:
 
 ```sh
 blitz -v
 ```
 
-Als Blitz geïnstalleerd is, zou je de versie van je installatie te zien moeten krijgen. Als dat niet zo is, krijg je een foutmelding te zien zoals “command not found: blitz”.
+Als Blitz geïnstalleerd is, zou je de versie van je installatie te zien
+moeten krijgen. Als dat niet zo is, krijg je een foutmelding te zien zoals
+“command not found: blitz”.
 
 ## Een nieuwe applicatie maken {#creating-a-new-app}
 
-Vanuit de command line `cd` je in de map waar je je applicatie wil aanmaken en voer je het volgende commando uit:
+Vanuit de command line `cd` je in de map waar je je applicatie wil
+aanmaken en voer je het volgende commando uit:
 
 ```sh
 blitz new my-blitz-app
 ```
 
-Blitz maakt een `my-blitz-app` map aan in je huidige map. Je wordt gevraagd om een form library te kiezen. Selecteer voor deze tutorial de aanbevolen library `React Final Form`.
+Blitz maakt een `my-blitz-app` map aan in je huidige map. Je wordt
+gevraagd om een form library te kiezen. Selecteer voor deze tutorial de
+aanbevolen library `React Final Form`.
 
 Laten we kijken wat `blitz new` heeft aangemaakt:
 
@@ -91,25 +98,36 @@ my-blitz-app
 
 Deze bestanden zijn:
 
-- De `app/` map bevat het meeste van je project. Hier plaats je pagina's of API-routes.
+- De `app/` map bevat het meeste van je project. Hier plaats je pagina's
+  of API-routes.
 
-- De `app/pages/` map is de map met primaire pagina's. Als je Next.js hebt gebruikt, merk je meteen dat dit anders is. In Blitz kan je verschillende `pages` mappen hebben die op build time worden samengevoegd.
+- De `app/pages/` map is de map met primaire pagina's. Als je Next.js hebt
+  gebruikt, merk je meteen dat dit anders is. In Blitz kan je
+  verschillende `pages` mappen hebben die op build time worden
+  samengevoegd.
 
-- De `app/core/` map is de belangrijkste plaats om componenten, hooks, etc. op te slaan die doorheen je applicatie worden gebruikt.
+- De `app/core/` map is de belangrijkste plaats om componenten, hooks,
+  etc. op te slaan die doorheen je applicatie worden gebruikt.
 
-- `db/` is waar je databaseconfiguratie terecht komt. Als je modellen schrijft of migraties nakijkt, kan je hier terecht.
+- `db/` is waar je databaseconfiguratie terecht komt. Als je modellen
+  schrijft of migraties nakijkt, kan je hier terecht.
 
-- `public/` is een map waarin je alle statische assets plaatst. Als je afbeeldingen, bestanden of video's hebt die je in je applicatie wilt gebruiken, kun je ze hier zetten.
+- `public/` is een map waarin je alle statische assets plaatst. Als je
+  afbeeldingen, bestanden of video's hebt die je in je applicatie wilt
+  gebruiken, kun je ze hier zetten.
 
-- `.babelrc.js`, `.env`, etc. ("dotfiles") zijn configuratiebestanden voor verschillende stukken JavaScript tooling.
+- `.babelrc.js`, `.env`, etc. ("dotfiles") zijn configuratiebestanden voor
+  verschillende stukken JavaScript tooling.
 
-- `blitz.config.js` is voor geavanceerde aangepaste configuratie van Blitz. Het heeft hetzelfde formaat als `next.config.js`.
+- `blitz.config.js` is voor geavanceerde aangepaste configuratie van
+  Blitz. Het heeft hetzelfde formaat als `next.config.js`.
 
 - `tsconfig.json` is onze aanbevolen setup voor TypeScript.
 
 ## De ontwikkelingsserver {#the-development-server}
 
-Zorg ervoor dat je in de `my-blitz-app` map bent, als je dat nog niet hebt gedaan, en voer het volgende commando uit:
+Zorg ervoor dat je in de `my-blitz-app` map bent, als je dat nog niet hebt
+gedaan, en voer het volgende commando uit:
 
 ```sh
 blitz dev
@@ -128,19 +146,27 @@ info  - Using external babel configuration from /my-blitz-app/babel.config.js
 event - compiled successfully
 ```
 
-Nu de server draait, ga je via je webbrowser naar [localhost:3000](http://localhost:3000). Je ziet een welkomstpagina met het Blitz-logo. Het is gelukt!
+Nu de server draait, ga je via je webbrowser naar
+[localhost:3000](http://localhost:3000). Je ziet een welkomstpagina met
+het Blitz-logo. Het is gelukt!
 
 ## Registreer je als gebruiker {#sign-up-as-a-user}
 
-Blitz-apps worden gemaakt met gebruikersregistratie en login al ingesteld! Dus laten we eens proberen. Klik op de knop **Sign Up**. Voer een e-mailadres en wachtwoord in en klik op **Create Account**. Hierna word je teruggeleid naar de startpagina waar je de `id` en `role` van je gebruiker kan zien.
+Blitz-apps worden gemaakt met gebruikersregistratie en login al ingesteld!
+Dus laten we eens proberen. Klik op de knop **Sign Up**. Voer een
+e-mailadres en wachtwoord in en klik op **Create Account**. Hierna word je
+teruggeleid naar de startpagina waar je de `id` en `role` van je gebruiker
+kan zien.
 
-Als je wil, kan je ook proberen uitloggen en terug inloggen. Of klik op **Forgot your password?** op de loginpagina om die flow te proberen.
+Als je wil, kan je ook proberen uitloggen en terug inloggen. Of klik op
+**Forgot your password?** op de loginpagina om die flow te proberen.
 
 ## Schrijf je eerste pagina {#write-your-first-page}
 
 Nu gaan we onze eerste pagina maken.
 
-Open het bestand `app/pages/index.tsx` en vervang de inhoud van de `Home` component met dit:
+Open het bestand `app/pages/index.tsx` en vervang de inhoud van de `Home`
+component met dit:
 
 ```tsx
 //...
@@ -160,24 +186,41 @@ const Home: BlitzPage = () => {
 //...
 ```
 
-Als je het bestand opslaat, zou je de pagina moeten zien updaten in je browser. Je kan zoveel aanpassen als je wil. Als je klaar bent, ga je verder met het volgende deel.
+Als je het bestand opslaat, zou je de pagina moeten zien updaten in je
+browser. Je kan zoveel aanpassen als je wil. Als je klaar bent, ga je
+verder met het volgende deel.
 
 ## Database setup {#database-setup}
 
-Goed nieuws: er is al een SQLite database voor jou ingesteld! Je kan `blitz prisma studio` uitvoeren in de terminal om een web interface te openen waar je de data in je database kan bekijken.
+Goed nieuws: er is al een SQLite database voor jou ingesteld! Je kan
+`blitz prisma studio` uitvoeren in de terminal om een web interface te
+openen waar je de data in je database kan bekijken.
 
-Wanneer je je eerste echte project start, zal je een meer schaalbare database willen gebruiken zoals PostgreSQL, om te vermijden dat je onderweg van database moet veranderen. Voor meer informatie, bekijk [Database overzicht](database-overview). Voor nu gaan we verder met de standaard SQLite database.
+Wanneer je je eerste echte project start, zal je een meer schaalbare
+database willen gebruiken zoals PostgreSQL, om te vermijden dat je
+onderweg van database moet veranderen. Voor meer informatie, bekijk
+[Database overzicht](database-overview). Voor nu gaan we verder met de
+standaard SQLite database.
 
 ## Code voor onze modellen _scaffolden_ {#scaffolding-code-for-our-models}
 
-Blitz heeft een handig CLI commando genaamd [`generate`](./cli-generate) om boilerplate code te scaffolden. We zullen `generate` gebruiken om twee modellen aan te maken: `Question` en `Choice`. Een `Question` bevat de tekst van de vraag en een lijst met keuzes. Een `Choice` bevat de tekst van de keuze, het aantal stemmen, en een geassocieerde vraag. Blitz maakt voor beide modellen automatisch een id, een _aangemaakt_ timestamp en een _laatst bewerkt_ timestamp.
+Blitz heeft een handig CLI commando genaamd [`generate`](./cli-generate)
+om boilerplate code te scaffolden. We zullen `generate` gebruiken om twee
+modellen aan te maken: `Question` en `Choice`. Een `Question` bevat de
+tekst van de vraag en een lijst met keuzes. Een `Choice` bevat de tekst
+van de keuze, het aantal stemmen, en een geassocieerde vraag. Blitz maakt
+voor beide modellen automatisch een id, een _aangemaakt_ timestamp en een
+_laatst bewerkt_ timestamp.
 
 #### Eerst maken we alles voor het `Question` model:
 
 ```sh
 blitz generate all question text:string
 ```
-Druk op **Enter** als er wordt gevraagd om `prisma migrate` uit te voeren, die je databaseschema zal updaten met het nieuwe model. Er zal een naam worden gebraagd, dus typ iets zoals "add question".
+
+Druk op **Enter** als er wordt gevraagd om `prisma migrate` uit te voeren,
+die je databaseschema zal updaten met het nieuwe model. Er zal een naam
+worden gebraagd, dus typ iets zoals "add question".
 
 ```
 CREATE    app/pages/questions/[questionId].tsx
@@ -203,7 +246,6 @@ CREATE    app/questions/mutations/updateQuestion.ts
 ? Run 'prisma migrate dev' to update your database? (Y/n) › true
 ```
 
-
 ```
 Environment variables loaded from .env
 Prisma schema loaded from db/schema.prisma
@@ -221,15 +263,21 @@ migrations/
 Everything is now in sync.
 ```
 
-Het `generate` commando met type `all` genereert een model en query-, mutatie- en paginabestanden. Bekijk de [Blitz generate](./cli-generate) pagina voor een lijst van beschikbare type opties.
+Het `generate` commando met type `all` genereert een model en query-,
+mutatie- en paginabestanden. Bekijk de [Blitz generate](./cli-generate)
+pagina voor een lijst van beschikbare type opties.
 
 #### Vervolgens genereren we het `Choice` model met bijhorende query's en mutaties.
-We gebruiken dit keer als type `resource`, omdat we geen pagina's hoeven aan te maken voor het `Choice` model:
+
+We gebruiken dit keer als type `resource`, omdat we geen pagina's hoeven
+aan te maken voor het `Choice` model:
 
 ```sh
 blitz generate resource choice text votes:int:default=0 belongsTo:question
 ```
-Druk opnieuw op **Enter** als er wordt gevraagd om de migratie uit te voeren en geef een naam voor de migratie op.
+
+Druk opnieuw op **Enter** als er wordt gevraagd om de migratie uit te
+voeren en geef een naam voor de migratie op.
 
 ```
 CREATE    app/choices/queries/getChoice.ts
@@ -255,8 +303,8 @@ CREATE    app/choices/mutations/updateChoice.ts
 
 #### Laten we ten slotte het `Question` model updaten door een relatie toe te voegen met `Choice`.
 
-Open `db/schema.prisma` en voeg `choices Choice[]` toe aan het `Question` model.
-
+Open `db/schema.prisma` en voeg `choices Choice[]` toe aan het `Question`
+model.
 
 ```diff
 model Question {
@@ -268,11 +316,15 @@ model Question {
 }
 ```
 
-Voer dan `blitz prisma generate` uit om de Prisma client te updaten met het aangepaste schema. Er is geen database migratie nodig, omdat er geen echt veld wordt toegevoegd aan het `Question` model in de database.
+Voer dan `blitz prisma generate` uit om de Prisma client te updaten met
+het aangepaste schema. Er is geen database migratie nodig, omdat er geen
+echt veld wordt toegevoegd aan het `Question` model in de database.
 
 ## Spelen met de Prisma database client {#playing-with-the-prisma-database-client}
 
-Laten we nu eens in de interactieve Blitz shell springen en wat spelen met de Prisma database client die Blitz je aanbiedt. Om de Blitz console te starten, gebruik je dit commando:
+Laten we nu eens in de interactieve Blitz shell springen en wat spelen met
+de Prisma database client die Blitz je aanbiedt. Om de Blitz console te
+starten, gebruik je dit commando:
 
 ```sh
 blitz console
@@ -325,19 +377,24 @@ undefined
 
 ## Update de gegenereerde code voor de attributen van ons model {#update-generated-code-for-our-model-attributes}
 
+<!-- prettier-ignore-start -->
 :::info
 Voor we de app opnieuw runnen, moeten we wat van de code die gegenereerd is, aanpassen. Uiteindelijk zullen deze aanpassingen niet meer nodig zijn, maar voor nu moeten we nog rond een aantal openstaande problemen werken.
 :::
+<!-- prettier-ignore-end -->
 
-De gegenereerde paginainhoud maakt nog geen gebruik van de eigenlijke modelattributen die je tijdens de generatie hebt gedefinieerd. Dit komt eraan, maar voorlopig moeten we dit nog manueel oplossen.
-
+De gegenereerde paginainhoud maakt nog geen gebruik van de eigenlijke
+modelattributen die je tijdens de generatie hebt gedefinieerd. Dit komt
+eraan, maar voorlopig moeten we dit nog manueel oplossen.
 
 ### Vraag pagina's {#question-pages}
 
-[//]: # "Remove the following section once `generate` uses actual model attributes"
+[//]:
+  #
+  "Remove the following section once `generate` uses actual model attributes"
 
-
-Ga naar `app/pages/questions/index.tsx`. Merk op dat er een `QuestionsList` component gegenereerd is voor jou:
+Ga naar `app/pages/questions/index.tsx`. Merk op dat er een
+`QuestionsList` component gegenereerd is voor jou:
 
 ```tsx
 // app/pages/questions/index.tsx
@@ -345,14 +402,14 @@ Ga naar `app/pages/questions/index.tsx`. Merk op dat er een `QuestionsList` comp
 export const QuestionsList = () => {
   const router = useRouter()
   const page = Number(router.query.page) || 0
-  const [{ questions, hasMore }] = usePaginatedQuery(getQuestions, {
-    orderBy: { id: "asc" },
+  const [{questions, hasMore}] = usePaginatedQuery(getQuestions, {
+    orderBy: {id: "asc"},
     skip: ITEMS_PER_PAGE * page,
     take: ITEMS_PER_PAGE,
   })
 
-  const goToPreviousPage = () => router.push({ query: { page: page - 1 } })
-  const goToNextPage = () => router.push({ query: { page: page + 1 } })
+  const goToPreviousPage = () => router.push({query: {page: page - 1}})
+  const goToNextPage = () => router.push({query: {page: page + 1}})
 
   return (
     <div>
@@ -377,7 +434,9 @@ export const QuestionsList = () => {
 }
 ```
 
-Dit zal nog niet werken! Herinner je dat het `Question` model dat we gemaakt hebben geen `name` veld bevat. Om dit op te lossen, vervang je `question.name` door `question.text`:
+Dit zal nog niet werken! Herinner je dat het `Question` model dat we
+gemaakt hebben geen `name` veld bevat. Om dit op te lossen, vervang je
+`question.name` door `question.text`:
 
 ```diff
 // app/pages/questions/index.tsx
@@ -385,14 +444,14 @@ Dit zal nog niet werken! Herinner je dat het `Question` model dat we gemaakt heb
 export const QuestionsList = () => {
   const router = useRouter()
   const page = Number(router.query.page) || 0
-  const [{ questions, hasMore }] = usePaginatedQuery(getQuestions, {
-    orderBy: { id: "asc" },
+  const [{questions, hasMore}] = usePaginatedQuery(getQuestions, {
+    orderBy: {id: "asc"},
     skip: ITEMS_PER_PAGE * page,
     take: ITEMS_PER_PAGE,
   })
 
-  const goToPreviousPage = () => router.push({ query: { page: page - 1 } })
-  const goToNextPage = () => router.push({ query: { page: page + 1 } })
+  const goToPreviousPage = () => router.push({query: {page: page - 1}})
+  const goToNextPage = () => router.push({query: {page: page + 1}})
 
   return (
     <div>
@@ -418,10 +477,14 @@ export const QuestionsList = () => {
 }
 ```
 
-Laat ons nu een gelijkaardige aanpassing doen in `app/questions/components/QuestionForm.tsx`. In het formulier vervang je de `LabeledTextField` `name` property naar `"text"`.
+Laat ons nu een gelijkaardige aanpassing doen in
+`app/questions/components/QuestionForm.tsx`. In het formulier vervang je
+de `LabeledTextField` `name` property naar `"text"`.
 
 ```diff
-export function QuestionForm<S extends z.ZodType<any, any>>(props: FormProps<S>) {
+export function QuestionForm<S extends z.ZodType<any, any>>(
+  props: FormProps<S>,
+) {
   return (
     <Form<S> {...props}>
 -      <LabeledTextField name="name" label="Name" placeholder="Name" />
@@ -433,16 +496,17 @@ export function QuestionForm<S extends z.ZodType<any, any>>(props: FormProps<S>)
 
 ### `createQuestion` mutatie {#create-question-mutation}
 
-In `app/questions/mutations/createQuestion.ts` moeten we het `CreateQuestion` zod validatieschema veranderen zodat die `text` in plaats van `name` gebruikt.
+In `app/questions/mutations/createQuestion.ts` moeten we het
+`CreateQuestion` zod validatieschema veranderen zodat die `text` in plaats
+van `name` gebruikt.
 
-<!-- prettier-ignore -->
 ```diff
 // app/questions/mutations/createQuestion.ts
 
 const CreateQuestion = z
   .object({
--    name: z.string(),
-+    text: z.string(),
+-   name: z.string(),
++   text: z.string(),
   })
   .nonstrict()
 // ...
@@ -450,9 +514,10 @@ const CreateQuestion = z
 
 ### `updateQuestion` mutatie {#update-question-mutation}
 
-In `app/questions/mutations/updateQuestion.ts` moeten we het `UpdateQuestion` zod validatieschema veranderen zodat die `text` in plaats van `name` gebruikt.
+In `app/questions/mutations/updateQuestion.ts` moeten we het
+`UpdateQuestion` zod validatieschema veranderen zodat die `text` in plaats
+van `name` gebruikt.
 
-<!-- prettier-ignore -->
 ```diff
 // app/questions/mutations/updateQuestion.ts
 
@@ -466,51 +531,60 @@ const UpdateQuestion = z
 // ...
 ```
 
-
 ### `deleteQuestion` mutatie {#delete-question-mutation}
 
 [//]: # "Remove this section once Prisma supports cascading deletes"
 
-Prisma ondersteunt nog geen "cascading deletes". In de context van deze tutorial betekent dat dat de `Choice` data niet wordt verwijderd wanneerd de `Question` wordt verwijderd. We moeten tijdelijk de gegenereerde `deleteQuestion` mutatie uitbreiden om dit manueel te doen. Open `app/questions/mutations/deleteQuestion.ts` in je teksteditor en voeg het volgende toe bovenin de body van de functie:
+Prisma ondersteunt nog geen "cascading deletes". In de context van deze
+tutorial betekent dat dat de `Choice` data niet wordt verwijderd wanneerd
+de `Question` wordt verwijderd. We moeten tijdelijk de gegenereerde
+`deleteQuestion` mutatie uitbreiden om dit manueel te doen. Open
+`app/questions/mutations/deleteQuestion.ts` in je teksteditor en voeg het
+volgende toe bovenin de body van de functie:
 
 ```ts
-await db.choice.deleteMany({ where: { questionId: id } })
+await db.choice.deleteMany({where: {questionId: id}})
 ```
-
 
 Het eindresultaat zou er zo moeten uitzien:
 
-
-<!-- prettier-ignore -->
 ```diff
 // app/questions/mutations/deleteQuestion.ts
 
 export default resolver.pipe(
   resolver.zod(DeleteQuestion),
   resolver.authorize(),
-  async ({ id }) => {
-+   await db.choice.deleteMany({ where: { questionId: id } })
-    const question = await db.question.deleteMany({ where: { id } })
+  async ({id}) => {
++   await db.choice.deleteMany({where: {questionId: id}})
+    const question = await db.question.deleteMany({where: {id}})
 
     return question
-  }
+  },
 )
 ```
 
-Deze mutatie zal nu de keuzes geassocieerd met deze vraag verwijderen vooraleer de vraag zelf te verwijderen.
+Deze mutatie zal nu de keuzes geassocieerd met deze vraag verwijderen
+vooraleer de vraag zelf te verwijderen.
 
 #### Probeer nu vragen toe te voegen, te bewerken en te verwijderen
 
-Fantastisch! Zorg ervoor dat je app draait. Als dat niet het geval is, voer je `blitz dev` uit in je terminal en ga je naar `localhost:3000/questions`. Probeer vragen toe te voegen, te bewerken en te verwijderen.
+Fantastisch! Zorg ervoor dat je app draait. Als dat niet het geval is,
+voer je `blitz dev` uit in je terminal en ga je naar
+`localhost:3000/questions`. Probeer vragen toe te voegen, te bewerken en
+te verwijderen.
 
 ## Keuzes toevoegen aan het vraag-formulier {#adding-choices-to-the-question-form}
 
-Je bent al super goed bezig! Het volgende dat we gaan doen is keuzes toevoegen aan ons vraag-formulier. Open `app/questions/components/QuestionForm.tsx` in je editor.
+Je bent al super goed bezig! Het volgende dat we gaan doen is keuzes
+toevoegen aan ons vraag-formulier. Open
+`app/questions/components/QuestionForm.tsx` in je editor.
 
 Voeg drie extra `<LabeledTextField>` componenten toe als keuzes.
 
 ```diff
-export function QuestionForm<S extends z.ZodType<any, any>>(props: FormProps<S>) {
+export function QuestionForm<S extends z.ZodType<any, any>>(
+  props: FormProps<S>,
+) {
   return (
     <Form<S> {...props}>
       <LabeledTextField name="text" label="Tekst" placeholder="Tekst" />
@@ -522,13 +596,14 @@ export function QuestionForm<S extends z.ZodType<any, any>>(props: FormProps<S>)
 }
 ```
 
-Open daarna `app/pages/questions/new.tsx` en initialiseer `initialValues` als volgt:
+Open daarna `app/pages/questions/new.tsx` en initialiseer `initialValues`
+als volgt:
 
 ```diff
       <QuestionForm
         submitText="Create Question"
--        // initialValues={{ }}
-+        initialValues={{ choices: [] }}
+-       // initialValues={{ }}
++       initialValues={{choices: []}}
         onSubmit={async (values) => {
           try {
             const question = await createQuestionMutation(values)
@@ -543,17 +618,18 @@ Open daarna `app/pages/questions/new.tsx` en initialiseer `initialValues` als vo
       />
 ```
 
-Open nu `app/questions/mutations/createQuestion.ts` en update het zod schema zodat de data van de keuzes aanvaard wordt in de mutatie. We moeten ook nog de `db.question.create` call updaten zodat de keuzes ook worden aangemaakt.
+Open nu `app/questions/mutations/createQuestion.ts` en update het zod
+schema zodat de data van de keuzes aanvaard wordt in de mutatie. We moeten
+ook nog de `db.question.create` call updaten zodat de keuzes ook worden
+aangemaakt.
 
-
-<!-- prettier-ignore -->
 ```diff
-//app/questions/mutations/createQuestion.ts
+// app/questions/mutations/createQuestion.ts
 
 const CreateQuestion = z
   .object({
     text: z.string(),
-+   choices: z.array(z.object({ text: z.string() })),
++   choices: z.array(z.object({text: z.string()})),
   })
   .nonstrict()
 
@@ -561,29 +637,33 @@ export default resolver.pipe(
   resolver.zod(CreateQuestion),
   resolver.authorize(),
   async (input) => {
--   const question = await db.question.create({ data: input })
+-   const question = await db.question.create({data: input})
 +   const question = await db.question.create({
-+      data: {
++     data: {
 +       ...input,
-+       choices: { create: input.choices },
++       choices: {create: input.choices},
 +     },
 +   })
 
     return question
-  }
+  },
 )
 ```
 
 #### Probeer het uit
 
-Nu kan je naar `localhost:3000/questions/new` gaan en een nieuwe vraag maken met keuzes!
-
+Nu kan je naar `localhost:3000/questions/new` gaan en een nieuwe vraag
+maken met keuzes!
 
 ## Keuzes oplijsten {#listing-choices}
 
-Even op adem komen. Ga terug naar `localhost:3000/questions` in je browser en bekijk alle vragen die hebt gemaakt. Wat als we de keuzes voor deze vragen hier ook tonen? Eerst moeten we de query's voor de vragen aanpassen. In Prisma moet je de client expliciet laten weten dat je geneste relaties mee in je query wil opnemen. Pas je `getQuestion.ts` en `getQuestions.ts` bestanden aan als volgt:
+Even op adem komen. Ga terug naar `localhost:3000/questions` in je browser
+en bekijk alle vragen die hebt gemaakt. Wat als we de keuzes voor deze
+vragen hier ook tonen? Eerst moeten we de query's voor de vragen
+aanpassen. In Prisma moet je de client expliciet laten weten dat je
+geneste relaties mee in je query wil opnemen. Pas je `getQuestion.ts` en
+`getQuestions.ts` bestanden aan als volgt:
 
-<!-- prettier-ignore -->
 ```diff
 // app/questions/queries/getQuestion.ts
 
@@ -595,34 +675,43 @@ const GetQuestion = z.object({
 export default resolver.pipe(
   resolver.zod(GetQuestion),
   resolver.authorize(),
-  async ({ id }) => {
--   const question = await db.question.findFirst({ where: { id } })
-+   const question = await db.question.findFirst({ where: { id }, include: {choices: true} })
+  async ({id}) => {
+-   const question = await db.question.findFirst({where: {id}})
++   const question = await db.question.findFirst({
++     where: {id},
++     include: {choices: true},
++   })
 
     if (!question) throw new NotFoundError()
 
     return question
-  }
+  },
 )
 ```
 
-<!-- prettier-ignore -->
 ```diff
 // app/questions/queries/getQuestions.ts
 
 interface GetQuestionsInput
-  extends Pick<Prisma.QuestionFindManyArgs, "where" | "orderBy" | "skip" | "take"> {}
+  extends Pick<
+    Prisma.QuestionFindManyArgs,
+    "where" | "orderBy" | "skip" | "take"
+  > {}
 
 export default resolver.pipe(
   resolver.authorize(),
-  async ({ where, orderBy, skip = 0, take = 100 }: GetQuestionsInput) => {
-    const { items: questions, hasMore, nextPage, count } = await paginate({
+  async ({where, orderBy, skip = 0, take = 100}: GetQuestionsInput) => {
+    const {items: questions, hasMore, nextPage, count} = await paginate({
       skip,
       take,
-      count: () => db.question.count({ where }),
+      count: () => db.question.count({where}),
       query: (paginateArgs) =>
--       db.question.findMany({ ...paginateArgs, where, orderBy }),
-+       db.question.findMany({ ...paginateArgs, where, orderBy, include: {choices: true} }),
+        db.question.findMany({
+          ...paginateArgs,
+          where,
+          orderBy,
++         include: {choices: true},
+        }),
     })
 
     return {
@@ -631,11 +720,14 @@ export default resolver.pipe(
       hasMore,
       count,
     }
-  }
+  },
 )
 ```
 
-Nu springen we terug naar onze hoofdpagina met vragen (`app/pages/questions/index.tsx`) in de editor, en we lijsten de keuzes bij elke vraag op. Voeg deze code toe onder het `Link` element in onze `QuestionsList`:
+Nu springen we terug naar onze hoofdpagina met vragen
+(`app/pages/questions/index.tsx`) in de editor, en we lijsten de keuzes
+bij elke vraag op. Voeg deze code toe onder het `Link` element in onze
+`QuestionsList`:
 
 ```diff
 // app/pages/questions/index.tsx
@@ -662,11 +754,14 @@ Bekijk nu `/questions` in je browser. **Magie!**
 
 ## Laat mensen stemmen op deze vragen! {#let-people-vote-on-questions}
 
-Open `app/pages/questions/[questionId].tsx` in je editor. Eerst gaan we de pagina wat verbeteren.
+Open `app/pages/questions/[questionId].tsx` in je editor. Eerst gaan we de
+pagina wat verbeteren.
 
-1. Vervang `<h1>Question {question.id}</h1>` door `<h1>{question.text}</h1>`.
+1. Vervang `<h1>Question {question.id}</h1>` door
+   `<h1>{question.text}</h1>`.
 
-2. Verwijder het `pre` element en kopiëer hier onze keuzelijst die we hiervoor hebben gemaakt:
+2. Verwijder het `pre` element en kopiëer hier onze keuzelijst die we
+   hiervoor hebben gemaakt:
 
 ```tsx
 <ul>
@@ -678,7 +773,8 @@ Open `app/pages/questions/[questionId].tsx` in je editor. Eerst gaan we de pagin
 </ul>
 ```
 
-Als je teruggaat naar je browser, zou je pagina er nu ongeveer zo moeten uitzien!
+Als je teruggaat naar je browser, zou je pagina er nu ongeveer zo moeten
+uitzien!
 
 <img
   width="567"
@@ -688,8 +784,8 @@ Als je teruggaat naar je browser, zou je pagina er nu ongeveer zo moeten uitzien
 
 #### Nu is het tijd om stemmen toe te voegen!
 
-Eerst openen we `app/choices/mutations/updateChoice.ts`, updaten het zod schema en voegen een verhoger voor het aantal stemmen toe.
-
+Eerst openen we `app/choices/mutations/updateChoice.ts`, updaten het zod
+schema en voegen een verhoger voor het aantal stemmen toe.
 
 ```diff
 const UpdateChoice = z
@@ -702,16 +798,20 @@ const UpdateChoice = z
 export default resolver.pipe(
   resolver.zod(UpdateChoice),
   resolver.authorize(),
-  async ({ id, ...data }) => {
--   const choice = await db.choice.update({ where: { id }, data })
-+   const choice = await db.choice.update({ where: { id }, data: {votes: {increment: 1}} })
+  async ({id, ...data}) => {
+-   const choice = await db.choice.update({where: {id}, data})
++   const choice = await db.choice.update({
++     where: {id},
++     data: {votes: {increment: 1}},
++   })
 
     return choice
-  }
+  },
 )
 ```
 
-Ga nu terug naar `app/pages/questions/[questionId].tsx` en verander het volgende:
+Ga nu terug naar `app/pages/questions/[questionId].tsx` en verander het
+volgende:
 
 Voeg in onze `li` een `button` toe als volgt:
 
@@ -722,7 +822,8 @@ Voeg in onze `li` een `button` toe als volgt:
 </li>
 ```
 
-Importeer vervolgens de `updateChoice` mutatie die we hebben aangepast en creëer een `handleVote` functie in onze pagina:
+Importeer vervolgens de `updateChoice` mutatie die we hebben aangepast en
+creëer een `handleVote` functie in onze pagina:
 
 ```diff
 // app/pages/questions/[questionId].tsx
@@ -734,8 +835,8 @@ export const Question = () => {
   const router = useRouter()
   const questionId = useParam("questionId", "number")
   const [deleteQuestionMutation] = useMutation(deleteQuestion)
-  const [question] = useQuery(getQuestion, { id: questionId })
-+  const [updateChoiceMutation] = useMutation(updateChoice)
+  const [question] = useQuery(getQuestion, {id: questionId})
++ const [updateChoiceMutation] = useMutation(updateChoice)
 +
 +  const handleVote = async (id: number) => {
 +    try {
@@ -749,15 +850,15 @@ export const Question = () => {
   return (
 ```
 
-Daarna moeten we de `useQuery` call van de vraag updaten zodat die de `refetch` functie teruggeeft die we gebruiken binnen `handleVote`:
-
+Daarna moeten we de `useQuery` call van de vraag updaten zodat die de
+`refetch` functie teruggeeft die we gebruiken binnen `handleVote`:
 
 ```diff
 // app/pages/questions/[questionId].tsx
 
 //...
--  const [question] = useQuery(getQuestion, { id: questionId })
-+  const [question, {refetch}] = useQuery(getQuestion, { id: questionId })
+- const [question] = useQuery(getQuestion, {id: questionId})
++ const [question, {refetch}] = useQuery(getQuestion, {id: questionId})
 //...
 ```
 
@@ -774,15 +875,18 @@ export const Question = () => {
   const router = useRouter()
   const questionId = useParam("questionId", "number")
   const [deleteQuestionMutation] = useMutation(deleteQuestion)
-  const [question, { refetch }] = useQuery(getQuestion, { id: questionId })
+  const [question, {refetch}] = useQuery(getQuestion, {id: questionId})
   const [updateChoiceMutation] = useMutation(updateChoice)
 
   const handleVote = async (id: number) => {
     try {
-      await updateChoiceMutation({ id })
+      await updateChoiceMutation({id})
       refetch()
     } catch (error) {
-      alert("Fout bij het updaten van de keuze " + JSON.stringify(error, null, 2))
+      alert(
+        "Fout bij het updaten van de keuze " +
+          JSON.stringify(error, null, 2),
+      )
     }
   }
 
@@ -811,11 +915,11 @@ export const Question = () => {
           type="button"
           onClick={async () => {
             if (window.confirm("This will be deleted")) {
-              await deleteQuestionMutation({ id: question.id })
+              await deleteQuestionMutation({id: question.id})
               router.push("/questions")
             }
           }}
-          style={{ marginLeft: "0.5rem" }}
+          style={{marginLeft: "0.5rem"}}
         >
           Delete
         </button>
@@ -827,13 +931,15 @@ export const Question = () => {
 
 ## Leten we tot slot het bewerken van keuzes voor bestaande vragen mogelijk maken {#edit-choices-for-question}
 
-Als je op de **Edit** knop klikt bij één van je bestaande vragen, zie je dat die hetzelfde formulier gebruikt als bij het aanmaken van vragen. Dat is dus al in orde! We hoeven enkel onze mutatie nog aan te passen.
+Als je op de **Edit** knop klikt bij één van je bestaande vragen, zie je
+dat die hetzelfde formulier gebruikt als bij het aanmaken van vragen. Dat
+is dus al in orde! We hoeven enkel onze mutatie nog aan te passen.
 
 Open `app/questions/mutations/updateQuestion.ts` en verander het volgende:
 
 ```diff
-//app/questions/mutations/updateQuestion.ts
-import { resolver } from "blitz"
+// app/questions/mutations/updateQuestion.ts
+import {resolver} from "blitz"
 import db from "db"
 import * as z from "zod"
 
@@ -841,17 +947,19 @@ const UpdateQuestion = z
   .object({
     id: z.number(),
     text: z.string(),
-+   choices: z.array(z.object({ id: z.number().optional(), text: z.string() }).nonstrict()),
++   choices: z.array(
++     z.object({id: z.number().optional(), text: z.string()}).nonstrict(),
++   ),
   })
   .nonstrict()
 
 export default resolver.pipe(
   resolver.zod(UpdateQuestion),
   resolver.authorize(),
-  async ({ id, ...data }) => {
--   const question = await db.question.update({ where: { id }, data })
+  async ({id, ...data}) => {
+-   const question = await db.question.update({where: {id}, data})
 +   const question = await db.question.update({
-+     where: { id },
++     where: {id},
 +     data: {
 +       ...data,
 +       choices: {
@@ -866,20 +974,31 @@ export default resolver.pipe(
 +   })
 
     return question
-  }
+  },
 )
 ```
 
-[`upsert`](https://www.prisma.io/docs/reference/api-reference/prisma-client-reference#upsert) is een speciale operatie die betekent: "Als dit item bestaat, update het dan. Zo niet, maak het dan aan". Dat is perfect in dit geval, want we hebben de gebruiker niet verplicht om drie keuzes toe voegen bij het maken van de vraag. Dus als de gebruiker later nog een keuze toevoegt door de vraag te bewerken, zal het die hier worden aangemaakt.
+[`upsert`](https://www.prisma.io/docs/reference/api-reference/prisma-client-reference#upsert)
+is een speciale operatie die betekent: "Als dit item bestaat, update het
+dan. Zo niet, maak het dan aan". Dat is perfect in dit geval, want we
+hebben de gebruiker niet verplicht om drie keuzes toe voegen bij het maken
+van de vraag. Dus als de gebruiker later nog een keuze toevoegt door de
+vraag te bewerken, zal het die hier worden aangemaakt.
 
 ## Conclusie {#conclusion}
 
-🥳 Proficiat! Je hebt je eigen Blitz app gemaakt! Speel er gerust wat mee, of deel het met je vrienden. Nu je deze tutorial hebt afgewerkt, waarom probeer je je stemming-app niet nog beter te maken? Je zou kunnen proberen:
+🥳 Proficiat! Je hebt je eigen Blitz app gemaakt! Speel er gerust wat mee,
+of deel het met je vrienden. Nu je deze tutorial hebt afgewerkt, waarom
+probeer je je stemming-app niet nog beter te maken? Je zou kunnen
+proberen:
 
-- Styling toevoegen (Hint: probeer `blitz install tailwind` of `blitz install chakra-ui`)
+- Styling toevoegen (Hint: probeer `blitz install tailwind` of
+  `blitz install chakra-ui`)
 - Meer statistieken over de stemmen laten zien
 - Live uitrollen op [Render](./deploy-render) of [Vercel](./deploy-vercel)
 
-Als je je project wil delen met de wereldwijde Blitz community, dan is er geen betere plek om dat te doen dan op Discord.
+Als je je project wil delen met de wereldwijde Blitz community, dan is er
+geen betere plek om dat te doen dan op Discord.
 
-Ga naar [discord.blitzjs.com](https://discord.blitzjs.com). Post hier je link in het **#built-with-blitz** kanaal om het met iedereen te delen!
+Ga naar [discord.blitzjs.com](https://discord.blitzjs.com). Post hier je
+link in het **#built-with-blitz** kanaal om het met iedereen te delen!

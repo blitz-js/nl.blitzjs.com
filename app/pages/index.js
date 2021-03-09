@@ -1,21 +1,23 @@
-import { Link, Image } from "blitz"
-import { Header } from "@/components/Header"
-import { ButtonLink } from "@/components/ButtonLink"
-import { HeroCode } from "@/components/home/HeroCode"
-import { VideoPlayer } from "@/components/home/VideoPlayer"
-import { Octokit } from "@octokit/rest"
-import { Feature } from "@/components/home/Feature"
-import { FeatureIcon } from "@/components/home/FeatureIcon"
-import { FeatureIconTitle } from "@/components/home/FeatureIconTitle"
-import { Footer } from "@/components/home/Footer"
-import { StyledLink } from "@/components/home/StyledLink"
-import { Hand } from "@/components/home/Hand"
-import Scrollbar from "@/components/Scrollbar"
-import { useState, useEffect } from "react"
-import { SocialCards } from "../components/SocialCards"
-import { SponsorPack } from "../components/SponsorPack"
+import {Octokit} from "@octokit/rest"
+import {Image, Link} from "blitz"
+import {useEffect, useState} from "react"
 
-const Home = ({ randomContributors }) => {
+import {ButtonLink} from "@/components/ButtonLink"
+import {Header} from "@/components/Header"
+import {Feature} from "@/components/home/Feature"
+import {FeatureIcon} from "@/components/home/FeatureIcon"
+import {FeatureIconTitle} from "@/components/home/FeatureIconTitle"
+import {Footer} from "@/components/home/Footer"
+import {Hand} from "@/components/home/Hand"
+import {HeroCode} from "@/components/home/HeroCode"
+import {StyledLink} from "@/components/home/StyledLink"
+import {VideoPlayer} from "@/components/home/VideoPlayer"
+import Scrollbar from "@/components/Scrollbar"
+import {SocialCards} from "@/components/SocialCards"
+import {SponsorPack} from "@/components/SponsorPack"
+import {getGitHubFile} from "@/utils/getGitHubFile"
+
+const Home = ({randomContributors}) => {
   const [navIsOpen, setNavIsOpen] = useState(false)
 
   useEffect(() => {
@@ -52,9 +54,9 @@ const Home = ({ randomContributors }) => {
                     Het Fullstack React Framework
                   </h2>
                   <p className="text-lg xl:text-xl xl:font-medium text-off-white lg:text-transparent lg:bg-clip-text lg:bg-gradient-to-r lg:from-blue-gradient-white lg:to-blue-gradient-light-blue xl:w-4/5">
-                    Blitz is een framework dat geïnspireerd werd door Ruby on Rails,
-                    gebouwd is op Next.js en beschikt over een "Zero API" data
-                    layer abstractie die REST/GraphQL overbodig maakt.
+                    Blitz is een framework dat geïnspireerd werd door Ruby on Rails, gebouwd is op
+                    Next.js en beschikt over een "Zero API" data layer abstractie die REST/GraphQL
+                    overbodig maakt.
                   </p>
                   <div className="flex space-x-4">
                     <ButtonLink className="w-2/3 lg:w-auto rounded-tl-xl" href="/docs/get-started">
@@ -77,16 +79,16 @@ const Home = ({ randomContributors }) => {
                   <Hand
                     variant="hero-righthand"
                     className="z-20 hidden lg:block -left-4"
-                    style={{ top: "15.2rem" }}
+                    style={{top: "15.2rem"}}
                   />
                   <Hand
                     variant="hero-leftarm"
                     className="hidden lg:block"
-                    style={{ top: "30rem", right: "-4.8rem" }}
+                    style={{top: "30rem", right: "-4.8rem"}}
                   />
                   <Hand
                     variant="hero-lefthand"
-                    style={{ top: "26.6rem", right: "-2.2em" }}
+                    style={{top: "26.6rem", right: "-2.2em"}}
                     className="z-20 hidden lg:block"
                   />
                   <HeroCode className="z-10" />
@@ -156,8 +158,8 @@ const Home = ({ randomContributors }) => {
                     <Feature title="Losse opinies">
                       <p>
                         De out-of-the-box ervaring begeleidt je op een pad dat perfect is voor de
-                        meeste applicaties. Maar als je buiten de gebaande paden wilt treden, ben
-                        je volledig vrij om dat te doen.
+                        meeste applicaties. Maar als je buiten de gebaande paden wilt treden, ben je
+                        volledig vrij om dat te doen.
                       </p>
                       <p>
                         En bijna alles is pluggable. We bepalen bijvoorbeeld niet welke styling of
@@ -198,7 +200,7 @@ const Home = ({ randomContributors }) => {
                 Blitz CodeSandbox voorbeeld
               </h3>
               <div>
-                <Hand variant="sandbox-right" style={{ right: "-13.2rem", bottom: "-35rem" }} />
+                <Hand variant="sandbox-right" style={{right: "-13.2rem", bottom: "-35rem"}} />
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
@@ -219,17 +221,17 @@ const Home = ({ randomContributors }) => {
                   De Blitz Community - Ons belangrijkste aspect
                 </h2>
                 <div className="z-10 grid grid-cols-5 gap-1 md:grid-cols-6 lg:grid-cols-5 grid-rows-8 overflow-clip">
-                  {randomContributors.map((contributor) => (
+                  {randomContributors.map((contributor, i) => (
                     <a
                       href={`https://github.com/${contributor.login}`}
-                      key={contributor.id}
+                      key={i}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <img
                         src={contributor.avatar_url}
-                        alt={contributor.login}
-                        title={contributor.login}
+                        alt={contributor.name}
+                        title={contributor.name}
                         className="w-full"
                       />
                     </a>
@@ -289,7 +291,7 @@ const Home = ({ randomContributors }) => {
               </h2>
               <div className="w-full">
                 <Scrollbar className="lg:hidden" thumbHeight="4px" thumbColor="white">
-                  <div className="px-6 architecture-diagram" style={{ paddingBottom: "2px" }}>
+                  <div className="px-6 architecture-diagram" style={{paddingBottom: "2px"}}>
                     <img src="img/architecture.svg" alt="Architecture diagram" />
                   </div>
                 </Scrollbar>
@@ -301,8 +303,7 @@ const Home = ({ randomContributors }) => {
             <div className="absolute w-full h-full row-start-8 row-end-19 xl:row-end-19 -z-20 bg-purple-mid dark:bg-purple-off-black"></div>
             <div className="relative px-6 mx-auto my-6 space-y-12 text-white xl:my-0 max-w-7xl xl:space-y-36">
               <h2 className="text-3xl font-semibold lg:text-transparent lg:bg-clip-text lg:bg-gradient-to-r lg:from-blue-gradient-white lg:to-blue-gradient-light-blue xl:text-5xl">
-                Alles end-to-end van <br className="hidden xl:block" />
-                de database tot de frontend
+                Alles end-to-end van <br className="hidden xl:block" /> de database tot de frontend
               </h2>
               <div className="grid gap-12 md:grid-cols-2 xl:grid-cols-3">
                 <Hand
@@ -315,9 +316,9 @@ const Home = ({ randomContributors }) => {
                   zoals Auth0.
                 </FeatureIconTitle>
                 <FeatureIconTitle icon="database" title="Database agnostisch">
-                  Je kan elke database gebruiken die je wilt. Prisma 2 is de standaard
-                  database client, maar je kan deze verwijderen en iets anders gebruiken, zoals Fauna
-                  of DynamoDB.
+                  Je kan elke database gebruiken die je wilt. Prisma 2 is de standaard database
+                  client, maar je kan deze verwijderen en iets anders gebruiken, zoals Fauna of
+                  DynamoDB.
                 </FeatureIconTitle>
                 <FeatureIconTitle icon="fileCode" title="Recipes">
                   Eén commando om code en/of packages in je Blitz app te installeren. Voorbeelden:
@@ -348,7 +349,7 @@ const Home = ({ randomContributors }) => {
               <Hand
                 variant="sponsors-squiggle"
                 className="-right-24 xl:hidden"
-                style={{ top: "-5.3rem" }}
+                style={{top: "-5.3rem"}}
               />
             </div>
             <div className="px-6 mx-auto text-center max-w-7xl ">
@@ -357,14 +358,14 @@ const Home = ({ randomContributors }) => {
                   <Hand
                     variant="sponsors-left"
                     className="hidden xl:block -left-80 pointer-events-none"
-                    style={{ top: "-18.05rem" }}
+                    style={{top: "-18.05rem"}}
                   />
                   Onze sponsors
                 </h2>
                 <p className="text-lg xl:text-xl">
                   Jullie financiële bijdragen helpen ervoor te zorgen dat Blitz verder wordt
-                  ontwikkeld <br className="hidden lg:block" />
-                  en onderhouden! We hebben maandelijkse sponsoropties vanaf $5/maand.
+                  ontwikkeld <br className="hidden lg:block" /> en onderhouden! We hebben
+                  maandelijkse sponsoropties vanaf $5/maand.
                 </p>
                 <div>
                   <ButtonLink
@@ -420,15 +421,13 @@ const getStaticProps = async () => {
     auth: process.env.GITHUB_AUTH_TOKEN,
   })
 
-  let contributors = []
-
-  for await (const response of octokit.paginate.iterator(octokit.repos.listContributors, {
+  const {contributors} = await getGitHubFile({
+    octokit,
     owner: "blitz-js",
     repo: "blitz",
-    per_page: 100,
-  })) {
-    contributors.push(...response.data)
-  }
+    path: ".all-contributorsrc",
+    json: true,
+  })
 
   let randomIndexes = []
   while (randomIndexes.length < MAX_CONTRIBUTORS) {
@@ -439,7 +438,7 @@ const getStaticProps = async () => {
   let randomContributors = randomIndexes.map((i) => contributors[i])
 
   return {
-    props: { randomContributors },
+    props: {randomContributors},
     revalidate: 60 * 30, // 30 minutes
   }
 }
@@ -447,9 +446,9 @@ const getStaticProps = async () => {
 Home.layoutProps = {
   meta: {
     title: "Blitz.js - Het Fullstack React Framework",
-    description: `Blitz is een hyperproductief fullstack React-framework dat is gebouwd op Next.js en een "Zero-API" datalaag heeft.`,
+    description: `Blitz is een hyperproductief fullstack React-framework dat is gebouwd op Next.js en beschikt over een "Zero-API" data layer.`,
   },
 }
 
 export default Home
-export { getStaticProps }
+export {getStaticProps}
