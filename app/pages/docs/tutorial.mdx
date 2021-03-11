@@ -202,7 +202,7 @@ onderweg van database moet veranderen. Voor meer informatie, bekijk
 [Database overzicht](database-overview). Voor nu gaan we verder met de
 standaard SQLite database.
 
-## Code voor onze modellen _scaffolden_ {#scaffolding-code-for-our-models}
+## Code voor onze modellen scaffolden {#scaffolding-code-for-our-models}
 
 Blitz heeft een handig CLI commando genaamd [`generate`](./cli-generate)
 om boilerplate code te scaffolden. We zullen `generate` gebruiken om twee
@@ -733,20 +733,22 @@ bij elke vraag op. Voeg deze code toe onder het `Link` element in onze
 // app/pages/questions/index.tsx
 
 // ...
-    {questions.map((question) => (
-      <li key={question.id}>
-        <Link href={`/questions/${question.id}`}>
-          <a>{question.text}</a>
-        </Link>
-+       <ul>
-+          {question.choices.map((choice) => (
-+            <li key={choice.id}>
-+              {choice.text} - {choice.votes} stemmen
-+            </li>
-+          ))}
-+       </ul>
-      </li>
-    ))}
+{
+  questions.map((question) => (
+    <li key={question.id}>
+      <Link href={`/questions/${question.id}`}>
+        <a>{question.text}</a>
+      </Link>
++     <ul>
++       {question.choices.map((choice) => (
++         <li key={choice.id}>
++           {choice.text} - {choice.votes} stemmen
++         </li>
++       ))}
++     </ul>
+    </li>
+  ))
+}
 // ...
 ```
 
@@ -838,14 +840,14 @@ export const Question = () => {
   const [question] = useQuery(getQuestion, {id: questionId})
 + const [updateChoiceMutation] = useMutation(updateChoice)
 +
-+  const handleVote = async (id: number) => {
-+    try {
-+      await updateChoiceMutation({ id })
-+      refetch()
-+    } catch (error) {
-+      alert("Fout bij het updaten van de keuze " + JSON.stringify(error, null, 2))
-+    }
-+  }
++ const handleVote = async (id: number) => {
++   try {
++     await updateChoiceMutation({id})
++     refetch()
++   } catch (error) {
++     alert("Fout bij het updaten van de keuze " + JSON.stringify(error, null, 2))
++   }
++ }
 
   return (
 ```
