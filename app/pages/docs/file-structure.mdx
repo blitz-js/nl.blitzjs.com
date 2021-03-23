@@ -4,7 +4,7 @@ title: Bestandsstructuur
 sidebar_label: Bestandsstructuur
 ---
 
-#### Leidende beginselen
+#### Leidende principes
 
 1. Bestanden die samen veranderen, zouden bij elkaar moeten staan.
 2. Minimale eisen, maximale flexibiliteit
@@ -97,8 +97,8 @@ Bevat alle core applicatiecode.
   - Alle andere mappen zoals `components/` en `hooks/` gaan in één van de bovenstaande domain context mappen.
 - Speciale mapnamen
   - Kunnen op elk niveau van de hiërarchie binnen `app` bestaan.
-  - `pages/` weergeeft een React component op een URL. Volgt dezelfde semantiek als de Next.js `pages/api/` map.
-  - `api/` geeft een Node.js request handler vrij op de URL. Volgt dezelfde semantiek als de Next.js `pages/api/` map.
+  - `pages/` stelt een React component ter beschikking op een URL. Volgt dezelfde semantiek als de Next.js `pages/api/` map.
+	- `api/` stelt een Node.js request handler ter beschikking op een URL. Volgt dezelfde semantiek als de Next.js `pages/api/` map.
   - `queries/` en `mutations/` zijn voor je Blitz queries en mutations. Elke query en mutation wordt gekoppeld aan een URL die overeenkomt met het bestandspad.
 
 #### `db`
@@ -111,7 +111,7 @@ Bevat integratiecode van derden. Bijvoorbeeld: `auth0.js`, `twilio.js`, etc. Dez
 
 #### `pages`
 
-De `pages` map op het hoogste niveau map en alle geneste `pages` mappen binnen `app` worden samengevoegd op build time. De build zal mislukken als dezelfde route op twee plaatsen is gedefinieerd.
+De `pages` map op het hoogste niveau en alle geneste `pages` mappen binnen `app` worden samengevoegd op build time. De build zal mislukken als dezelfde route op twee plaatsen is gedefinieerd.
 
 - De `pages` map op het hoogste niveau is optioneel.
 - Heeft dezelfde semantiek als de Next.js `pages` map. Alle bestanden hierin worden gekoppeld aan een URL die overeenkomt met hun bestandspaden.
@@ -126,7 +126,7 @@ En net zoals de `pages` map, worden de `api` map op het hoogste niveau en alle g
 
 #### `public`
 
-Alle bestanden in deze map worden statisch geserveerd vanuit de root URL van je app.
+Alle bestanden in deze map worden statisch geserved vanuit de root URL van je app.
 
 #### `blitz.config.js`
 

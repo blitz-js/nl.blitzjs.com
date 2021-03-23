@@ -100,8 +100,8 @@ try {
 
 Als een externe link verwijst naar een artikel in een referentie zoals [MDN] of [Wikipedia], en er bestaat een versie van dat artikel in het Nederlands van degelijke kwaliteit, overweeg dan om in de plaats naar die versie te linken.
 
-[mdn]: https://developer.mozilla.org/en-US/
-[wikipedia]: https://en.wikipedia.org/wiki/Main_Page
+[MDN]: https://developer.mozilla.org/en-US/
+[Wikipedia]: https://en.wikipedia.org/wiki/Main_Page
 
 Voorbeeld:
 
@@ -144,7 +144,7 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 | community              | _community_                                 |
 | components             | componenten                                 |
 | configuration          | configuratie                                |
-| convension             | conventie                                   |
+| convention             | conventie                                   |
 | data layer             | _data layer_                                |
 | database               | _database_                                  |
 | defaults               | standaardinstellingen / -waarden            |
@@ -203,7 +203,7 @@ Om overal de juiste verwijzingen naar pagina's te hebben, vind je hieronder de N
 | Get Started                   | Aan de slag                         |
 | How the Community Operates    | Hoe de community werkt              |
 | Tradeoffs                     | Overwegingen                        |
-| What is Next.js?              | What is Next.js                     |
+| What is Next.js?              | Wat is Next.js                     |
 | Free Stickers                 | Gratis stickers                     |
 | Why Blitz instead of Next.js? | Waarom Blitz in plaats van Next.js? |
 | File Structure                | Bestandsstructuur                   |
