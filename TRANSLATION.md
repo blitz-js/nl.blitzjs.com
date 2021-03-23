@@ -37,10 +37,11 @@ Hierdoor zal bovenstaande link niet meer werken.
 Laat tekst in codeblokken onvertaald, behalve voor commentaar. Je kan eventueel tekst in strings vertalen, maar let op dat je geen strings vertaalt die naar code verwijzen!
 
 Voorbeeld:
+
 ```js
 // Example
 try {
-  const product = await updateProjectMutation({ name: 'Cool Shoes' })
+  const product = await updateProjectMutation({name: "Cool Shoes"})
   setQueryData(product)
 } catch (error) {
   alert("Error saving product")
@@ -52,7 +53,7 @@ try {
 ```js
 // Voorbeeld
 try {
-  const product = await updateProductMutation({ name: 'Cool Shoes' })
+  const product = await updateProductMutation({name: "Cool Shoes"})
   setQueryData(product)
 } catch (error) {
   alert("Error saving product")
@@ -64,7 +65,7 @@ try {
 ```js
 // Voorbeeld
 try {
-  const product = await updateProductMutation({ name: 'Coole schoenen' })
+  const product = await updateProductMutation({name: "Coole schoenen"})
   setQueryData(product)
 } catch (error) {
   alert("Fout bij het opslaan van het artikel")
@@ -76,7 +77,7 @@ try {
 ```js
 // Voorbeeld
 try {
-  const artikel = await updateArtikelMutation({ name: 'Coole schoenen' })
+  const artikel = await updateArtikelMutation({name: "Coole schoenen"})
   setQueryData(artikel)
 } catch (error) {
   alert("Fout bij het opslaan van het artikel")
@@ -88,7 +89,7 @@ try {
 ```js
 // Voorbeeld
 try {
-  const artikel = await artikelBijwerkenMutatie({ naam: 'Coole schoenen' })
+  const artikel = await artikelBijwerkenMutatie({naam: "Coole schoenen"})
   stelQueryGegevensIn(artikel)
 } catch (error) {
   waarschuwing("Fout bij het opslaan van het artikel")
@@ -99,8 +100,8 @@ try {
 
 Als een externe link verwijst naar een artikel in een referentie zoals [MDN] of [Wikipedia], en er bestaat een versie van dat artikel in het Nederlands van degelijke kwaliteit, overweeg dan om in de plaats naar die versie te linken.
 
-[MDN]: https://developer.mozilla.org/en-US/
-[Wikipedia]: https://en.wikipedia.org/wiki/Main_Page
+[mdn]: https://developer.mozilla.org/en-US/
+[wikipedia]: https://en.wikipedia.org/wiki/Main_Page
 
 Voorbeeld:
 
@@ -124,6 +125,7 @@ Om consistentie te behouden en de teksten zo toegankelijk mogelijk te maken, geb
 
 Om de consistentie in de documentatie te behouden vind je hieronder de vertalingen voor de _vaktermen_ in het Nederlands. Ook de woorden die expliciet in het Engels worden behouden vind je hier terug.
 
+
 |       Origineel        |                  Vertaling                  |
 | :--------------------- | :------------------------------------------ |
 | agnostic               | agnostisch                                  |
@@ -144,6 +146,7 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 | configuration          | configuratie                                |
 | convension             | conventie                                   |
 | data layer             | _data layer_                                |
+| data source            | _data source_                               |
 | database               | _database_                                  |
 | defaults               | standaardinstellingen / -waarden            |
 | dependency             | _dependency_                                |
@@ -162,6 +165,10 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 | hooks                  | _hooks_                                     |
 | identity provider      | identiteitsprovider                         |
 | issue                  | _issue_                                     |
+| Image Component        | afbeeldingscomponent                        |
+| Image Optimization     | afbeeldingsoptimalisatie                    |
+| issue                  | _issue_                                     |
+| lazy loaded            | _lazy loaded_                               |
 | library                | _library_                                   |
 | log in / login         | inloggen (_verb_) / login (_noun_)          |
 | middleware             | _middleware_                                |
@@ -192,6 +199,14 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 | tutorial               | _tutorial_                                  |
 | user                   | gebruiker                                   |
 | username               | gebruikersnaam                              |
+
+Om overal de juiste verwijzingen naar pagina's te hebben, vind je hieronder de Nederlandse vertalingen voor de docs pagina's.
+
+| Origineel | Vertaling      |
+| use case  | _use case_     |
+| user      | gebruiker      |
+| username  | gebruikersnaam |
+| viewport  | _viewport_     |
 
 Om overal de juiste verwijzingen naar pagina's te hebben, vind je hieronder de Nederlandse vertalingen voor de docs pagina's.
 
