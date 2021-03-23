@@ -165,7 +165,7 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 | Image Component        | afbeeldingscomponent                        |
 | Image Optimization     | afbeeldingsoptimalisatie                    |
 | issue                  | _issue_                                     |
-| laze loaded            | _lazy loaded_                               |
+| lazy loaded            | _lazy loaded_                               |
 | library                | _library_                                   |
 | log in / login         | inloggen (_verb_) / login (_noun_)          |
 | middleware             | _middleware_                                |

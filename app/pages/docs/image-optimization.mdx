@@ -22,14 +22,14 @@ als de afbeelding gehost wordt via een externe data source, zoals een CMS,
 kan ze nog steeds geoptimaliseerd worden.
 
 In plaats van afbeeldingen te optimaliseren op build time, doet Blitz dit
-on-demand, wanneer gebruikers ze opvragen. In tegenstelling tot bij
-statische sitegenerators en andere statische oplossingen, worden je build
-times niet verhoogd, of je nu 10 of 10 miljoen afbeeldingen gebruikt.
+on-demand, wanneer gebruikers ze opvragen. In tegenstelling tot statische
+sitegenerators en andere statische oplossingen, worden je build times niet
+verhoogd, of je nu 10 of 10 miljoen afbeeldingen gebruikt.
 
 Afbeeldingen worden standaard _lazy loaded_. Dat wil zeggen dat je
 paginasnelheid niet wordt verminderd door afbeeldingen die buiten de
 viewport vallen. Afbeeldingen worden geladen wanneer ze in de viewport
-gescrolled worden.
+gescrold worden.
 
 Afbeeldingen worden altijd op zo'n manier weergegeven dat ze
 [Cumulative Layout Shift](https://web.dev/cls/), een
@@ -73,7 +73,7 @@ use cases via `blitz.config.js`.
 
 Om afbeeldingsoptimalisatie in te schakelen voor afbeeldingen die gehost
 worden op een externe website, gebruik je een absolute URL voor de `src`
-van Image en specifieer je welke `domains` toegestaan zijn om te
+van `Image` en specifieer je welke `domains` toegestaan zijn om te
 optimaliseren. Dit is nodig, zodat externe URL's niet misbruikt kunnen
 worden.
 
@@ -104,7 +104,7 @@ module.exports = {
 
 Volgende afbeeldingsoptimalisatie cloud providers worden ondersteund:
 
-- [Vercel](https://vercel.com): Werkt automatisch wanneer je deployt op
+- [Vercel](https://vercel.com): Werkt automatisch wanneer je uitrolt op
   Vercel. Geen configuratie nodig.
   [Lees meer](https://vercel.com/docs/next.js/image-optimization)
 - [Imgix](https://www.imgix.com): `loader: 'imgix'`
@@ -116,7 +116,7 @@ Volgende afbeeldingsoptimalisatie cloud providers worden ondersteund:
 
 Onderstaande beschrijft het caching algoritme voor de standaard
 [loader](#loader). Voor alle andere loaders raadpleeg je de documentatie
-van je cloud provider.
+van je cloudprovider.
 
 Afbeeldingen worden dynamisch geoptimaliseerd wanneer ze worden
 opgevraagd, en worden opgeslagen in de `<distDir>/cache/images` map. De
@@ -167,7 +167,7 @@ module.exports = {
 
 Je kan een lijst met afbeeldingsbreedtes specifiëren door de `imageSizes`
 property. Deze breedtes zouden anders (gewoonlijk kleiner) moeten zijn dan
-ze breedtes gedefinieerd in `deviceSizes`, omdat de arrays geconcateneerd
+ze breedtes gedefinieerd in `deviceSizes`, omdat de arrays samengevoegd
 worden. Deze breedtes worden gebruikt wanneer de `Image` component
 `layout="fixed"` of `layout="intrinsic"` gebruikt.
 
@@ -310,7 +310,7 @@ Een string die media query's mapt naar toestelformaten. Standaard is dit
 `100vw`.
 
 We raden aan om `sizes` in te stellen wanneer `layout="responsive"` en je
-afbeelding niet even breedt zal zijn als de viewport.
+afbeelding niet even breed zal zijn als de viewport.
 
 [Lees meer](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes).
 
