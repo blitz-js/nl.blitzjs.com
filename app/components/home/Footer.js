@@ -1,11 +1,12 @@
-import Link from "next/link"
-import { Icon } from "@/components/home/Icon"
-import { LinkList } from "@/components/home/LinkList"
-import { NewsletterForm } from "@/components/home/NewsletterForm"
-import { IoLogoVercel } from "react-icons/io5"
+import {Link} from "blitz"
 import clsx from "clsx"
+import {IoLogoVercel} from "react-icons/io5"
 
-export function Footer({ className, hasDarkMode }) {
+import {Icon} from "@/components/home/Icon"
+import {LinkList} from "@/components/home/LinkList"
+import {NewsletterForm} from "@/components/home/NewsletterForm"
+
+export function Footer({className, hasDarkMode}) {
   return (
     <footer className={className}>
       <div className="border-t border-gray-300 dark:border-white border-opacity-50">
@@ -23,8 +24,8 @@ export function Footer({ className, hasDarkMode }) {
         <div className="grid px-6 mx-auto max-w-7xl lg:grid-cols-3 gap-x-24 my-14 lg:mt-24 lg:mb-12 gap-y-7">
           <div className="flex flex-col justify-between space-y-7">
             <p className="text-lg font-semibold">
-							Wil je het laatste nieuws en updates van het Blitz-team ontvangen? Meld je dan aan voor onze
-              nieuwsbrief!
+              Wil je het laatste nieuws en updates van het Blitz-team ontvangen? Meld je dan aan
+              voor onze nieuwsbrief!
             </p>
             <div className="pb-5 lg:pb-0">
               <NewsletterForm hasDarkMode={hasDarkMode} />
@@ -93,7 +94,7 @@ export function Footer({ className, hasDarkMode }) {
                 </a>
               </Link>
               <br />
-              Copyright &copy; 2021 Brandon Bayer en Blitz.js bijdragers
+              Copyright &copy; {new Date().getFullYear()} Brandon Bayer en Blitz.js bijdragers
             </div>
           </div>
         </div>

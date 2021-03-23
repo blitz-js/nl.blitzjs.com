@@ -3,55 +3,97 @@ title: Afwegingen
 sidebar_label: Afwegingen
 ---
 
-Zoals je weet, maak je bij alles afwegingen. Wat zijn nu juist de afwegingen die je bij Blitz kan maken?
+Zoals je weet, maak je bij alles afwegingen. Wat zijn nu juist de
+afwegingen die je bij Blitz kan maken?
 
 ## Framework lock-in {#framework-lock-in}
 
-Elk framework heeft een bepaalde mate van lock-in. Als je jouw app met React bouwt, is deze nauw verweven met React.
+Elk framework heeft een bepaalde mate van lock-in. Als je jouw app met
+React bouwt, is deze nauw verweven met React.
 
-De mate van lock-in bij Blitz is groter dan bij Next.js. Een Blitz-codebase verschilt niet zoveel van een Next.js-codebase, maar het verschil is groot genoeg dat het niet super eenvoudig is om een Blitz applicatie om te zetten naar een gewone Next.js applicatie. Je zal waarschijnlijk gebruik maken van de authenticatie die eigen is aan Blitz. Overschakelen naar NextAuth zou je een vergelijkbare ervaring geven met Next.js.
+De mate van lock-in bij Blitz is groter dan bij Next.js. Een
+Blitz-codebase verschilt niet zoveel van een Next.js-codebase, maar het
+verschil is groot genoeg dat het niet super eenvoudig is om een Blitz
+applicatie om te zetten naar een gewone Next.js applicatie. Je zal
+waarschijnlijk gebruik maken van de authenticatie die eigen is aan Blitz.
+Overschakelen naar NextAuth zou je een vergelijkbare ervaring geven met
+Next.js.
 
-De Zero-API data layer is uniek voor Blitz. Dus als je overstapt op Next.js, moet je jouw eigen API-code beheren (wat je ook zou moeten doen als je met Next.js zou beginnen, dus je hebt niets verloren). Al je backend query- en mutatielogica kan echter rechtstreeks worden overgezet.
+De Zero-API data layer is uniek voor Blitz. Dus als je overstapt op
+Next.js, moet je jouw eigen API-code beheren (wat je ook zou moeten doen
+als je met Next.js zou beginnen, dus je hebt niets verloren). Al je
+backend query- en mutatielogica kan echter rechtstreeks worden overgezet.
 
 ## Next.js upgrades {#next-js-upgrades}
 
-Als je steeds met de nieuwste versie van Next.js wil werken, weet dan dat Blitz iets achter zal lopen, maar niet ver. Gewoonlijk updaten we Blitz binnen een week of minder na een nieuwe Next.js release.
+Als je steeds met de nieuwste versie van Next.js wil werken, weet dan dat
+Blitz iets achter zal lopen, maar niet ver. Gewoonlijk updaten we Blitz
+binnen een week of minder na een nieuwe Next.js release.
 
-Maar als je yarn gebruikt, kan je het `resolutions` veld in package.json gebruiken om Next.js te upgraden voordat wij dat doen.
-
+Maar als je yarn gebruikt, kan je het `resolutions` veld in package.json
+gebruiken om Next.js te upgraden voordat wij dat doen.
 
 ## Multi-Client API {#multi-client-api}
 
-Men zegt wel eens "Je zal uiteindelijk GraphQL nodig hebben, dus kan je er best ineens mee beginnen". Hoewel wij geloven dat de meeste apps niet groot genoeg zullen worden om GraphQL te rechtvaardigen, is de vraag naar een API voor meerdere clients een uitstekend punt.
+Men zegt wel eens "Je zal uiteindelijk GraphQL nodig hebben, dus kan je er
+best ineens mee beginnen". Hoewel wij geloven dat de meeste apps niet
+groot genoeg zullen worden om GraphQL te rechtvaardigen, is de vraag naar
+een API voor meerdere clients een uitstekend punt.
 
-We erkennen volledig dat veel web apps vroeg of laat een mobiele app nodig zullen hebben, en we willen deze integratie zo eenvoudig mogelijk maken!
+We erkennen volledig dat veel web apps vroeg of laat een mobiele app nodig
+zullen hebben, en we willen deze integratie zo eenvoudig mogelijk maken!
 
-Dat gezegd zijnde, kan je een GraphQL server toevoegen aan jouw Blitz app voor andere clients. Dit kan een uitstekende keuze zijn en sommige mensen doen dit ook.
+Dat gezegd zijnde, kan je een GraphQL server toevoegen aan jouw Blitz app
+voor andere clients. Dit kan een uitstekende keuze zijn en sommige mensen
+doen dit ook.
 
 **Op dit moment, vanaf 17 februari 2021:**
 
-- Kan je direct toegang krijgen tot de automatisch gegenereerde API-endpoints en kan je ze gebruiken in elke mobiele app (we hebben momenteel een paar mensen die dit doen)
-- Kan je alle gegenereerde endpoints in je app zien met het [`blitz routes`](./cli-routes) commando
-- Kan je de RPC-specificatie voor de endpoints hier zien: [RPC-specificatie](./rpc-specification)
+- Kan je direct toegang krijgen tot de automatisch gegenereerde
+  API-endpoints en kan je ze gebruiken in elke mobiele app (we hebben
+  momenteel een paar mensen die dit doen)
+- Kan je alle gegenereerde endpoints in je app zien met het
+  [`blitz routes`](./cli-routes) commando
+- Kan je de RPC-specificatie voor de endpoints hier zien:
+  [RPC-specificatie](./rpc-specification)
 
 **Wat we nog van plan zijn om te doen:**
 
-1. Eerst documentatie en tools toevoegen die het eenvoudiger maken om de handmatig gegenereerde API-endpoints te gebruiken. Zie: https://github.com/blitz-js/blitz/discussions/1907 en https://github.com/blitz-js/blitz/issues/745
-2. Vervolgens de mogelijkheid toevoegen om een JS/TS client library te genereren zodat men de gegenereerde endpoints op een gebruiksvriendelijke manier kan gebruiken in een app.
-3. Ten slotte een first-class react-native ondersteuning bieden waardoor je Blitz queries/mutations rechtstreeks in je react-native code kan importeren zodat het net op dezelfde magische wijze werkt als in je huidige web app. Na de 1.0 release zal Brandon zich vooral hierop focussen voor de rest van het jaar.
+1. Eerst documentatie en tools toevoegen die het eenvoudiger maken om de
+   handmatig gegenereerde API-endpoints te gebruiken. Zie:
+   https://github.com/blitz-js/blitz/discussions/1907 en
+   https://github.com/blitz-js/blitz/issues/745
+2. Vervolgens de mogelijkheid toevoegen om een JS/TS client library te
+   genereren zodat men de gegenereerde endpoints op een
+   gebruiksvriendelijke manier kan gebruiken in een app.
+3. Ten slotte een first-class react-native ondersteuning bieden waardoor
+   je Blitz queries/mutations rechtstreeks in je react-native code kan
+   importeren zodat het net op dezelfde magische wijze werkt als in je
+   huidige web app. Na de 1.0 release zal Brandon zich vooral hierop
+   focussen voor de rest van het jaar.
 
 ## Geavanceerde backendarchitectuur {#advanced-backend-architecture}
 
-Blitz heeft momenteel een redelijk beperkte backendarchitectuur in vergelijking met andere frameworks zoals NestJS of AdonisJS. Dit betekent echter niet dat je deze patronen niet kan gebruiken in Blitz, 
-maar dan moet je ze wel zelf opzetten. Je kan zelfs NestJS als backend voor je Blitz applicatie gebruiken als je dat wil.
+Blitz heeft momenteel een redelijk beperkte backendarchitectuur in
+vergelijking met andere frameworks zoals NestJS of AdonisJS. Dit betekent
+echter niet dat je deze patronen niet kan gebruiken in Blitz, maar dan
+moet je ze wel zelf opzetten. Je kan zelfs NestJS als backend voor je
+Blitz applicatie gebruiken als je dat wil.
 
-Maar we zijn zeer geïnteresseerd om geavanceerdere backendarchitecturen standaard of via een eenvoudige opt-in naar Blitz te brengen. We hebben hierover een [discussie gaande](https://github.com/blitz-js/blitz/discussions/1841) en we horen het graag als je ideeën hebt.
-
+Maar we zijn zeer geïnteresseerd om geavanceerdere backendarchitecturen
+standaard of via een eenvoudige opt-in naar Blitz te brengen. We hebben
+hierover een
+[discussie gaande](https://github.com/blitz-js/blitz/discussions/1841) en
+we horen het graag als je ideeën hebt.
 
 ## Single-threaded wanneer de applicatie niet serverless uitgerold is {#single-threaded-when-not-deployed-serverless}
 
-Dit is een nadeel van Next.js in het bijzonder. Next.js is single-threaded, wat betekent dat als je zware backend-verwerkingen uitvoert, 
-je kan merken dat alle webverzoeken eronder beginnen te lijden. 
-De oplossing hiervoor is om achtergrondverwerking over te hevelen naar andere processen.
+Dit is een nadeel van Next.js in het bijzonder. Next.js is
+single-threaded, wat betekent dat als je zware backend-verwerkingen
+uitvoert, je kan merken dat alle webverzoeken eronder beginnen te lijden.
+De oplossing hiervoor is om achtergrondverwerking over te hevelen naar
+andere processen.
 
-Meerdere achtergrondprocessen draaien is niet heel moeilijk, maar we willen nog documentatie en API's toevoegen om dit zo eenvoudig mogelijk te maken.
+Meerdere achtergrondprocessen draaien is niet heel moeilijk, maar we
+willen nog documentatie en API's toevoegen om dit zo eenvoudig mogelijk te
+maken.
