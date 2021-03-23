@@ -3,7 +3,7 @@ title: Tutorial
 sidebar_label: Tutorial
 ---
 
-In deze tutorial maken we samen een eenvoudige stemming-applicatie.
+In deze tutorial maken we samen een eenvoudige stemmingapplicatie.
 
 We gaan ervan uit dat je [Blitz al hebt geïnstalleerd](./get-started). Je
 kan nakijken of Blitz al is geïnstalleerd, en over welke versie je
@@ -98,8 +98,8 @@ my-blitz-app
 
 Deze bestanden zijn:
 
-- De `app/` map bevat het meeste van je project. Hier plaats je pagina's
-  of API-routes.
+- De `app/` map bevat het grootste deel van je project. Hier plaats je
+  pagina's of API-routes.
 
 - De `app/pages/` map is de map met primaire pagina's. Als je Next.js hebt
   gebruikt, merk je meteen dat dit anders is. In Blitz kan je
@@ -117,7 +117,7 @@ Deze bestanden zijn:
   gebruiken, kun je ze hier zetten.
 
 - `.babelrc.js`, `.env`, etc. ("dotfiles") zijn configuratiebestanden voor
-  verschillende stukken JavaScript tooling.
+  de verschillende onderdelen van JavaScript tooling.
 
 - `blitz.config.js` is voor geavanceerde aangepaste configuratie van
   Blitz. Het heeft hetzelfde formaat als `next.config.js`.
@@ -158,8 +158,9 @@ e-mailadres en wachtwoord in en klik op **Create Account**. Hierna word je
 teruggeleid naar de startpagina waar je de `id` en `role` van je gebruiker
 kan zien.
 
-Als je wil, kan je ook proberen uitloggen en terug inloggen. Of klik op
-**Forgot your password?** op de loginpagina om die flow te proberen.
+Als je wil, kan je ook proberen uit te loggen en terug in te loggen. Of
+klik op **Forgot your password?** op de loginpagina om die flow te
+proberen.
 
 ## Schrijf je eerste pagina {#write-your-first-page}
 
@@ -218,9 +219,9 @@ _laatst bewerkt_ timestamp.
 blitz generate all question text:string
 ```
 
-Druk op **Enter** als er wordt gevraagd om `prisma migrate` uit te voeren,
-die je databaseschema zal updaten met het nieuwe model. Er zal een naam
-worden gebraagd, dus typ iets zoals "add question".
+Druk op **Enter** als er wordt gevraagd om `prisma migrate` uit te voeren.
+Dit zal je databaseschema updaten met het nieuwe model. Er zal een naam
+worden gevraagd, dus typ iets zoals "add question".
 
 ```
 CREATE    app/pages/questions/[questionId].tsx
@@ -317,7 +318,7 @@ model Question {
 ```
 
 Voer dan `blitz prisma generate` uit om de Prisma client te updaten met
-het aangepaste schema. Er is geen database migratie nodig, omdat er geen
+het aangepaste schema. Er is geen databasemigratie nodig, omdat er geen
 echt veld wordt toegevoegd aan het `Question` model in de database.
 
 ## Spelen met de Prisma database client {#playing-with-the-prisma-database-client}
@@ -379,11 +380,11 @@ undefined
 
 <!-- prettier-ignore-start -->
 :::info
-Voor we de app opnieuw runnen, moeten we wat van de code die gegenereerd is, aanpassen. Uiteindelijk zullen deze aanpassingen niet meer nodig zijn, maar voor nu moeten we nog rond een aantal openstaande problemen werken.
+Voor we de app opnieuw uitvoeren, moeten we een deel van de code die gegenereerd is, aanpassen. Uiteindelijk zullen deze aanpassingen niet meer nodig zijn, maar voor nu moeten we nog rond een aantal openstaande problemen werken.
 :::
 <!-- prettier-ignore-end -->
 
-De gegenereerde paginainhoud maakt nog geen gebruik van de eigenlijke
+De gegenereerde pagina-inhoud maakt nog geen gebruik van de eigenlijke
 modelattributen die je tijdens de generatie hebt gedefinieerd. Dit komt
 eraan, maar voorlopig moeten we dit nog manueel oplossen.
 
@@ -536,7 +537,7 @@ const UpdateQuestion = z
 [//]: # "Remove this section once Prisma supports cascading deletes"
 
 Prisma ondersteunt nog geen "cascading deletes". In de context van deze
-tutorial betekent dat dat de `Choice` data niet wordt verwijderd wanneerd
+tutorial betekent dit dat de `Choice` data niet wordt verwijderd wanneer
 de `Question` wordt verwijderd. We moeten tijdelijk de gegenereerde
 `deleteQuestion` mutatie uitbreiden om dit manueel te doen. Open
 `app/questions/mutations/deleteQuestion.ts` in je teksteditor en voeg het
@@ -652,8 +653,8 @@ export default resolver.pipe(
 
 #### Probeer het uit
 
-Nu kan je naar `localhost:3000/questions/new` gaan en een nieuwe vraag
-maken met keuzes!
+Nu kan je naar `localhost:3000/questions/new` gaan en een nieuwe vraag met
+keuzes maken!
 
 ## Keuzes oplijsten {#listing-choices}
 
@@ -931,7 +932,7 @@ export const Question = () => {
 }
 ```
 
-## Leten we tot slot het bewerken van keuzes voor bestaande vragen mogelijk maken {#edit-choices-for-question}
+## Laten we tot slot het bewerken van keuzes voor bestaande vragen mogelijk maken {#edit-choices-for-question}
 
 Als je op de **Edit** knop klikt bij één van je bestaande vragen, zie je
 dat die hetzelfde formulier gebruikt als bij het aanmaken van vragen. Dat
@@ -981,23 +982,24 @@ export default resolver.pipe(
 ```
 
 [`upsert`](https://www.prisma.io/docs/reference/api-reference/prisma-client-reference#upsert)
-is een speciale operatie die betekent: "Als dit item bestaat, update het
-dan. Zo niet, maak het dan aan". Dat is perfect in dit geval, want we
-hebben de gebruiker niet verplicht om drie keuzes toe voegen bij het maken
-van de vraag. Dus als de gebruiker later nog een keuze toevoegt door de
-vraag te bewerken, zal het die hier worden aangemaakt.
+is een speciale database operatie die betekent: "Als dit item bestaat,
+update het dan. Zo niet, maak het dan aan". Dat is perfect in dit geval,
+want we hebben de gebruiker niet verplicht om drie keuzes toe voegen bij
+het maken van de vraag. Dus als de gebruiker later nog een keuze toevoegt
+door de vraag te bewerken, zal het die hier worden aangemaakt.
 
 ## Conclusie {#conclusion}
 
 🥳 Proficiat! Je hebt je eigen Blitz app gemaakt! Speel er gerust wat mee,
 of deel het met je vrienden. Nu je deze tutorial hebt afgewerkt, waarom
-probeer je je stemming-app niet nog beter te maken? Je zou kunnen
-proberen:
+probeer je je stemmingapplicatie niet nog beter te maken? Je zou kunnen
+proberen om:
 
-- Styling toevoegen (Hint: probeer `blitz install tailwind` of
+- Styling toe te voegen (Hint: probeer `blitz install tailwind` of
   `blitz install chakra-ui`)
-- Meer statistieken over de stemmen laten zien
-- Live uitrollen op [Render](./deploy-render) of [Vercel](./deploy-vercel)
+- Meer statistieken over de stemmen te laten zien
+- Live uit te rollen op [Render](./deploy-render) of
+  [Vercel](./deploy-vercel)
 
 Als je je project wil delen met de wereldwijde Blitz community, dan is er
 geen betere plek om dat te doen dan op Discord.
