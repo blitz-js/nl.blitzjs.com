@@ -1,42 +1,46 @@
 ---
-title: Image Component and Image Optimization
-sidebar_label: Image Optimization
+title: Afbeeldingscomponent en afbeeldingsoptimalisatie
+sidebar_label: Afbeeldingsoptimalisatie
 ---
 
-Blitz has a built-in Image Component and Automatic Image Optimization.
+Blitz heeft een ingebouwde afbeeldingscomponent en automatische
+afbeeldingsoptimalisatie.
 
-The Blitz Image Component, `Image`, is an extension of the HTML `<img>`
-element, evolved for the modern web.
+De Blitz afbeeldingscomponent `Image` is een uitbreiding van het
+HTML-element `<img>`, aangepast voor het moderne web.
 
-The Automatic Image Optimization allows for resizing, optimizing, and
-serving images in modern formats like
+De automatische afbeeldingsoptimalisatie zorgt voor het herschalen,
+optimaliseren en aanbieden van afbeeldingen in moderne formaten zoals
 [WebP](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types)
-when the browser supports it. This avoids shipping large images to devices
-with a smaller viewport. It also allows Blitz to automatically adopt
-future image formats and serve them to browsers that support those
-formats.
+wanneer de browser dit ondersteunt. Dit vermijdt het versturen van grote
+afbeeldingen naar toestellen met een kleinere viewport. Het geeft Blitz
+ook de mogelijkheid om automatisch toekomstige afbeeldingsformaten te
+gebruiken en deze aan te bieden aan browsers die ze ondersteunen.
 
-Automatic Image Optimization works with any image source. Even if the
-image is hosted by an external data source, like a CMS, it can still be
-optimized.
+Automatisch afbeeldingsoptimalisatie werkt met elke afbeeldingsbron. Zelfs
+als de afbeelding gehost wordt via een externe data source, zoals een CMS,
+kan ze nog steeds geoptimaliseerd worden.
 
-Instead of optimizing images at build time, Blitz optimizes images
-on-demand, as users request them. Unlike static site generators and
-static-only solutions, your build times aren't increased, whether shipping
-10 images or 10 million images.
+In plaats van afbeeldingen te optimaliseren op build time, doet Blitz dit
+on-demand, wanneer gebruikers ze opvragen. In tegenstelling tot statische
+sitegenerators en andere statische oplossingen, worden je build times niet
+verhoogd, of je nu 10 of 10 miljoen afbeeldingen gebruikt.
 
-Images are lazy loaded by default. That means your page speed isn't
-penalized for images outside the viewport. Images load as they are
-scrolled into viewport.
+Afbeeldingen worden standaard _lazy loaded_. Dat wil zeggen dat je
+paginasnelheid niet wordt verminderd door afbeeldingen die buiten de
+viewport vallen. Afbeeldingen worden geladen wanneer ze in de viewport
+gescrold worden.
 
-Images are always rendered in such a way as to avoid
-[Cumulative Layout Shift](https://web.dev/cls/), a
-[Core Web Vital](https://web.dev/vitals/) that Google is going to
-[use in search ranking](https://webmasters.googleblog.com/2020/05/evaluating-page-experience.html).
+Afbeeldingen worden altijd op zo'n manier weergegeven dat ze
+[Cumulative Layout Shift](https://web.dev/cls/), een
+[Core Web Vital](https://web.dev/vitals/) die Google gaat
+[gebruiken in de ranking van zoekresultaten](https://webmasters.googleblog.com/2020/05/evaluating-page-experience.html),
+vermijden.
 
-## Image Component {#image-component}
+## Afbeeldingscomponent {#image-component}
 
-To add an image to your application, import the `Image` component:
+Om een afbeelding aan je applicatie toe te voegen, importeer je de `Image`
+component:
 
 ```jsx
 import {Image} from "blitz"
@@ -44,14 +48,14 @@ import {Image} from "blitz"
 function Home() {
   return (
     <>
-      <h1>My Homepage</h1>
+      <h1>Mijn homepagina</h1>
       <Image
-        src="/me.png"
-        alt="Picture of the author"
+        src="/ik.png"
+        alt="Afbeelding van de auteur"
         width={500}
         height={500}
       />
-      <p>Welcome to my homepage!</p>
+      <p>Welkom op mijn homepagina!</p>
     </>
   )
 }
@@ -59,18 +63,19 @@ function Home() {
 export default Home
 ```
 
-## Configuration {#configuration}
+## Configuratie {#configuration}
 
-In addition to using properties available to the `Image` component, you
-can optionally configure Image Optimization for more advanced use cases
-via `blitz.config.js`.
+Naast het gebruik van de properties beschikbaar in de `Image` component,
+kan je optioneel afbeeldingsoptimalisatie configureren voor geavanceerdere
+use cases via `blitz.config.js`.
 
-### Domains {#domains}
+### Domeinen {#domains}
 
-To enable Image Optimization for images hosted on an external website, use
-an absolute url for the Image `src` and specify which `domains` are
-allowed to be optimized. This is needed to ensure that external urls can't
-be abused.
+Om afbeeldingsoptimalisatie in te schakelen voor afbeeldingen die gehost
+worden op een externe website, gebruik je een absolute URL voor de `src`
+van `Image` en specifieer je welke `domains` toegestaan zijn om te
+optimaliseren. Dit is nodig, zodat externe URL's niet misbruikt kunnen
+worden.
 
 ```js
 module.exports = {
@@ -82,10 +87,11 @@ module.exports = {
 
 ### Loader {#loader}
 
-If you want to use a cloud provider to optimize images instead of using
-the Blitz' built-in Image Optimization, you can configure the loader and
-path prefix. This allows you to use relative urls for the Image `src` and
-automatically generate the correct absolute url for your provider.
+Als je een cloudprovider wil gebruiken om afbeeldingen to optimaliseren in
+plaats van de ingebouwde afbeeldingsoptimalisatie van Blitz, kan je de
+`loader` en `path` prefix configureren. Dit zorgt ervoor dat je relatieve
+URLs kan gebruiken voor de Image `src` en automatisch de correcte absolute
+URL kan genereren voor je provider.
 
 ```js
 module.exports = {
@@ -96,54 +102,58 @@ module.exports = {
 }
 ```
 
-The following Image Optimization cloud providers are supported:
+Volgende afbeeldingsoptimalisatie cloud providers worden ondersteund:
 
-- [Vercel](https://vercel.com): Works automatically when you deploy on
-  Vercel, no configuration necessary.
-  [Learn more](https://vercel.com/docs/next.js/image-optimization)
+- [Vercel](https://vercel.com): Werkt automatisch wanneer je uitrolt op
+  Vercel. Geen configuratie nodig.
+  [Lees meer](https://vercel.com/docs/next.js/image-optimization)
 - [Imgix](https://www.imgix.com): `loader: 'imgix'`
 - [Cloudinary](https://cloudinary.com): `loader: 'cloudinary'`
 - [Akamai](https://www.akamai.com): `loader: 'akamai'`
-- Default: Works automatically with `blitz dev`, or a custom server
+- Standaard: Werkt automatisch met `blitz dev`, of een aangepaste server
 
 ## Caching {#caching}
 
-The following describes the caching algorithm for the default
-[loader](#loader). For all other loaders, please refer to your cloud
-provider's documentation.
+Onderstaande beschrijft het caching algoritme voor de standaard
+[loader](#loader). Voor alle andere loaders raadpleeg je de documentatie
+van je cloudprovider.
 
-Images are optimized dynamically upon request and stored in the
-`<distDir>/cache/images` directory. The optimized image file will be
-served for subsequent requests until the expiration is reached. When a
-request is made that matches a cached but expired file, the cached file is
-deleted before generating a new optimized image and caching the new file.
+Afbeeldingen worden dynamisch geoptimaliseerd wanneer ze worden
+opgevraagd, en worden opgeslagen in de `<distDir>/cache/images` map. De
+geoptimaliseerde afbeelding zal geserved worden voor alle volgende
+requests totdat de verlooptijd is verstreken. Wanneer een afbeelding wordt
+opgevraagd waarvan de caching periode is verlopen, wordt het bestand in de
+cache verwijderd vooraleer een nieuwe geoptimaliseerde afbeelding wordt
+gegenereerd en opgeslagen in de cache.
 
-The expiration (or rather Max Age) is defined by the upstream server's
-`Cache-Control` header.
+De verlooptijd (of beter _Max Age_) wordt bepaald door de `Cache-Control`
+header van de upstream server.
 
-If `s-maxage` is found in `Cache-Control`, it is used. If no `s-maxage` is
-found, then `max-age` is used. If no `max-age` is found, then 60 seconds
-is used.
+Als `s-maxage` wordt gevonden in `Cache-Control`, wordt deze gebruikt. Als
+er geen `s-maxage` wordt gevonden, wordt `max-age` gebruikt. Als er geen
+`max-age` wordt gevonden, wordt standaard 60 seconden gebruikt.
 
-You can configure [`deviceSizes`](#device-sizes) and
-[`imageSizes`](#device-sizes) to reduce the total number of possible
-generated images.
+Je kan [`deviceSizes`](#device-sizes) en [`imageSizes`](#image-sizes)
+configureren om het totaal aantal mogelijk gegenereerde afbeeldingen te
+verminderen.
 
-## Advanced {#advanced}
+## Geavanceerd {#advanced}
 
-The following configuration is for advanced use cases and is usually not
-necessary. If you choose to configure the properties below, you will
-override any changes to the Blitz defaults in future updates.
+Volgende configuratie is enkel voor geavanceerde use cases en is normaal
+gezien niet nodig. Als je onderstaande properties aanpast, zal je
+veranderingen aan de Blitz defaults bij toekomstige updates overschrijven.
 
-### Device Sizes {#device-sizes}
+### Toestelgroottes {#device-sizes}
 
-In some cases, where you know the expected device widths from the users of
-your website, you can specify a list of device width breakpoints using the
-`deviceSizes` property. These widths are used when the `Image` component
-uses `layout="responsive"` or `layout="fill"` so that the correct image is
-served for the device visiting your website.
+In sommige gevallen, waar je de verwachtte toestelbreedtes van de
+gebruikers van je website kent, kan je een lijst van breakpoints voor deze
+toestelbreedtes specifiëren met de `deviceSizes` property. Deze breedtes
+worden gebruikt wanneer de `Image` component `layout="responsive"` of
+`layout="fill"` gebruikt, zodat de correcte afbeelding geladen wordt voor
+het toestel dat je website bezoekt.
 
-If no configuration is provided, the default below is used.
+Als er geen configuratie wordt opgegeven, wordt onderstaande standaard
+gebruikt.
 
 ```js
 module.exports = {
@@ -153,15 +163,16 @@ module.exports = {
 }
 ```
 
-### Image Sizes {#image-sizes}
+### Afbeeldingsgroottes {#image-sizes}
 
-You can specify a list of image widths using the `imageSizes` property.
-These widths should be different (usually smaller) than the widths defined
-in `deviceSizes` because the arrays will be concatenated. These widths are
-used when the `Image` component uses `layout="fixed"` or
-`layout="intrinsic"`.
+Je kan een lijst met afbeeldingsbreedtes specifiëren door de `imageSizes`
+property. Deze breedtes zouden anders (gewoonlijk kleiner) moeten zijn dan
+ze breedtes gedefinieerd in `deviceSizes`, omdat de arrays samengevoegd
+worden. Deze breedtes worden gebruikt wanneer de `Image` component
+`layout="fixed"` of `layout="intrinsic"` gebruikt.
 
-If no configuration is provided, the default below is used.
+Als er geen configuratie wordt opgegeven, wordt onderstaande standaard
+gebruikt.
 
 ```js
 module.exports = {
@@ -173,16 +184,16 @@ module.exports = {
 
 ## Image API {#image-api}
 
-Image Optimization can be enabled via the `Image` component.
+Afbeeldingsoptimalisatie kan ingeschakeld worden via de `Image` component.
 
-### Usage {#usage}
+### Gebruik {#usage}
 
-For an example, consider a project with the following files:
+Neem als voorbeeld een project met volgende bestanden:
 
 - `pages/index.js`
-- `public/me.png`
+- `public/ik.png`
 
-We can serve an optimized image like so:
+We kunnen op deze manier een geoptimaliseerde afbeelding tonen:
 
 ```jsx
 import {Image} from "blitz"
@@ -190,14 +201,14 @@ import {Image} from "blitz"
 function Home() {
   return (
     <>
-      <h1>My Homepage</h1>
+      <h1>Mijn homepagina</h1>
       <Image
-        src="/me.png"
-        alt="Picture of the author"
+        src="/ik.png"
+        alt="Afbeelding van de auteur"
         width={500}
         height={500}
       />
-      <p>Welcome to my homepage!</p>
+      <p>Welkom op mijn homepagina!</p>
     </>
   )
 }
@@ -205,65 +216,69 @@ function Home() {
 export default Home
 ```
 
-### Required Props {#required-props}
+### Vereiste props {#required-props}
 
-The `Image` component requires the following properties.
+De `Image` component verwacht volgende vereiste properties.
 
 #### src
 
-The path or URL to the source image. This is required.
+Het pad of de URL van de bronafbeelding. Dit is vereist.
 
-When using an external URL, you must add it to [domains](#domains) in
-`blitz.config.js`.
+Wanneer je een externe URL gebruikt, moet je die toevoegen aan
+[domains](#domains) in `blitz.config.js`.
 
 #### width
 
-The width of the image, in pixels. Must be an integer without a unit.
+De breedte van de afbeelding, in pixels. Dit moet een geheel getal zijn
+zonder eenheid.
 
-Required unless [layout="fill"`](#layout).
+Vereist, tenzij [layout="fill"`](#layout) wordt gebruikt.
 
 #### height
 
-The height of the image, in pixels. Must be an integer without a unit.
+De hoogte van de afbeelding, in pixels. Dit moet een geheel getal zijn
+zonder eenheid.
 
-Required unless [layout="fill"`](#layout).
+Vereist, tenzij [layout="fill"`](#layout) wordt gebruikt.
 
-### Optional Props {#optional-props}
+### Optionele props {#optional-props}
 
-The `<Image />` component optionally accepts the following properties.
+De `<Image />` component aanvaardt optioneel volgende properties.
 
 #### layout
 
-The layout behavior of the image as the viewport changes size. Defaults to
-`intrinsic`.
+Het layout gedrag van de afbeelding wanneer het formaat van de viewport
+verandert. Standaard is dit `intrinsic`.
 
-When `fixed`, the image dimensions will not change as the viewport changes
-(no responsiveness) similar to the native `img` element.
+Bij `fixed` zal het formaat van de afbeelding niet veranderen als de
+viewport verandert (geen responsiviteit) net als bij het native `img`
+element.
 
-When `intrinsic`, the image will scale the dimensions down for smaller
-viewports but maintain the original dimensions for larger viewports.
+Bij `intrinsic` zal de afbeelding verkleind worden voor kleinere
+viewports, maar zijn originele formaat behouden voor grotere viewports.
 
-When `responsive`, the image will scale the dimensions down for smaller
-viewports and scale up for larger viewports.
+Bij `responsive` zal de afbeelding verkleind worden voor kleinere
+viewports en vergroot worden voor grotere viewports.
 
-When `fill`, the image will stretch both width and height to the
-dimensions of the parent element, usually paired with
+Bij `fill` zal de afbeelding zowel in de breedte als de hoogte uitgerekt
+worden naar de afmetingen van het parent element, meestal gecombineerd met
 [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit).
 
-Try it out:
+Probeer het uit:
 
-- [Demo the `fixed` layout](https://image-component.nextjs.gallery/layout-fixed)
-- [Demo the `intrinsic` layout](https://image-component.nextjs.gallery/layout-intrinsic)
-- [Demo the `responsive` layout](https://image-component.nextjs.gallery/layout-responsive)
-- [Demo the `fill` layout](https://image-component.nextjs.gallery/layout-fill)
-- [Demo background image](https://image-component.nextjs.gallery/background)
+- [Demo van de `fixed` layout](https://image-component.nextjs.gallery/layout-fixed)
+- [Demo van de `intrinsic` layout](https://image-component.nextjs.gallery/layout-intrinsic)
+- [Demo van de `responsive` layout](https://image-component.nextjs.gallery/layout-responsive)
+- [Demo van de `fill` layout](https://image-component.nextjs.gallery/layout-fill)
+- [Demo van een achtergrondafbeelding](https://image-component.nextjs.gallery/background)
 
 ### loader {#loader-1}
 
-A custom function used to resolve URLs. Defaults to
+Een aangepaste functie om URL's te resolven. Standaard is dit het
 [`images` object in `blitz.config.js`](/docs/basic-features/image-optimization.md#loader).
 
-`loader` is a function returning a string, given the following parameters:
+`loader` is een functie die een string teruggeeft en volgende parameters
+aanneemt:
 
 - [`src`](#src)
 - [`width`](#width)
@@ -280,8 +295,8 @@ const MyImage = (props) => {
   return (
     <Image
       loader={myLoader}
-      src="/me.png"
-      alt="Picture of the author"
+      src="/ik.png"
+      alt="Afbeelding van de auteur"
       width={500}
       height={500}
     />
@@ -291,70 +306,74 @@ const MyImage = (props) => {
 
 #### sizes
 
-A string mapping media queries to device sizes. Defaults to `100vw`.
+Een string die media query's mapt naar toestelformaten. Standaard is dit
+`100vw`.
 
-We recommend setting `sizes` when `layout="responsive"` and your image
-will not be the same width as the viewport.
+We raden aan om `sizes` in te stellen wanneer `layout="responsive"` en je
+afbeelding niet even breed zal zijn als de viewport.
 
-[Learn more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes).
+[Lees meer](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes).
 
 #### quality
 
-The quality of the optimized image, an integer between 1 and 100 where 100
-is the best quality. Defaults to 75.
+De kwaliteit van de geoptimaliseerde afbeelding, een geheel getal tussen 1
+en 100 waarbij 100 de beste kwaliteit is. Standaard is dit 75.
 
 #### priority
 
-When true, the image will be considered high priority and
-[preload](https://web.dev/preload-responsive-images/).
+Wanneer dit `true` is, zal de afbeelding beschouwd worden als hoge
+prioriteit en
+[gepreload worden](https://web.dev/preload-responsive-images/).
 
-Should only be used when the image is visible above the fold. Defaults to
-false.
+Dit zou je enkel moeten gebruiken wanneer de afbeelding zichtbaar is boven
+de vouw. Standaard is dit `false`.
 
-### Advanced Props {#advanced-props}
+### Geavanceerde props {#advanced-props}
 
-In some cases, you may need more advanced usage. The `Image` component
-optionally accepts the following advanced properties.
+In sommige gevallen heb je meer geavanceerde props nodig. De `Image`
+component aanvaardt de volgende geavanceerde properties.
 
 #### objectFit
 
-The image fit when using `layout="fill"`.
+De pasvorm van de afbeelding wanneer `layout="fill"` wordt gebruikt.
 
-[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)
+[Lees meer](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)
 
 #### objectPosition
 
-The image position when using `layout="fill"`.
+De afbeeldingspositie wanneer `layout="fill"` wordt gebruikt.
 
-[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/object-position)
+[Lees meer](https://developer.mozilla.org/en-US/docs/Web/CSS/object-position)
 
 #### loading
 
-> **Attention**: This property is only meant for advanced usage. Switching
-> an image to load with `eager` will normally **hurt performance**.
+> **Let op**: Deze property is enkel bedoeld voor geavanceerd gebruik. Een
+> afbeelding zo instellen dat ze geladen wordt met `eager` zal normaal de
+> **prestaties negatief beïnvloeden**.
 >
-> We recommend using the [`priority`](#priority) property instead, which
-> properly loads the image eagerly for nearly all use cases.
+> We raden aan om in de plaats daarvan de [`priority`](#priority) property
+> te gebruiken, die de afbeelding in bijna alle gevallen eager zal laden.
 
-The loading behavior of the image. Defaults to `lazy`.
+Het laadgedrag van de afbeelding. Standaard is dit `lazy`.
 
-When `lazy`, defer loading the image until it reaches a calculated
-distance from the viewport.
+Bij `lazy` zal het laden van de afbeelding worden uitgesteld tot het een
+berekende afstand tot de viewport heeft bereikt.
 
-When `eager`, load the image immediately.
+Bij `eager` zal de afbeelding onmiddellijk laden.
 
-[Learn more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-loading)
+[Lees meer](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-loading)
 
 #### unoptimized
 
-When true, the source image will be served as-is instead of changing
-quality, size, or format. Defaults to false.
+Als dit `true` is, zal de afbeelding geserved worden zoals ze is in plaats
+van de kwaliteit, de afbeelding of het formaat te veranderen. Standaard is
+dit `false`.
 
-### Other Props {#other-props}
+### Andere props {#other-props}
 
-Other properties on the `Image` component will be passed to the underlying
-`img` element with the exception of the following:
+Andere properties op de `Image` component zullen doorgegeven worden aan
+het onderliggende `img` element met uitzondering van de volgende:
 
-- `style`. Use `className` instead.
-- `srcSet`. Use [Device Sizes](#device-sizes) instead.
-- `decoding`. It is always `"async"`.
+- `style`. Gebruik `className` in de plaats.
+- `srcSet`. Gebruik [toestelgroottes](#device-sizes) in de plaats.
+- `decoding`. Dit is altijd `"async"`.
