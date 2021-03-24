@@ -125,7 +125,8 @@ Om consistentie te behouden en de teksten zo toegankelijk mogelijk te maken, geb
 
 Om de consistentie in de documentatie te behouden vind je hieronder de vertalingen voor de _vaktermen_ in het Nederlands. Ook de woorden die expliciet in het Engels worden behouden vind je hier terug.
 
-| Origineel              | Vertaling                                   |
+
+|       Origineel        |                  Vertaling                  |
 | :--------------------- | :------------------------------------------ |
 | agnostic               | agnostisch                                  |
 | app                    | app(licatie)                                |
@@ -150,6 +151,7 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 | defaults               | standaardinstellingen / -waarden            |
 | dependency             | _dependency_                                |
 | deploy                 | uitrollen                                   |
+| endpoint               | _endpoint_                                  |
 | end-to-end             | _end-to-end_                                |
 | (code) execution       | uitvoering (van de code)                    |
 | feature                | _feature_                                   |
@@ -162,6 +164,7 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 | Hot Module Replacement | _Hot Module Replacement_                    |
 | hooks                  | _hooks_                                     |
 | identity provider      | identiteitsprovider                         |
+| issue                  | _issue_                                     |
 | Image Component        | afbeeldingscomponent                        |
 | Image Optimization     | afbeeldingsoptimalisatie                    |
 | issue                  | _issue_                                     |
@@ -194,14 +197,20 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 | templates              | _templates_                                 |
 | token                  | _token_                                     |
 | tutorial               | _tutorial_                                  |
-| use case               | _use case_                                  |
 | user                   | gebruiker                                   |
 | username               | gebruikersnaam                              |
-| viewport               | _viewport_                                  |
 
 Om overal de juiste verwijzingen naar pagina's te hebben, vind je hieronder de Nederlandse vertalingen voor de docs pagina's.
 
-| Origineel                  | Vertaling              |
+| Origineel | Vertaling      |
+| use case  | _use case_     |
+| user      | gebruiker      |
+| username  | gebruikersnaam |
+| viewport  | _viewport_     |
+
+Om overal de juiste verwijzingen naar pagina's te hebben, vind je hieronder de Nederlandse vertalingen voor de docs pagina's.
+
+|         Origineel          |       Vertaling        |
 | :------------------------- | :--------------------- |
 | Get Started                | Aan de slag            |
 | How the Community Operates | Hoe de community werkt |
