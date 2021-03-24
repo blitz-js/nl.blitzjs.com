@@ -443,17 +443,9 @@ const getStaticProps = async () => {
   }
 }
 
-<<<<<<< HEAD
-Home.layoutProps = {
-  meta: {
-    title: "Blitz.js - Het Fullstack React Framework",
-    description: `Blitz is een hyperproductief fullstack React-framework dat is gebouwd op Next.js en beschikt over een "Zero-API" data layer.`,
-  },
-=======
 Home.meta = {
-  title: "Blitz.js - The Fullstack React Framework",
-  description: `Blitz is a hyper-productive fullstack React framework that's built on Next.js and features a "Zero-API" data layer.`,
->>>>>>> f9a74c0d66911f54a97cc5cebfe7177103ac5e6e
+  title: "Blitz.js - Het Fullstack React Framework",
+  description: `Blitz is een hyperproductief fullstack React-framework dat is gebouwd op Next.js en beschikt over een "Zero-API" data layer.`,
 }
 
 export default Home

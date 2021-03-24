@@ -133,15 +133,9 @@ Als `s-maxage` wordt gevonden in `Cache-Control`, wordt deze gebruikt. Als
 er geen `s-maxage` wordt gevonden, wordt `max-age` gebruikt. Als er geen
 `max-age` wordt gevonden, wordt standaard 60 seconden gebruikt.
 
-<<<<<<< HEAD
 Je kan [`deviceSizes`](#device-sizes) en [`imageSizes`](#image-sizes)
 configureren om het totaal aantal mogelijk gegenereerde afbeeldingen te
 verminderen.
-=======
-You can configure [`deviceSizes`](#device-sizes) and
-[`imageSizes`](#image-sizes) to reduce the total number of possible
-generated images.
->>>>>>> f9a74c0d66911f54a97cc5cebfe7177103ac5e6e
 
 ## Geavanceerd {#advanced}
 
@@ -230,35 +224,22 @@ De `Image` component verwacht volgende vereiste properties.
 
 Het pad of de URL van de bronafbeelding. Dit is vereist.
 
-<<<<<<< HEAD
 Wanneer je een externe URL gebruikt, moet je die toevoegen aan
-[domains](#domains) in `blitz.config.js`.
-=======
-When using an external URL, you must add it to [`domains`](#domains) in
-`blitz.config.js`.
->>>>>>> f9a74c0d66911f54a97cc5cebfe7177103ac5e6e
+[`domains`](#domains) in `blitz.config.js`.
 
 #### width
 
 De breedte van de afbeelding, in pixels. Dit moet een geheel getal zijn
 zonder eenheid.
 
-<<<<<<< HEAD
-Vereist, tenzij [layout="fill"`](#layout) wordt gebruikt.
-=======
-Required unless `layout="fill"`.
->>>>>>> f9a74c0d66911f54a97cc5cebfe7177103ac5e6e
+Vereist, tenzij [layout="fill"`] wordt gebruikt.
 
 #### height
 
 De hoogte van de afbeelding, in pixels. Dit moet een geheel getal zijn
 zonder eenheid.
 
-<<<<<<< HEAD
-Vereist, tenzij [layout="fill"`](#layout) wordt gebruikt.
-=======
-Required unless `layout="fill"`.
->>>>>>> f9a74c0d66911f54a97cc5cebfe7177103ac5e6e
+Vereist, tenzij [layout="fill"`] wordt gebruikt.
 
 ### Optionele props {#optional-props}
 
@@ -293,13 +274,8 @@ Probeer het uit:
 
 ### loader {#loader-1}
 
-<<<<<<< HEAD
 Een aangepaste functie om URL's te resolven. Standaard is dit het
-[`images` object in `blitz.config.js`](/docs/basic-features/image-optimization.md#loader).
-=======
-A custom function used to resolve URLs. Defaults to
 [`images` object in `blitz.config.js`](#loader).
->>>>>>> f9a74c0d66911f54a97cc5cebfe7177103ac5e6e
 
 `loader` is een functie die een string teruggeeft en volgende parameters
 aanneemt:
@@ -345,14 +321,9 @@ en 100 waarbij 100 de beste kwaliteit is. Standaard is dit 75.
 
 #### priority
 
-<<<<<<< HEAD
 Wanneer dit `true` is, zal de afbeelding beschouwd worden als hoge
 prioriteit en
 [gepreload worden](https://web.dev/preload-responsive-images/).
-=======
-When `true`, the image will be considered high priority and
-[preload](https://web.dev/preload-responsive-images/).
->>>>>>> f9a74c0d66911f54a97cc5cebfe7177103ac5e6e
 
 Dit zou je enkel moeten gebruiken wanneer de afbeelding zichtbaar is boven
 de vouw. Standaard is dit `false`.
@@ -366,42 +337,26 @@ component aanvaardt de volgende geavanceerde properties.
 
 De pasvorm van de afbeelding wanneer `layout="fill"` wordt gebruikt.
 
-<<<<<<< HEAD
-[Lees meer](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)
-=======
-[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit).
->>>>>>> f9a74c0d66911f54a97cc5cebfe7177103ac5e6e
+[Lees meer](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit).
 
 #### objectPosition
 
 De afbeeldingspositie wanneer `layout="fill"` wordt gebruikt.
 
-<<<<<<< HEAD
-[Lees meer](https://developer.mozilla.org/en-US/docs/Web/CSS/object-position)
-
-#### loading
-
-> **Let op**: Deze property is enkel bedoeld voor geavanceerd gebruik. Een
-> afbeelding zo instellen dat ze geladen wordt met `eager` zal normaal de
-> **prestaties negatief beïnvloeden**.
->
-> We raden aan om in de plaats daarvan de [`priority`](#priority) property
-> te gebruiken, die de afbeelding in bijna alle gevallen eager zal laden.
-=======
-[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/object-position).
+[Lees meer](https://developer.mozilla.org/en-US/docs/Web/CSS/object-position).
 
 #### loading
 
 <!-- prettier-ignore-start -->
 :::caution
-This property is only meant for advanced usage. Switching an image to
-load with `eager` will normally **hurt performance**.
+Deze property is enkel bedoeld voor geavanceerd gebruik. Een
+afbeelding zo instellen dat ze geladen wordt met `eager` zal normaal de
+**prestaties negatief beïnvloeden**.
 
-We recommend using the `priority` property instead, which properly loads
-the image eagerly for nearly all use cases.
+We raden aan om in de plaats daarvan de `priority` property
+te gebruiken, die de afbeelding in bijna alle gevallen eager zal laden.
 :::
 <!-- prettier-ignore-end -->
->>>>>>> f9a74c0d66911f54a97cc5cebfe7177103ac5e6e
 
 Het laadgedrag van de afbeelding. Standaard is dit `lazy`.
 
@@ -410,22 +365,13 @@ berekende afstand tot de viewport heeft bereikt.
 
 Bij `eager` zal de afbeelding onmiddellijk laden.
 
-<<<<<<< HEAD
-[Lees meer](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-loading)
+[Lees meer](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-loading).
 
 #### unoptimized
 
 Als dit `true` is, zal de afbeelding geserved worden zoals ze is in plaats
-van de kwaliteit, de afbeelding of het formaat te veranderen. Standaard is
+van de kwaliteit, de afmetingen of het formaat te veranderen. Standaard is
 dit `false`.
-=======
-[Learn more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-loading).
-
-#### unoptimized
-
-When `true`, the source image will be served as-is instead of changing
-quality, size, or format. Defaults to `false`.
->>>>>>> f9a74c0d66911f54a97cc5cebfe7177103ac5e6e
 
 ### Andere props {#other-props}
 
