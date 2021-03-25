@@ -37,10 +37,11 @@ Hierdoor zal bovenstaande link niet meer werken.
 Laat tekst in codeblokken onvertaald, behalve voor commentaar. Je kan eventueel tekst in strings vertalen, maar let op dat je geen strings vertaalt die naar code verwijzen!
 
 Voorbeeld:
+
 ```js
 // Example
 try {
-  const product = await updateProjectMutation({ name: 'Cool Shoes' })
+  const product = await updateProjectMutation({name: "Cool Shoes"})
   setQueryData(product)
 } catch (error) {
   alert("Error saving product")
@@ -52,7 +53,7 @@ try {
 ```js
 // Voorbeeld
 try {
-  const product = await updateProductMutation({ name: 'Cool Shoes' })
+  const product = await updateProductMutation({name: "Cool Shoes"})
   setQueryData(product)
 } catch (error) {
   alert("Error saving product")
@@ -64,7 +65,7 @@ try {
 ```js
 // Voorbeeld
 try {
-  const product = await updateProductMutation({ name: 'Coole schoenen' })
+  const product = await updateProductMutation({name: "Coole schoenen"})
   setQueryData(product)
 } catch (error) {
   alert("Fout bij het opslaan van het artikel")
@@ -76,7 +77,7 @@ try {
 ```js
 // Voorbeeld
 try {
-  const artikel = await updateArtikelMutation({ name: 'Coole schoenen' })
+  const artikel = await updateArtikelMutation({name: "Coole schoenen"})
   setQueryData(artikel)
 } catch (error) {
   alert("Fout bij het opslaan van het artikel")
@@ -88,7 +89,7 @@ try {
 ```js
 // Voorbeeld
 try {
-  const artikel = await artikelBijwerkenMutatie({ naam: 'Coole schoenen' })
+  const artikel = await artikelBijwerkenMutatie({naam: "Coole schoenen"})
   stelQueryGegevensIn(artikel)
 } catch (error) {
   waarschuwing("Fout bij het opslaan van het artikel")
@@ -99,8 +100,8 @@ try {
 
 Als een externe link verwijst naar een artikel in een referentie zoals [MDN] of [Wikipedia], en er bestaat een versie van dat artikel in het Nederlands van degelijke kwaliteit, overweeg dan om in de plaats naar die versie te linken.
 
-[MDN]: https://developer.mozilla.org/en-US/
-[Wikipedia]: https://en.wikipedia.org/wiki/Main_Page
+[mdn]: https://developer.mozilla.org/en-US/
+[wikipedia]: https://en.wikipedia.org/wiki/Main_Page
 
 Voorbeeld:
 
@@ -124,77 +125,90 @@ Om consistentie te behouden en de teksten zo toegankelijk mogelijk te maken, geb
 
 Om de consistentie in de documentatie te behouden vind je hieronder de vertalingen voor de _vaktermen_ in het Nederlands. Ook de woorden die expliciet in het Engels worden behouden vind je hier terug.
 
-| Origineel | Vertaling |
-|:---|:---|
-| agnostic | agnostisch |
-| app | app(licatie) |
-| application | applicatie |
-| architectural pattern | architectuurpatroon |
-| array | _array_ |
-| authentication | authenticatie |
-| authorization | autorisatie |
-| backend |  _backend_ |
-| client | _client_ |
-| client-side | _client-side_ |
-| Code of Conduct | gedragscode |
-| codebase | _codebase_ |
-| command | commando |
-| community | _community_ |
-| components | componenten |
-| configuration | configuratie |
-| convension | conventie |
-| data layer | _data layer_ |
-| database |  _database_ |
-| defaults | standaardinstellingen / -waarden |
-| dependency | _dependency_ |
-| deploy | uitrollen |
-| end-to-end | _end-to-end_ |
-| (code) execution | uitvoering (van de code) |
-| feature | _feature_ |
-| fetch (data) | (data) opvragen |
-| file structure | bestandsstructuur |
-| form | _form_ |
-| framework | _framework_ |
-| frontend |  _frontend_ |
-| fullstack | _fullstack_ |
-| Hot Module Replacement | _Hot Module Replacement_ |
-| hooks |  _hooks_ |
-| identity provider | identiteitsprovider |
-| issue | _issue_ |
-| library | _library_ |
-| log in / login | inloggen (_verb_) / login (_noun_) |
-| middleware | _middleware_ |
-| migrate | migreren |
-| monolithic | monolitisch |
-| password | wachtwoord |
-| prefetch | _prefetch_ |
-| pre-rendering | _pre-rendering_ |
-| pluggable | _pluggable_ |
-| production | productie |
-| promise | _promise_ |
-| prototyping | _prototyping_ |
-| recipe | _recipe_ |
-| release | _release_ |
-| release cycle | _release cycle_ |
-| reset | opnieuw instellen (_verb_) / reset (_noun_) |
-| routing / router | _routing_ / _router_ |
-| scaffold | _scaffold_ |
-| scalable | schaalbaar |
-| scale | schalen / opschalen |
-| server |  _server_ |
-| serverless | _serverless_ |
-| set up / setup | opzetten (_verb_) / setup (_noun_) |
-| sign up / signup | registreren (_verb_) / registratie (_noun_) |
-| styling | _styling_ |
-| templates |  _templates_ |
-| token |  _token_ |
-| tutorial | _tutorial_ |
-| user | gebruiker |
-| username | gebruikersnaam |
+
+|       Origineel        |                  Vertaling                  |
+| :--------------------- | :------------------------------------------ |
+| agnostic               | agnostisch                                  |
+| app                    | app(licatie)                                |
+| application            | applicatie                                  |
+| architectural pattern  | architectuurpatroon                         |
+| array                  | _array_                                     |
+| authentication         | authenticatie                               |
+| authorization          | autorisatie                                 |
+| backend                | _backend_                                   |
+| build                  | _build_                                     |
+| client                 | _client_                                    |
+| client-side            | _client-side_                               |
+| Code of Conduct        | gedragscode                                 |
+| codebase               | _codebase_                                  |
+| command                | commando                                    |
+| community              | _community_                                 |
+| components             | componenten                                 |
+| configuration          | configuratie                                |
+| convention             | conventie                                   |
+| data layer             | _data layer_                                |
+| database               | _database_                                  |
+| defaults               | standaardinstellingen / -waarden            |
+| dependency             | _dependency_                                |
+| deploy                 | uitrollen                                   |
+| endpoint               | _endpoint_                                  |
+| end-to-end             | _end-to-end_                                |
+| (code) execution       | uitvoering (van de code)                    |
+| feature                | _feature_                                   |
+| fetch (data)           | (data) opvragen                             |
+| file structure         | bestandsstructuur                           |
+| form                   | _form_                                      |
+| framework              | _framework_                                 |
+| frontend               | _frontend_                                  |
+| fullstack              | _fullstack_                                 |
+| Hot Module Replacement | _Hot Module Replacement_                    |
+| hooks                  | _hooks_                                     |
+| identity provider      | identiteitsprovider                         |
+| issue                  | _issue_                                     |
+| Image Component        | afbeeldingscomponent                        |
+| Image Optimization     | afbeeldingsoptimalisatie                    |
+| issue                  | _issue_                                     |
+| lazy loaded            | _lazy loaded_                               |
+| library                | _library_                                   |
+| log in / login         | inloggen (_verb_) / login (_noun_)          |
+| middleware             | _middleware_                                |
+| migrate                | migreren                                    |
+| monolithic             | monolitisch                                 |
+| password               | wachtwoord                                  |
+| prefetch               | _prefetch_                                  |
+| pre-rendering          | _pre-rendering_                             |
+| pluggable              | _pluggable_                                 |
+| production             | productie                                   |
+| promise                | _promise_                                   |
+| prototyping            | _prototyping_                               |
+| recipe                 | _recipe_                                    |
+| release                | _release_                                   |
+| release cycle          | _release cycle_                             |
+| reset                  | opnieuw instellen (_verb_) / reset (_noun_) |
+| root                   | _root_                                      |
+| routing / router       | _routing_ / _router_                        |
+| scaffold               | _scaffold_                                  |
+| scalable               | schaalbaar                                  |
+| scale                  | schalen / opschalen                         |
+| server                 | _server_                                    |
+| serverless             | _serverless_                                |
+| set up / setup         | opzetten (_verb_) / setup (_noun_)          |
+| sign up / signup       | registreren (_verb_) / registratie (_noun_) |
+| styling                | _styling_                                   |
+| templates              | _templates_                                 |
+| token                  | _token_                                     |
+| tutorial               | _tutorial_                                  |
+| user                   | gebruiker                                   |
+| username               | gebruikersnaam                              |
 
 Om overal de juiste verwijzingen naar pagina's te hebben, vind je hieronder de Nederlandse vertalingen voor de docs pagina's.
 
-| Origineel | Vertaling |
-|:---|:---|
-| Get Started | Aan de slag |
-| How the Community Operates | Hoe de community werkt |
+| Origineel                     | Vertaling                           |
+| :---------------------------- | :---------------------------------- |
+| Get Started                   | Aan de slag                         |
+| How the Community Operates    | Hoe de community werkt              |
+| Tradeoffs                     | Overwegingen                        |
+| What is Next.js?              | Wat is Next.js                     |
+| Free Stickers                 | Gratis stickers                     |
+| Why Blitz instead of Next.js? | Waarom Blitz in plaats van Next.js? |
+| File Structure                | Bestandsstructuur                   |
