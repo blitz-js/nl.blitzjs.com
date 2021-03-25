@@ -136,6 +136,7 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 | authentication         | authenticatie                               |
 | authorization          | autorisatie                                 |
 | backend                | _backend_                                   |
+| build                  | _build_                                     |
 | client                 | _client_                                    |
 | client-side            | _client-side_                               |
 | Code of Conduct        | gedragscode                                 |
@@ -144,9 +145,8 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 | community              | _community_                                 |
 | components             | componenten                                 |
 | configuration          | configuratie                                |
-| convension             | conventie                                   |
+| convention             | conventie                                   |
 | data layer             | _data layer_                                |
-| data source            | _data source_                               |
 | database               | _database_                                  |
 | defaults               | standaardinstellingen / -waarden            |
 | dependency             | _dependency_                                |
@@ -185,6 +185,7 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 | release                | _release_                                   |
 | release cycle          | _release cycle_                             |
 | reset                  | opnieuw instellen (_verb_) / reset (_noun_) |
+| root                   | _root_                                      |
 | routing / router       | _routing_ / _router_                        |
 | scaffold               | _scaffold_                                  |
 | scalable               | schaalbaar                                  |
@@ -202,15 +203,12 @@ Om de consistentie in de documentatie te behouden vind je hieronder de vertaling
 
 Om overal de juiste verwijzingen naar pagina's te hebben, vind je hieronder de Nederlandse vertalingen voor de docs pagina's.
 
-| Origineel | Vertaling      |
-| use case  | _use case_     |
-| user      | gebruiker      |
-| username  | gebruikersnaam |
-| viewport  | _viewport_     |
-
-Om overal de juiste verwijzingen naar pagina's te hebben, vind je hieronder de Nederlandse vertalingen voor de docs pagina's.
-
-|         Origineel          |       Vertaling        |
-| :------------------------- | :--------------------- |
-| Get Started                | Aan de slag            |
-| How the Community Operates | Hoe de community werkt |
+| Origineel                     | Vertaling                           |
+| :---------------------------- | :---------------------------------- |
+| Get Started                   | Aan de slag                         |
+| How the Community Operates    | Hoe de community werkt              |
+| Tradeoffs                     | Overwegingen                        |
+| What is Next.js?              | Wat is Next.js                     |
+| Free Stickers                 | Gratis stickers                     |
+| Why Blitz instead of Next.js? | Waarom Blitz in plaats van Next.js? |
+| File Structure                | Bestandsstructuur                   |
