@@ -92,41 +92,60 @@ sidebar_label: Bestandsstructuur
 
 Bevat alle core applicatiecode.
 
-- De bestandsstructuur binnen `app/` is vrijblijvend, maar we raden het volgende aan:
-  - De eerste laag mappen moeten een "domain context" zijn, zoals `core/`, `projects/`, `users/`, `billing/`, etc.
-  - Alle andere mappen zoals `components/` en `hooks/` gaan in één van de bovenstaande domain context mappen.
+- De bestandsstructuur binnen `app/` is vrijblijvend, maar we raden het
+  volgende aan:
+  - De eerste laag mappen moeten een "domain context" zijn, zoals `core/`,
+    `projects/`, `users/`, `billing/`, etc.
+  - Alle andere mappen zoals `components/` en `hooks/` gaan in één van de
+    bovenstaande domain context mappen.
 - Speciale mapnamen
   - Kunnen op elk niveau van de hiërarchie binnen `app` bestaan.
-  - `pages/` stelt een React component ter beschikking op een URL. Volgt dezelfde semantiek als de Next.js `pages/api/` map.
-	- `api/` stelt een Node.js request handler ter beschikking op een URL. Volgt dezelfde semantiek als de Next.js `pages/api/` map.
-  - `queries/` en `mutations/` zijn voor je Blitz queries en mutations. Elke query en mutation wordt gekoppeld aan een URL die overeenkomt met het bestandspad.
+  - `pages/` stelt een React component ter beschikking op een URL. Volgt
+    dezelfde semantiek als de Next.js `pages/api/` map.
+  - `api/` stelt een Node.js request handler ter beschikking op een URL.
+    Volgt dezelfde semantiek als de Next.js `pages/api/` map.
+  - `queries/` en `mutations/` zijn voor je Blitz queries en mutations.
+    Elke query en mutation wordt gekoppeld aan een URL die overeenkomt met
+    het bestandspad.
 
 #### `db`
 
-Bevat databaseconfiguratie-, schema- en migratiebestanden. `db/index.js` exporteert je geïnitialiseerde database client zodat je deze overal in jouw app kan gebruiken.
+Bevat databaseconfiguratie-, schema- en migratiebestanden. `db/index.js`
+exporteert je geïnitialiseerde database client zodat je deze overal in
+jouw app kan gebruiken.
 
 #### `integrations`
 
-Bevat integratiecode van derden. Bijvoorbeeld: `auth0.js`, `twilio.js`, etc. Deze bestanden zijn een goede plaats om een client met gedeelde configuratie te instantiëren
+Bevat integratiecode van derden. Bijvoorbeeld: `auth0.js`, `twilio.js`,
+etc. Deze bestanden zijn een goede plaats om een client met gedeelde
+configuratie te instantiëren
 
 #### `pages`
 
-De `pages` map op het hoogste niveau en alle geneste `pages` mappen binnen `app` worden samengevoegd op build time. De build zal mislukken als dezelfde route op twee plaatsen is gedefinieerd.
+De `pages` map op het hoogste niveau en alle geneste `pages` mappen binnen
+`app` worden samengevoegd op build time. De build zal mislukken als
+dezelfde route op twee plaatsen is gedefinieerd.
 
 - De `pages` map op het hoogste niveau is optioneel.
-- Heeft dezelfde semantiek als de Next.js `pages` map. Alle bestanden hierin worden gekoppeld aan een URL die overeenkomt met hun bestandspaden.
-- Hoewel je alle routebestanden hier kan plaatsen, raden wij aan om deze in `app` te plaatsen. Maar je kan ook al jouw routebestanden in deze map op het hoogste niveau plaatsen in plaats van ze te verspreiden over de verschillende 
-mappen binnen `app`.
+- Heeft dezelfde semantiek als de Next.js `pages` map. Alle bestanden
+  hierin worden gekoppeld aan een URL die overeenkomt met hun
+  bestandspaden.
+- Hoewel je alle routebestanden hier kan plaatsen, raden wij aan om deze
+  in `app` te plaatsen. Maar je kan ook al jouw routebestanden in deze map
+  op het hoogste niveau plaatsen in plaats van ze te verspreiden over de
+  verschillende mappen binnen `app`.
 
 #### `api`
 
 Hetzelfde als de Next.js `pages/api` map, maar niet genest in `pages`.
 
-En net zoals de `pages` map, worden de `api` map op het hoogste niveau en alle geneste `api` mappen samengevoegd op build time.
+En net zoals de `pages` map, worden de `api` map op het hoogste niveau en
+alle geneste `api` mappen samengevoegd op build time.
 
 #### `public`
 
-Alle bestanden in deze map worden statisch geserved vanuit de root URL van je app.
+Alle bestanden in deze map worden statisch geserved vanuit de root URL van
+je app.
 
 #### `blitz.config.js`
 
@@ -134,4 +153,6 @@ Een configuratiebestand met dezelfde opmaak als `next.config.js`
 
 ### Andere opmerkingen {#other-notes}
 
-- Alle mappen op het hoogste niveau worden automatisch gealiased. Je kan bijvoorbeeld `app/projects/queries/getProject` overal in de applicatie importeren.
+- Alle mappen op het hoogste niveau worden automatisch gealiased. Je kan
+  bijvoorbeeld `app/projects/queries/getProject` overal in de applicatie
+  importeren.

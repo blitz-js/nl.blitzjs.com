@@ -1,17 +1,18 @@
-import { createPageList } from "@/utils/createPageList"
-import { Image } from "blitz"
+import {Image} from "blitz"
+
+import {createPageList} from "@/utils/createPageList"
 
 const pages = createPageList(
   // use compiled location
   require.context(
     `pages/docs/?meta=title,sidebar_label,shortTitle,published,displayUrl`,
     false,
-    /\.mdx$/
+    /\.mdx$/,
   ),
-  "docs"
+  "docs",
 )
 
-const Title = ({ title, iconPath, iconDarkPath }) => (
+const Title = ({title, iconPath, iconDarkPath}) => (
   <div className="px-3 mb-5 flex">
     {iconPath && (
       <div className={`mr-4 ${iconDarkPath ? "dark:hidden" : ""}`}>
@@ -117,6 +118,7 @@ export const documentationNav = [
       pages["authorization"],
       pages["auth-utils"],
       pages["passportjs"],
+      pages["impersonation"],
     ],
   },
   {
@@ -174,7 +176,7 @@ export const documentationNav = [
         iconDarkPath="/img/deploying-to-production-white.svg"
       />
     ),
-    pages: [pages["deploy-render"], pages["deploy-vercel"], pages["deploy-heroku"]],
+    pages: [pages["deploy-render"], pages["deploy-heroku"], pages["deploy-vercel"]],
   },
   {
     title: (
