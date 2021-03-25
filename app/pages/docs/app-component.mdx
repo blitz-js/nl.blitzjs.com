@@ -1,18 +1,18 @@
 ---
-title: Root <App> Component
+title: Root <App> component
 sidebar_label: <App>
 ---
 
-Blitz uses the `App` component in `app/pages/_app.ts` to initialize pages.
-You can modify it to do amazing things like:
+Blitz gebruikt de `App` component in `app/pages/_app.ts` om pagina's te
+initialiseren. Je kan hem wijzigen om geweldige dingen te doen zoals:
 
-- Persisting layout between page changes
-- Keeping state when navigating pages
-- Custom error handling using `componentDidCatch`
-- Inject additional data into pages
-- [Add global CSS](./css)
+- Het behouden van de layout wanneer een pagina verandert
+- Het behouden van de staat bij het navigeren door pagina's
+- Aangepaste foutafhandeling met `componentDidCatch`
+- Het injecteren van extra gegevens in pagina's
+- [Het toevoegen van globale CSS](./css)
 
-The default `_app.tsx` file looks like this:
+Het standaard `_app.tsx` bestand ziet er als volgt uit:
 
 ```tsx
 // app/pages/_app.tsx
@@ -21,11 +21,11 @@ export default function App({Component, pageProps}) {
 }
 ```
 
-The `Component` prop is the active `page`, so whenever you navigate
-between routes, `Component` will change to the new `page`. Therefore, any
-props you send to `Component` will be received by the `page`.
+De `Component` prop is de actieve pagina, dus wanneer je tussen routes
+navigeert, zal `Component` veranderen naar de nieuwe pagina. Daarom zullen
+alle props die je naar `Component` stuurt door de pagina worden ontvangen.
 
-`pageProps` is an object with the initial props that were preloaded for
-your page by one of our data fetching methods like
-[`getStaticProps`](./get-static-props) or
+`pageProps` is een object met de initiële props die vooraf zijn geladen
+voor jouw pagina door één van onze methodes om data op te vragen zoals
+[`getStaticProps`](./get-static-props) of
 [`getServerSideProps`](./get-server-side-props)
