@@ -1,56 +1,58 @@
 ---
-title: Pages
-sidebar_label: Pages
+title: Pagina's
+sidebar_label: Pagina's
 ---
 
-In Blitz, a **page** is a
-[React Component](https://reactjs.org/docs/components-and-props.html)
-exported from a `.js`, `.jsx`, `.ts`, or `.tsx` file in a `pages`
-directory. Each page is associated with a route based on its file path.
+In Blitz is een **pagina** een
+[React component](https://reactjs.org/docs/components-and-props.html) die
+geëxporteerd wordt vanuit een `.js`, `.jsx`, `.ts` of `.tsx` bestand in
+een `pages` map. Elke pagina wordt geassocieerd met een route op basis van
+zijn bestandspad.
 
-All of the following are valid pages:
+Alle volgende pagina's zijn geldig:
 
 - `app/pages/about.tsx`
 - `app/projects/pages/projects/index.tsx`
 - `app/tasks/pages/projects/[projectId]/tasks/[taskId].tsx`
 
-**Example**: If you create `app/pages/about.js` that exports a React
-component like below, it will be accessible at `/about`.
+**Voorbeeld**: Als je `app/pages/about.js` maakt die een React component
+exporteert zoals hieronder, zal deze beschikbaar zijn op `/about`.
 
 ```jsx
 function About() {
-  return <div>About</div>
+  return <div>Over ons</div>
 }
 
 export default About
 ```
 
-### Pages with Dynamic Routes {#pages-with-dynamic-routes}
+### Pagina's met dynamische routes {#pages-with-dynamic-routes}
 
-Blitz supports pages with dynamic routes. For example, if you create a
-file called `app/pages/posts/[id].js`, then it will be accessible at
-`posts/1`, `posts/2`, etc.
+Blitz ondersteunt pagina's met dynamische routes. Bijvoorbeeld, als je een
+bestand met de naam `app/pages/posts/[id].js` maakt, dan zal het
+beschikbaar zijn op `posts/1`, `posts/2`, etc.
 
-> To learn more about routing, check the
-> [Routing documentation](./routing).
+> Voor meer informatie over routing, lees de
+> [routing documentatie](./routing).
 
-### Automatic Static Optimization {#automatic-static-optimization}
+### Automatische statische optimalisatie {#automatic-static-optimization}
 
-By default, Blitz pre-renders the static HTML for every page unless you
-explicitly opt-in to server-side rendering.
+Standaard pre-rendert Blitz de statische HTML voor elke pagina, tenzij je
+expliciet kiest voor server-side rendering.
 
-For pages with dynamic data, the page's loading state will be
-pre-rendered.
+Voor pagina's met dynamische gegevens zal de laadstatus van de pagina
+pre-rendered worden.
 
-#### First Render UX
+#### Eerste render UX
 
-In some cases, the static optimization can cause an undesirable UX where
-the first render shows one thing but the second render shows another. For
-example this happens when using `useSession()`.
+In sommige gevallen kan de statische optimalisatie een ongewenste UX
+veroorzaken waar de eerste render het ene laat zien, maar de tweede render
+het andere. Dit gebeurt bijvoorbeeld bij het gebruik van `useSession()`.
 
-In this case you can set `Page.suppressFirstRenderFlicker = true`, and
-Blitz will hide the first render's content. This will result in a tiny
-delay of first paint but will greatly improve the perceived UX.
+In dit geval kan je `Page.suppressFirstRenderFlicker = true` instellen, en
+Blitz zal de inhoud van de eerste render verbergen. Dit zal resulteren in
+een kleine vertraging van de eerste render, maar zal de waargenomen UX
+sterk verbeteren.
 
 ```tsx
 const Page: BlitzPage = () => {
@@ -64,32 +66,33 @@ Page.suppressFirstRenderFlicker = true
 export default Page
 ```
 
-### Static Page Generation for Unauthenticated Pages {#static-page-generation-for-unauthenticated-pages}
+### Statische paginageneratie voor pagina's zonder authenticatie {#static-page-generation-for-unauthenticated-pages}
 
-For pages accessible by anyone without authentication, we recommend using
-`getStaticProps` so the page, along with it's data, is 100% statically
-generated during pre-rendering (like Gatsby). Then the entire static page
-can be cached on a CDN. This is perfect for public pages like blog posts.
+Voor pagina's die toegankelijk zijn voor iedereen zonder authenticatie,
+raden we aan `getStaticProps` te gebruiken zodat de pagina, samen met zijn
+data, 100% statisch gegenereerd wordt tijdens pre-rendering (zoals
+Gatsby). Dan kan de hele statische pagina worden gecached op een CDN. Dit
+is perfect voor publieke pagina's zoals blogposts.
 
-There are two methods for use with static generation, and you'll often use
-both together.
+Er zijn twee methodes voor gebruik met statische generatie, en je zal vaak
+beide samen gebruiken.
 
-1. `getStaticProps` - To load the **data** for your page. See the
-   [`getStaticProps` documentation](./get-static-props) for more details.
-2. `getStaticPaths` - To load the possible **paths** for your page. See
-   the [`getStaticPaths` documentation](./get-static-paths) for more
+1. `getStaticProps` - Om de **data** voor je pagina te laden. Zie de
+   [`getStaticProps` documentatie](./get-static-props) voor meer details.
+2. `getStaticPaths` - Om de mogelijke **paden** voor je pagina te laden.
+   Zie de [`getStaticPaths` documentatie](./get-static-paths) voor meer
    details.
 
-### Server-side Rendering {#server-side-rendering}
+### Server-side rendering {#server-side-rendering}
 
-> Also referred to as "SSR" or "Dynamic Rendering".
+> Ook wel "SSR" of "Dynamic Rendering" genoemd.
 
-If a page uses **Server-side Rendering**, the page HTML is generated on
-**each request**.
+Als een pagina **server-side rendering** gebruikt, wordt de HTML van de
+pagina bij **elke request** gegenereerd.
 
-To use Server-side Rendering for a page, you need to `export` an `async`
-function called `getServerSideProps`. This function will be called by the
-server on every request.
+Om server-side rendering te gebruiken voor een pagina, moet je een `async`
+functie met de naam `getServerSideProps` exporteren. Deze functie zal door
+de server worden aangeroepen bij elke request.
 
-See the [`getServerSideProps` documentation](./get-server-side-props) for
-more details.
+Zie de [`getServerSideProps` documentatie](./get-server-side-props) voor
+meer details.
