@@ -3,18 +3,18 @@ title: Testing
 sidebar_label: Testing
 ---
 
-The `blitz` dependency also automatically installs and configures `jest`,
-`@testing-library/react`, `@testing-library/react-hooks`, and
-`@testing-libary/jest-dom` for you.
+De `blitz` dependency installeert en configureert ook automatisch `jest`,
+`@testing-library/react`, `@testing-library/react-hooks` en
+`@testing-libary/jest-dom` voor jou.
 
 ## Jest {#jest}
 
-[Jest](https://jestjs.io/) is a delightful testing framework that's simple
-to use. To run tests in your app, you will run `jest` or `jest --watch`
-from the terminal.
+[Jest](https://jestjs.io/) is een aangenaam testing framework dat
+eenvoudig te gebruiken is. Om testen te draaien in je applicatie kan je
+`jest` of `jest --watch` uitvoeren in je terminal.
 
-To make a new test, make a file named `something.test.ts` (or `.js`,
-`.tsx`, etc). Here's an example:
+Om een nieuwe test te maken, maak je een bestand aan met de naam
+`something.test.ts` (of `.js`, `.tsx`, etc.). Hier is een voorbeeld:
 
 ```ts
 import something from "./somewhere"
@@ -25,17 +25,17 @@ it("does something", () => {
 })
 ```
 
-> For more details on using Jest,
-> [read the Jest documentation](https://jestjs.io/docs/en/using-matchers)
+> Voor meer details over het gebruik van Jest,
+> [lees de documentatie](https://jestjs.io/docs/en/using-matchers)
 
 ### Jest Config {#jest-config}
 
-Blitz provides a Jest preset that configures lots of complex things for
-you, including Typescript support.
+Blitz biedt een Jest preset die veel complexe zaken voor jou configureert,
+inclusief Typescript ondersteuning.
 
-If you need to
-[customize the jest config](https://jestjs.io/docs/en/configuration), you
-can do so in `jest.config.js`.
+Als je
+[de Jest configuratie moet aanpassen](https://jestjs.io/docs/en/configuration),
+kan je dit doen in `jest.config.js`.
 
 ```ts
 // jest.config.js
@@ -44,23 +44,26 @@ module.exports = {
 }
 ```
 
-### Client vs Server Environments {#client-vs-server-environments}
+### Client- vs. serveromgevingen {#client-vs-server-environments}
 
-The following test files will run in the Jest server environment:
+De volgende testbestanden zullen in de Jest serveromgeving uitgevoerd
+worden:
 
-- `*.test.*` files inside an `api`, `queries`, or `mutations` folder
-- `*.server.test.*` files
+- `*.test.*` bestanden in een `api`, `queries`, of `mutations` map
+- `*.server.test.*` bestanden
 
-All other files will run in the Jest client environment (with jsdom).
+Alle andere bestanden zullen in de Jest clientomgeving uitgevoerd worden
+(met jsdom).
 
 ## @testing-library {#testing-library}
 
-[@testing-library](https://testing-library.com/docs/) is family of
-packages helps you test UI components in a user-centric way. It's a better
-alternative to Enzyme, if you've used that in the past.
+[@testing-library](https://testing-library.com/docs/) is een familie van
+pakketten die je helpt om UI componenten te testen op een
+gebruikersgerichte manier. Het is een beter alternatief voor Enzyme, als
+je dit in het verleden al gebruikt hebt.
 
-The following packages are installed for you. Refer to their documentation
-as needed.
+De volgende pakketten zijn voor jou geïnstalleerd. Bekijk hun documentatie
+als je ze nodig hebt.
 
 - [@testing-library/dom](https://testing-library.com/docs/dom-testing-library/intro)
 - [@testing-library/jest-dom](https://testing-library.com/docs/ecosystem-jest-dom)
