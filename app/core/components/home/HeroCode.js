@@ -25,20 +25,10 @@ const NewProjectPage: BlitzPage = () => {
         submitText="Project aanmaken"
         schema={CreateProject}
         onSubmit={async (values) => {
-<<<<<<< HEAD
-          try {
-            // Dit is hetzelfde als de server functie rechtstreeks te callen
-            const project = await createProjectMutation(values)
-            router.push("/projects/" + project.id)
-          } catch (error) {
-            return { [FORM_ERROR]: error.toString() }
-          }
-=======
-          // This is equivalent to calling the server function directly
+          // Dit is hetzelfde als de server functie rechtstreeks te callen
           const project = await createProjectMutation(values)
-          // Notice the 'Routes' object Blitz provides for routing
+          // Merk het 'Routes' object op dat Blitz gebruikt voor routing
           router.push(Routes.ProjectsPage({projectId: project.id}}))
->>>>>>> 82436ec0678e19c73c9c61ff701e0569a9fe4a67
         }}
       />
     </div>

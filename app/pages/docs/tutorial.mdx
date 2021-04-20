@@ -277,16 +277,11 @@ aan te maken voor het `Choice` model:
 blitz generate resource choice text votes:int:default=0 belongsTo:question
 ```
 
-If you get an error run `blitz prisma format`
+Als je een foutmelding krijgt, voer dan `blitz prisma format` uit.
 
-<<<<<<< HEAD
-Druk opnieuw op **Enter** als er wordt gevraagd om de migratie uit te
-voeren en geef een naam voor de migratie op.
-=======
-Note that this doesn't require a database migration because we haven't
-added the `Choice` field to the `Question` model yet. So we are choosing
-`false` when prompted to run the migration:
->>>>>>> 82436ec0678e19c73c9c61ff701e0569a9fe4a67
+Merk op dat dit geen databasemigratie vereist omdat we het `Choice` veld
+nog niet aan het `Question` model hebben toegevoegd. Dus we kiezen `false`
+wanneer er wordt gevraagd om de migratie uit te voeren:
 
 ```
 CREATE    app/choices/queries/getChoice.ts
@@ -325,18 +320,13 @@ model Question {
 }
 ```
 
-<<<<<<< HEAD
-Voer dan `blitz prisma generate` uit om de Prisma client te updaten met
-het aangepaste schema. Er is geen databasemigratie nodig, omdat er geen
-echt veld wordt toegevoegd aan het `Question` model in de database.
-=======
-Now we can run the migration to update our database:
+Nu kunnen we de migratie uitvoeren om onze database te updaten:
 
 ```sh
 blitz prisma migrate dev
 ```
 
-And again, enter a name for the migration, like "add choice":
+Vul opnieuw een naam in voor de migratie, zoals "add choice":
 
 ```
 Environment variables loaded from .env
@@ -353,9 +343,8 @@ migrations/
 Your database is now in sync with your schema.
 ```
 
-Now our database is ready and a Prisma client is also generated. Lets move
-on to play with the Prisma client!
->>>>>>> 82436ec0678e19c73c9c61ff701e0569a9fe4a67
+Nu is onze database klaar en er is ook een Prisma client gegenereerd.
+Laten we verder gaan en eens met de Prisma client spelen.
 
 ## Spelen met de Prisma database client {#playing-with-the-prisma-database-client}
 
