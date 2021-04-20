@@ -132,3 +132,17 @@ Voorbeelden:
   hebben met producten
 - `app/admin/pages/` zou alle pagina's kunnen bevatten die te maken hebben
   met de backend administratie sectie
+
+### 9. Route Manifest {#9-relaxed-restrictions}
+
+Next.js vereist dat je manueel paginalocaties typt. Blitz bevat een
+[Route Manifest](./route-manifest), zodat je het volgende kan doen:
+
+```ts
+<Link href={Routes.ProductsPage({ productId: 123 })} />
+// in plaats van
+<Link href={`/products/${123}`} />
+```
+
+Dit bevordert de expressiviteit en vergemakkelijkt het verplaatsen van
+pagina's naar een andere locatie.
