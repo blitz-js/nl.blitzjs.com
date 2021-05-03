@@ -9,7 +9,9 @@ Je hebt Node.js 12 of nieuwer nodig.
 
 ### Installeer Blitz {#install-blitz}
 
-Run `npm install -g blitz`
+Run `yarn global add blitz` or `npm install -g blitz --legacy-peer-deps`
+(legacy-peer-deps is needed because npm totally change behavior of peer
+deps and some dependencies haven't caught up)
 
 ### Maak een nieuwe applicatie {#create-a-new-app}
 
