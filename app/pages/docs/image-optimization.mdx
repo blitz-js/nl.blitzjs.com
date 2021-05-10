@@ -43,7 +43,7 @@ Om een afbeelding aan je applicatie toe te voegen, importeer je de `Image`
 component:
 
 ```jsx
-import {Image} from "blitz"
+import { Image } from "blitz"
 
 function Home() {
   return (
@@ -196,7 +196,7 @@ Neem als voorbeeld een project met volgende bestanden:
 We kunnen op deze manier een geoptimaliseerde afbeelding tonen:
 
 ```jsx
-import {Image} from "blitz"
+import { Image } from "blitz"
 
 function Home() {
   return (
@@ -285,9 +285,9 @@ aanneemt:
 - `quality`
 
 ```js
-import {Image} from "blitz"
+import { Image } from "blitz"
 
-const myLoader = ({src, width, quality}) => {
+const myLoader = ({ src, width, quality }) => {
   return `https://example.com/${src}?w=${width}&q=${quality || 75}`
 }
 
@@ -347,6 +347,7 @@ De afbeeldingspositie wanneer `layout="fill"` wordt gebruikt.
 
 #### loading
 
+<<<<<<< HEAD
 <!-- prettier-ignore-start -->
 :::caution
 Deze property is enkel bedoeld voor geavanceerd gebruik. Een
@@ -357,6 +358,17 @@ We raden aan om in de plaats daarvan de `priority` property
 te gebruiken, die de afbeelding in bijna alle gevallen eager zal laden.
 :::
 <!-- prettier-ignore-end -->
+=======
+<Card type="caution">
+
+This property is only meant for advanced usage. Switching an image to load
+with `eager` will normally **hurt performance**.
+
+We recommend using the `priority` property instead, which properly loads
+the image eagerly for nearly all use cases.
+
+</Card>
+>>>>>>> bfbb00492a38c56fed7fd256b2f2399d1b3484a3
 
 Het laadgedrag van de afbeelding. Standaard is dit `lazy`.
 
