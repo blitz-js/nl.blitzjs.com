@@ -1,6 +1,11 @@
 ---
+<<<<<<< HEAD:app/pages/docs/image-optimization.mdx
 title: Afbeeldingscomponent en afbeeldingsoptimalisatie
 sidebar_label: Afbeeldingsoptimalisatie
+=======
+title: Image Component and Image Optimization
+sidebar_label: <Image>
+>>>>>>> 9a282371a929bae5732160068e4ff99fb796722c:app/pages/docs/image-component.mdx
 ---
 
 Blitz heeft een ingebouwde afbeeldingscomponent en automatische
@@ -43,11 +48,13 @@ Om een afbeelding aan je applicatie toe te voegen, importeer je de `Image`
 component:
 
 ```jsx
-import {Image} from "blitz"
+import { Image } from "blitz"
+import profilePic from "../me.png"
 
 function Home() {
   return (
     <>
+<<<<<<< HEAD:app/pages/docs/image-optimization.mdx
       <h1>Mijn homepagina</h1>
       <Image
         src="/ik.png"
@@ -56,6 +63,11 @@ function Home() {
         height={500}
       />
       <p>Welkom op mijn homepagina!</p>
+=======
+      <h1>My Homepage</h1>
+      <Image src={profilePic} alt="Picture of the author" />
+      <p>Welcome to my homepage!</p>
+>>>>>>> 9a282371a929bae5732160068e4ff99fb796722c:app/pages/docs/image-component.mdx
     </>
   )
 }
@@ -196,7 +208,7 @@ Neem als voorbeeld een project met volgende bestanden:
 We kunnen op deze manier een geoptimaliseerde afbeelding tonen:
 
 ```jsx
-import {Image} from "blitz"
+import { Image } from "blitz"
 
 function Home() {
   return (
@@ -222,7 +234,15 @@ De `Image` component verwacht volgende vereiste properties.
 
 #### src
 
+<<<<<<< HEAD:app/pages/docs/image-optimization.mdx
 Het pad of de URL van de bronafbeelding. Dit is vereist.
+=======
+Required and must be one of the following:
+
+1. A statically imported image file, as in the example code above, or
+2. A path string. This can be either an absolute external URL, or an
+   internal path depending on the [loader](#loader).
+>>>>>>> 9a282371a929bae5732160068e4ff99fb796722c:app/pages/docs/image-component.mdx
 
 Wanneer je een externe URL gebruikt, moet je die toevoegen aan
 [`domains`](#domains) in `blitz.config.js`.
@@ -232,14 +252,24 @@ Wanneer je een externe URL gebruikt, moet je die toevoegen aan
 De breedte van de afbeelding, in pixels. Dit moet een geheel getal zijn
 zonder eenheid.
 
+<<<<<<< HEAD:app/pages/docs/image-optimization.mdx
 Vereist, tenzij [layout="fill"`] wordt gebruikt.
+=======
+Required, except for statically imported images, or those with
+[`layout="fill"`](#layout).
+>>>>>>> 9a282371a929bae5732160068e4ff99fb796722c:app/pages/docs/image-component.mdx
 
 #### height
 
 De hoogte van de afbeelding, in pixels. Dit moet een geheel getal zijn
 zonder eenheid.
 
+<<<<<<< HEAD:app/pages/docs/image-optimization.mdx
 Vereist, tenzij [layout="fill"`] wordt gebruikt.
+=======
+Required, except for statically imported images, or those with
+[`layout="fill"`](#layout).
+>>>>>>> 9a282371a929bae5732160068e4ff99fb796722c:app/pages/docs/image-component.mdx
 
 ### Optionele props {#optional-props}
 
@@ -285,9 +315,9 @@ aanneemt:
 - `quality`
 
 ```js
-import {Image} from "blitz"
+import { Image } from "blitz"
 
-const myLoader = ({src, width, quality}) => {
+const myLoader = ({ src, width, quality }) => {
   return `https://example.com/${src}?w=${width}&q=${quality || 75}`
 }
 
@@ -295,8 +325,13 @@ const MyImage = (props) => {
   return (
     <Image
       loader={myLoader}
+<<<<<<< HEAD:app/pages/docs/image-optimization.mdx
       src="/ik.png"
       alt="Afbeelding van de auteur"
+=======
+      src="me.png"
+      alt="Picture of the author"
+>>>>>>> 9a282371a929bae5732160068e4ff99fb796722c:app/pages/docs/image-component.mdx
       width={500}
       height={500}
     />
@@ -328,7 +363,20 @@ prioriteit en
 Dit zou je enkel moeten gebruiken wanneer de afbeelding zichtbaar is boven
 de vouw. Standaard is dit `false`.
 
+<<<<<<< HEAD:app/pages/docs/image-optimization.mdx
 ### Geavanceerde props {#advanced-props}
+=======
+#### placeholder
+
+A placeholder to use while the image is loading, possible values are
+`blur` or `empty`. Defaults to `empty`. When `placeholder="blur"`, the
+`blurDataURL` will be used as the placeholder. If the `src` is an object
+from a static import, then `blurDataURL` will automatically be populated.
+If the `src` is a string, then you must provide the
+[`blurDataURL` property](#blurdataurl).
+
+### Advanced Props {#advanced-props}
+>>>>>>> 9a282371a929bae5732160068e4ff99fb796722c:app/pages/docs/image-component.mdx
 
 In sommige gevallen heb je meer geavanceerde props nodig. De `Image`
 component aanvaardt de volgende geavanceerde properties.
@@ -347,6 +395,7 @@ De afbeeldingspositie wanneer `layout="fill"` wordt gebruikt.
 
 #### loading
 
+<<<<<<< HEAD:app/pages/docs/image-optimization.mdx
 <!-- prettier-ignore-start -->
 :::caution
 Deze property is enkel bedoeld voor geavanceerd gebruik. Een
@@ -357,6 +406,17 @@ We raden aan om in de plaats daarvan de `priority` property
 te gebruiken, die de afbeelding in bijna alle gevallen eager zal laden.
 :::
 <!-- prettier-ignore-end -->
+=======
+<Card type="caution">
+
+This property is only meant for advanced usage. Switching an image to load
+with `eager` will normally **hurt performance**.
+
+We recommend using the `priority` property instead, which properly loads
+the image eagerly for nearly all use cases.
+
+</Card>
+>>>>>>> 9a282371a929bae5732160068e4ff99fb796722c:app/pages/docs/image-component.mdx
 
 Het laadgedrag van de afbeelding. Standaard is dit `lazy`.
 
@@ -366,6 +426,18 @@ berekende afstand tot de viewport heeft bereikt.
 Bij `eager` zal de afbeelding onmiddellijk laden.
 
 [Lees meer](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-loading).
+
+#### blurDataURL
+
+A
+[Data URL](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
+to be used as a placeholder image before the `src` image successfully
+loads. Only takes effect when combined with
+[`placeholder="blur"`](#placeholder).
+
+Must be a base64-encoded image. It will be enlarged and blurred, so a very
+small image (10px or less) is recommended. Including larger images as
+placeholders may harm your application performance.
 
 #### unoptimized
 
