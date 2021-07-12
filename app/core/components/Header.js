@@ -80,7 +80,11 @@ const Header = ({
     onNavToggle(newValue)
   }
 
+<<<<<<< HEAD
   const bannerMsg = "Blitz is nu in beta! 🎉 1.0 wordt verwacht in mei of juni"
+=======
+  const bannerMsg = "Blitz is in beta! 🎉 1.0 expected in Q3 this year"
+>>>>>>> c1b92d0818d4176f1f2357d015b0d0dec5b3e954
 
   const menuLinks = [
     {
